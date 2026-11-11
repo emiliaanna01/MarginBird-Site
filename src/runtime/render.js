@@ -31,6 +31,19 @@ function value(raw, scopes) {
   return raw.replace(HOLE, (_, p) => { const v = lookup(p, scopes); return v == null ? '' : String(v); });
 }
 
+// Width/height let the browser reserve space before an image loads (no layout jump); srcset serves smaller files where they fit.
+function sizeImage(props) {
+  const map = (typeof globalThis !== 'undefined' && globalThis.MB_IMG) || {};
+  const info = map[props.src];
+  if (!info) return;
+  if (props.width == null && props.height == null) {
+    props.width = info.width; props.height = info.height;
+    const st = typeof props.style === 'string' ? props.style : '';
+    if (!/(^|;)\s*height\s*:/.test(st)) props.style = (st ? st.replace(/;?\s*$/, '; ') : '') + 'height: auto';
+  }
+  if (info.srcset && !props.srcset) { props.srcset = info.srcset; props.sizes = props.sizes || '(max-width: 600px) 45vw, 240px'; }
+}
+
 const camel = (s) => s.replace(/-([a-z])/g, (_, c) => c.toUpperCase());
 const EVENTS = { onclick: 'onClick', onsubmit: 'onSubmit', onmousemove: 'onMouseMove', onmouseleave: 'onMouseLeave', onmouseenter: 'onMouseEnter', onfocus: 'onFocus', onblur: 'onBlur', oninput: 'onInput', onchange: 'onChange', onkeydown: 'onKeyDown', onpointermove: 'onPointerMove' };
 
@@ -53,6 +66,7 @@ export function createDC(h, Fragment, PComponent) {
           if (v === undefined || v === null) continue;
           props[name] = v;
         }
+        if (n[1] === 'img') sizeImage(props);
         const kids = [];
         renderNodes(n[3], scopes, kids);
         out.push(h(n[1], props, ...kids));

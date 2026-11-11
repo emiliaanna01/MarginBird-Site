@@ -38,10 +38,19 @@ const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;').repl
 
 // ---------- assets ----------
 const blobMap = {};
+const imgInfo = {};
 for (const f of fs.readdirSync(SRC).filter((f) => f.endsWith('.jpg'))) {
   const id = f.replace('.jpg', '');
-  await sharp(path.join(SRC, f)).webp({ quality: 82 }).toFile(path.join(OUT, 'assets', id + '.webp'));
+  const img = sharp(path.join(SRC, f));
+  const { width, height } = await img.metadata();
+  await img.clone().webp({ quality: 82 }).toFile(path.join(OUT, 'assets', id + '.webp'));
   blobMap[id] = '/assets/' + id + '.webp';
+  const variants = [];
+  // Large photos get smaller copies so phones and small slots don't download the full file.
+  for (const w of [400, 800]) {
+    if (width > w * 1.25) { await img.clone().resize(w).webp({ quality: 80 }).toFile(path.join(OUT, 'assets', id + '-' + w + '.webp')); variants.push('/assets/' + id + '-' + w + '.webp ' + w + 'w'); }
+  }
+  imgInfo['/assets/' + id + '.webp'] = { width, height, srcset: variants.length ? variants.concat('/assets/' + id + '.webp ' + width + 'w').join(', ') : '' };
 }
 const mbBuf = fs.readFileSync(path.join(SRC, 'vendor', 'mbline.js'));
 const mbName = '/assets/mbline-' + hash(mbBuf) + '.js';
@@ -51,6 +60,7 @@ const cssBuf = fs.readFileSync(path.join(SRC, 'shared.css'), 'utf8') + fs.readFi
 const cssName = '/assets/site-' + hash(cssBuf) + '.css';
 fs.writeFileSync(path.join(OUT, cssName), cssBuf);
 
+globalThis.MB_IMG = imgInfo;
 // ---------- compile components ----------
 function attrsOf(el) { return (el.attrs || []).map((a) => [a.prefix ? a.prefix + ':' + a.name : a.name, a.value]); }
 function kids(el) { return el.nodeName === 'template' ? el.content.childNodes : el.childNodes; }
@@ -217,6 +227,7 @@ for (const [route, name, props] of PAGES) {
 ${NOINDEX ? '<meta name="robots" content="noindex">' : `<link rel="canonical" href="${canonical}">`}
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="MarginBird">
+<meta property="og:locale" content="en_US">
 <meta property="og:title" content="${esc(meta.title)}">
 <meta property="og:description" content="${esc(meta.description)}">
 <meta property="og:url" content="${canonical}">
@@ -238,7 +249,7 @@ ${NOINDEX ? '<meta name="robots" content="noindex">' : `<link rel="canonical" hr
 ${fontUrl ? `<link rel="stylesheet" href="${esc(fontUrl)}">` : ''}
 <link rel="stylesheet" href="${cssName}">
 ${styles}
-<script>window.MB_CONFIG=${JSON.stringify(CONFIG)};</script>
+<script>window.MB_CONFIG=${JSON.stringify(CONFIG)};window.MB_IMG=${JSON.stringify(imgInfo)};</script>
 ${jsonld(route, name)}
 </head>
 <body>
