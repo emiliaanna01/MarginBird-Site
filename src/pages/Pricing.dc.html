@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Pricing | MarginBird</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="/_blob/f901add9d736276c532f1e80529fbc09">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Fraunces:opsz,wght@9..144,300;9..144,400&amp;display=swap" rel="stylesheet">
+<style>body{margin:0;background:#040507}.cmprow{transition:background .2s ease}.cmprow:hover{background:rgba(244,239,230,0.02)}.faqrow:hover{background:rgba(244,239,230,0.02)}</style>
+</helmet>
+<div style="--acc: {{t.c}}; --accl: {{t.l}}; --rgb: {{t.rgb}}; font-family: Geist, system-ui, sans-serif; color: #F4EFE6; background: {{t.base}}; width: 100%; box-sizing: border-box; overflow: hidden">
+<dc-import name="Nav" theme="{{theme}}" current="pricing" hint-size="100%,72px"></dc-import>
+
+<section style="position: relative; padding: 150px 28px 40px">
+<div aria-hidden="true" class="beam" style="position: absolute; top: -240px; left: 50%; width: 1400px; height: 600px; background: radial-gradient(closest-side, rgba({{t.rgb}},0.42), rgba({{t.rgb}},0.12) 45%, transparent 75%); filter: blur(30px); pointer-events: none"></div>
+<div style="position: relative; max-width: 1000px; margin: 0 auto; text-align: center">
+<h1 class="fade" style="font-weight: 500; font-size: clamp(48px, 7.4vw, 108px); line-height: 0.96; letter-spacing: -0.055em; margin: 0">Published prices. Written scope.</h1>
+<p class="fade" style="animation-delay: .3s; font-size: 20px; line-height: 1.6; color: #BAC2D0; margin: 26px auto 0; max-width: 46ch">Every client gets a written scope with exact deliverables. We take on 6 new clients a month so each build gets senior attention.</p>
+</div>
+</section>
+
+<section style="max-width: 1180px; margin: 0 auto; padding: 40px 28px 20px">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px">
+<sc-for list="{{plans}}" as="pl" hint-placeholder-count="3">
+<div onMouseEnter="{{pl.enter}}" onMouseMove="{{pl.move}}" onMouseLeave="{{pl.leave}}" style="text-align: left; border-radius: 26px; padding: 1px; background: {{pl.ring}}; box-shadow: {{pl.glow}}; transform: {{pl.lift}}; transition: transform .35s ease, box-shadow .35s ease">
+<div style="position: relative; overflow: hidden; border-radius: 25px; background: linear-gradient(180deg, #141D30, #0A0F1A); padding: 32px; height: 100%; box-sizing: border-box; display: flex; flex-direction: column; gap: 20px">
+<div aria-hidden="true" style="position: absolute; inset: 0; pointer-events: none; background: {{pl.spot}}"></div>
+<div style="position: relative; display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap"><span style="font-weight: 500; font-size: 24px">{{pl.name}}</span><span style="font-size: 13px; font-weight: 500; padding: 6px 12px; border-radius: 999px; border: 1px solid {{pl.pillBorder}}; color: {{pl.pillFg}}; background: {{pl.pillBg}}">{{pl.pill}}</span></div>
+<div style="position: relative"><div style="font-size: 14px; color: #A7B0C0">Starting at</div><div style="display: flex; align-items: baseline; gap: 8px; margin-top: 6px"><span style="font-family: Fraunces, serif; font-weight: 300; font-size: 64px; line-height: 1; letter-spacing: -0.04em">{{pl.price}}</span><span style="font-size: 24px; font-weight: 500; letter-spacing: -0.02em; color: #DCE1EA">{{pl.unit}}</span></div><div style="font-size: 15px; color: #A7B0C0; margin-top: 8px">{{pl.extra}}</div></div>
+<a href="FreeAudit.dc.html" onFocus="{{pl.enter}}" style="position: relative; text-align: center; text-decoration: none; font-weight: 600; font-size: 16px; padding: 15px; border-radius: 999px; background: {{pl.btnBg}}; color: {{pl.btnFg}}; border: 1px solid {{pl.btnBorder}}">{{pl.btn}}</a>
+<div style="position: relative; display: flex; flex-direction: column; gap: 11px">
+<sc-for list="{{pl.items}}" as="it" hint-placeholder-count="6">
+<div style="display: flex; gap: 10px; font-size: 15px; line-height: 1.5; color: #DCE1EA"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="{{t.c}}" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 3px"><path d="M5 12l5 5 9-10"></path></svg><span>{{it}}</span></div>
+</sc-for>
+</div>
+<div style="position: relative; font-size: 14px; color: #8F99AD; margin-top: auto">{{pl.term}}</div>
+</div>
+</div>
+</sc-for>
+</div>
+
+<div style="margin-top: 18px; border-radius: 26px; border: 1px solid rgba(244,239,230,0.09); background: linear-gradient(180deg, #0F1626, #080B13); padding: 30px 32px; display: flex; flex-wrap: wrap; gap: 28px; align-items: center; justify-content: space-between">
+<div style="flex: 1 1 320px; min-width: 0"><h2 style="font-weight: 500; font-size: 26px; letter-spacing: -0.025em; margin: 0"><a href="Ads.dc.html" style="color: #F4EFE6; text-underline-offset: 5px; text-decoration-color: rgba({{t.rgb}},0.6)">Paid ads on Meta and Google</a></h2><p style="font-size: 15px; color: #A7B0C0; margin: 8px 0 0">You pay ad spend directly to the platform. We never mark it up.</p></div>
+<div style="display: flex; flex-wrap: wrap; gap: 40px">
+<div><div style="font-size: 14px; color: #A7B0C0">Campaign launch</div><div style="font-family: Fraunces, serif; font-weight: 300; font-size: 36px">$597</div></div>
+<div><div style="font-size: 14px; color: #A7B0C0">Management</div><div style="font-family: Fraunces, serif; font-weight: 300; font-size: 36px">$697<span style="font-family: Geist, sans-serif; font-size: 15px; color: #A7B0C0">/mo</span></div></div>
+<div><div style="font-size: 14px; color: #A7B0C0">Launch and 3 months</div><div style="display: flex; align-items: baseline; gap: 10px"><span style="font-size: 18px; color: #77809A; text-decoration: line-through">$2,688</span><span style="font-family: Fraunces, serif; font-weight: 300; font-size: 36px; background: {{t.g}}; -webkit-background-clip: text; background-clip: text; color: transparent">$2,197</span></div></div>
+</div>
+</div>
+<div style="margin-top: 18px; display: flex; flex-wrap: wrap; gap: 18px">
+<a href="Brand.dc.html" class="lift" style="flex: 1 1 300px; text-decoration: none; color: #F4EFE6; border-radius: 22px; padding: 24px 28px; background: linear-gradient(180deg, #0F1626, #080B13); box-shadow: 0 0 0 1px rgba(244,239,230,0.09); display: flex; justify-content: space-between; align-items: center; gap: 16px"><span><span style="display: block; font-size: 18px; font-weight: 500">Brand starter kit</span><span style="display: block; font-size: 14px; color: #A7B0C0; margin-top: 4px">Logo suite, colours, type and locked templates</span></span><span style="font-family: Fraunces, serif; font-weight: 300; font-size: 34px">$750</span></a>
+<div style="flex: 1 1 300px; border-radius: 22px; padding: 24px 28px; background: linear-gradient(180deg, #0F1626, #080B13); box-shadow: 0 0 0 1px rgba(244,239,230,0.09)"><span style="display: block; font-size: 18px; font-weight: 500">Our guarantees</span><span style="display: block; font-size: 15px; line-height: 1.55; color: #BAC2D0; margin-top: 6px">Site live in 14 days or your first month of care is free. Ad campaigns live within 7 days of approval.</span></div>
+</div>
+</section>
+
+<section style="max-width: 1180px; margin: 0 auto; padding: 120px 28px 20px">
+<h2 style="font-weight: 500; font-size: clamp(40px, 5vw, 68px); line-height: 1; letter-spacing: -0.045em; margin: 0">Why owners switch to us</h2>
+<div style="overflow-x: auto; margin-top: 44px; padding-top: 14px">
+<table style="width: 100%; min-width: 760px; border-collapse: separate; border-spacing: 0; font-size: 16px; background: linear-gradient(180deg, #0F1626, #080B13); border: 1px solid rgba(244,239,230,0.09); border-radius: 20px">
+<thead><tr>
+<th scope="col" style="width: 34%; padding: 22px 24px; text-align: left; border-bottom: 1px solid rgba(244,239,230,0.09); font-size: 15px; font-weight: 500; color: #A7B0C0">What you get</th>
+<th scope="col" style="width: 20%; padding: 22px 16px; border-bottom: 1px solid rgba(244,239,230,0.09); border-left: 1px solid rgba(244,239,230,0.06); font-weight: 500">Freelancers</th>
+<th scope="col" style="width: 20%; padding: 22px 16px; border-bottom: 1px solid rgba(244,239,230,0.09); border-left: 1px solid rgba(244,239,230,0.06); font-weight: 500">Typical agency</th>
+<th scope="col" style="width: 26%; padding: 22px 16px; background: {{t.g}}; color: {{t.ink}}; border-top-left-radius: 16px; border-top-right-radius: 16px; position: relative; top: -14px; font-weight: 600; box-shadow: 0 -10px 40px -12px rgba({{t.rgb}},0.7)">MarginBird</th>
+</tr></thead>
+<tbody>
+<sc-for list="{{rows}}" as="r" hint-placeholder-count="7">
+<tr class="cmprow">
+<th scope="row" style="padding: 18px 24px; text-align: left; font-weight: 500; border-bottom: 1px solid rgba(244,239,230,0.06)">{{r.k}}</th>
+<sc-for list="{{r.cells}}" as="c" hint-placeholder-count="3">
+<td style="padding: 18px 16px; text-align: center; border-bottom: 1px solid rgba(244,239,230,0.06); border-left: 1px solid rgba(244,239,230,0.06); background: {{c.bg}}">
+<sc-if value="{{c.yes}}" hint-placeholder-val="{{ false }}"><span role="img" aria-label="Yes" style="width: 28px; height: 28px; border-radius: 50%; background: {{t.g}}; display: inline-flex; align-items: center; justify-content: center; box-shadow: 0 0 16px -2px {{t.c}}"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="{{t.ink}}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"></path></svg></span></sc-if>
+<sc-if value="{{c.no}}" hint-placeholder-val="{{ false }}"><span role="img" aria-label="No" style="display: inline-flex"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5E6B7E" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></span></sc-if>
+<sc-if value="{{c.isText}}" hint-placeholder-val="{{ true }}"><span style="font-size: 15px; color: {{c.fg}}; font-weight: {{c.w}}">{{c.text}}</span></sc-if>
+</td>
+</sc-for>
+</tr>
+</sc-for>
+</tbody>
+</table>
+</div>
+</section>
+
+<section style="max-width: 900px; margin: 0 auto; padding: 120px 28px 40px">
+<h2 style="font-weight: 500; font-size: clamp(40px, 5vw, 68px); line-height: 1; letter-spacing: -0.045em; margin: 0">Questions owners ask us.</h2>
+<div style="margin-top: 48px; border-top: 1px solid rgba(244,239,230,0.1)">
+<sc-for list="{{faqs}}" as="f" hint-placeholder-count="8">
+<div style="border-bottom: 1px solid rgba(244,239,230,0.1)">
+<button type="button" class="faqrow" onClick="{{f.toggle}}" aria-expanded="{{f.expanded}}" style="width: 100%; text-align: left; background: transparent; border: 0; color: #F4EFE6; font-family: Geist, sans-serif; font-size: 20px; font-weight: 500; padding: 26px 4px; display: flex; justify-content: space-between; align-items: center; gap: 20px; cursor: pointer">{{f.q}}<span aria-hidden="true" style="flex: none; width: 32px; height: 32px; border-radius: 50%; border: 1px solid rgba(244,239,230,0.18); display: flex; align-items: center; justify-content: center; transform: {{f.rot}}; transition: transform .3s ease"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#F4EFE6" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></span></button>
+<sc-if value="{{f.open}}" hint-placeholder-val="{{ false }}"><p class="drop" style="font-size: 17px; line-height: 1.65; color: #BAC2D0; margin: 0; padding: 0 56px 28px 4px">{{f.a}}</p></sc-if>
+</div>
+</sc-for>
+</div>
+</section>
+
+<section style="position: relative; padding: 120px 28px 120px; text-align: center">
+<div aria-hidden="true" class="breathe" style="position: absolute; bottom: -140px; left: 50%; transform: translateX(-50%); width: 1200px; height: 560px; background: radial-gradient(closest-side, rgba({{t.rgb}},0.4), rgba({{t.rgb}},0.12) 45%, transparent 75%); filter: blur(40px); pointer-events: none"></div>
+<h2 style="position: relative; font-weight: 500; font-size: clamp(44px, 6.4vw, 92px); line-height: 0.96; letter-spacing: -0.05em; margin: 0">Not sure which plan fits?</h2>
+<p style="position: relative; font-size: 19px; color: #DCE1EA; margin: 22px auto 0; max-width: 44ch">Start with the free audit. We will recommend one, in writing, with no pressure.</p>
+<a href="FreeAudit.dc.html" class="pill" style="position: relative; display: inline-block; margin-top: 34px; background: {{t.g}}; color: {{t.ink}}; text-decoration: none; font-weight: 600; font-size: 17px; padding: 17px 28px; border-radius: 999px">Book my free audit</a>
+</section>
+
+<dc-import name="Footer" theme="{{theme}}" hint-size="100%,300px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","default":"violet","options":["ice","platinum","violet","gold"]},"$preview":{"width":1440,"height":4600}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { selected: 'grow', hover: null, spot: null, faq: 0 }; }
+  renderVals() {
+    const TH = {
+      ice: { c: '#7DB9FF', l: '#CFE6FF', rgb: '125,185,255', ink: '#04101F', base: '#040507', s: ['#3E78C9', '#CFE6FF', '#7DB9FF', '#F3F9FF', '#4F8BD9'] },
+      platinum: { c: '#DDE3EE', l: '#FFFFFF', rgb: '220,228,240', ink: '#0A0C10', base: '#050506', s: ['#8E97A8', '#F6F8FC', '#C3CAD6', '#FFFFFF', '#9AA3B3'] },
+      violet: { c: '#A78BFF', l: '#DCD2FF', rgb: '167,139,255', ink: '#120A2A', base: '#06050B', s: ['#6C4FE0', '#DCD2FF', '#A78BFF', '#F3EEFF', '#7A5CF0'] },
+      gold: { c: '#F0C462', l: '#FFE3A0', rgb: '240,196,98', ink: '#1A1206', base: '#07090F', s: ['#A9792A', '#F7DC94', '#E0B04E', '#FFF3C8', '#B8893A'] }
+    };
+    const theme = this.props.theme || 'violet';
+    const T0 = TH[theme] || TH.violet;
+    const g = 'linear-gradient(110deg, ' + T0.s[0] + ' 0%, ' + T0.s[1] + ' 28%, ' + T0.s[2] + ' 52%, ' + T0.s[3] + ' 72%, ' + T0.s[4] + ' 100%)';
+    const t = { ...T0, g };
+    const sp = this.state.spot;
+    const activeId = this.state.hover || this.state.selected;
+    const defs = [
+      { id: 'launch', name: 'Launch', pill: 'Get online fast', price: '$997', unit: 'once', extra: 'plus $149/mo care', btn: 'Start with Launch', items: ['Premium 5-page website in 14 days', 'Booking and hosting set up', 'Missed-call text-back', 'Review requests', 'Google profile set up', 'Logo cleanup and colours'], term: 'Care plan is month-to-month' },
+      { id: 'grow', name: 'Grow', pill: 'Most popular', price: '$997', unit: 'a month', extra: 'plus $500 setup', btn: 'Start with Grow', items: ['Everything in Launch', '12 posts a month on Facebook and Instagram, 4 reels', 'Lead follow-up by text and email', 'Weekly Google posts and review replies', 'Brand kit refresh in month one', 'One-page monthly report'], term: '3-month minimum, then monthly' },
+      { id: 'scale', name: 'Scale', pill: 'Adds paid ads', price: '$1,997', unit: 'a month', extra: 'plus $500 setup', btn: 'Start with Scale', items: ['Everything in Grow', '20 posts and 8 reels a month, with replies', 'Meta or Google ads management', 'Monthly landing pages and local SEO', 'Full brand starter kit', 'Report every two weeks and a monthly call'], term: '3-month minimum. Ad spend is billed to you.' }
+    ];
+    const plans = defs.map((pl) => {
+      const active = activeId === pl.id;
+      const on = sp && sp.id === pl.id;
+      const at = on ? sp.x + 'px ' + sp.y + 'px' : '50% 0%';
+      return { ...pl, pressed: this.state.selected === pl.id ? 'true' : 'false',
+        ring: active ? 'radial-gradient(420px circle at ' + at + ', rgba(' + T0.rgb + ',1), rgba(' + T0.rgb + ',0.25) 40%, rgba(244,239,230,0.08) 75%)' : 'rgba(244,239,230,0.08)',
+        glow: active ? '0 0 80px -20px rgba(' + T0.rgb + ',0.6)' : 'none', lift: active ? 'translateY(-4px)' : 'none',
+        spot: active ? 'radial-gradient(420px circle at ' + at + ', rgba(' + T0.rgb + ',0.12), transparent 60%)' : 'none',
+        btnBg: active ? g : 'transparent', btnFg: active ? T0.ink : '#F4EFE6', btnBorder: active ? T0.c : 'rgba(244,239,230,0.18)',
+        pillBg: pl.id === 'grow' ? 'rgba(' + T0.rgb + ',0.14)' : 'transparent', pillFg: pl.id === 'grow' ? T0.l : '#BAC2D0', pillBorder: pl.id === 'grow' ? 'rgba(' + T0.rgb + ',0.45)' : 'rgba(244,239,230,0.12)',
+        enter: () => this.setState({ hover: pl.id }),
+        move: (e) => { const r = e.currentTarget.getBoundingClientRect(); this.setState({ hover: pl.id, spot: { id: pl.id, x: Math.round(e.clientX - r.left), y: Math.round(e.clientY - r.top) } }); },
+        leave: () => this.setState({ hover: null, spot: null }), pick: () => this.setState({ selected: pl.id }) };
+    });
+    const Y = 'yes', N = 'no';
+    const rowDefs = [
+      ['One team for site, social, ads, brand and automation', N, 'Single channel', Y],
+      ['Website live in 14 days', 'Varies', '30 days to 6 weeks', Y],
+      ['Missed calls answered automatically', N, 'Add-on, about $297/mo', 'Included'],
+      ['Ad spend never marked up', 'Varies', N, Y],
+      ['You own the site, accounts and data', 'Usually', 'Sometimes', Y],
+      ['Starting price', 'Low, but piecemeal', '$4,000+/mo', 'From $997'],
+      ['Contract terms', 'Ad hoc', '6–12 month lock-in', '3 months, then monthly']
+    ];
+    const rows = rowDefs.map(([k, a, b, c]) => ({ k, cells: [a, b, c].map((v, i) => ({ yes: v === Y, no: v === N, isText: v !== Y && v !== N, text: v, bg: i === 2 ? 'rgba(' + T0.rgb + ',0.06)' : 'transparent', fg: i === 2 ? '#F4EFE6' : '#A7B0C0', w: i === 2 ? '600' : '400' })) }));
+    const faqDefs = [
+      ['What happens in the free business audit?', 'We look at your brand, website, ads, social and the tools you pay for. You get a short video with what we found and one fix you can use right away, whether or not you hire us.'],
+      ['Why are your prices lower than most US agencies?', 'We run a lean senior team with no account-manager layers, and we build systems once instead of billing for the same task every month. The savings go into your price, not our overhead.'],
+      ['Who owns the website, ad accounts and automations?', 'You do. Everything is set up in your name from day one. If we stop working together, you keep all of it.'],
+      ['Do you mark up ad spend?', 'No. You pay Meta or Google directly. Our fee is fixed and written into your scope.'],
+      ['How long until something is live?', 'Websites go live within 14 days. Ad campaigns launch within 7 days of approval. Automations depend on scope, and we give you a date before we start.'],
+      ['What does the 3-month minimum cover?', 'Content systems and ads need a few cycles to learn what works. After three months, Grow and Scale go month to month.'],
+      ['Can I start with one service?', 'Yes. Many clients start with the ads launch, a website or one automation, then add more once it pays for itself.'],
+      ['What tools do you build on?', 'WordPress, Shopify, Meta and Google Ads, GoHighLevel, Twilio, Zapier, Make, Canva and OpenAI, depending on what fits your business.']
+    ];
+    return {
+      t, theme, plans, rows,
+      faqs: faqDefs.map(([q, a], i) => { const open = this.state.faq === i; return { q, a, open, expanded: open ? 'true' : 'false', rot: open ? 'rotate(45deg)' : 'none', toggle: () => this.setState({ faq: open ? null : i }) }; })
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Site navigation</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="/_blob/f901add9d736276c532f1e80529fbc09">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Fraunces:opsz,wght@9..144,300;9..144,400&amp;display=swap" rel="stylesheet">
+<style>body{margin:0}</style>
+</helmet>
+<div style="--acc: {{t.c}}; --accl: {{t.l}}; --rgb: {{t.rgb}}; font-family: Geist, system-ui, sans-serif; color: #F4EFE6">
+<header style="position: fixed; top: 0; left: 0; right: 0; z-index: 50; background: rgba(4,5,7,0.72); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid rgba(244,239,230,0.07)">
+<div style="max-width: 1280px; margin: 0 auto; padding: 14px 28px; display: flex; align-items: center; justify-content: space-between; gap: 16px">
+<a href="Main.dc.html" aria-label="MarginBird home" style="display: flex; align-items: center; gap: 10px; text-decoration: none">
+<svg width="30" height="22" viewBox="0 0 30 22" fill="none" aria-hidden="true"><path d="M1 19.5C7 18.8 12 15.8 15.5 10.5" stroke="{{t.c}}" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="1 3"></path><path d="M12.5 12.5c3.2-5.4 7.2-7.4 11.6-6.2l5.4-4.8-1.8 7.4c-2 4-6.6 6-12.6 5.3z" fill="{{t.c}}"></path></svg>
+<span style="font-weight: 600; font-size: 19px; letter-spacing: -0.03em; color: #F4EFE6">MarginBird</span>
+</a>
+<nav aria-label="Main" class="navlinks" style="gap: 2px; align-items: center; font-size: 15px">
+<sc-for list="{{menus}}" as="m" hint-placeholder-count="2">
+<div style="position: relative">
+<button type="button" class="navbtn" onClick="{{m.toggle}}" aria-expanded="{{m.expanded}}" style="font-family: Geist, sans-serif; font-size: 15px; color: {{m.fg}}; background: transparent; border: 0; border-radius: 999px; padding: 10px 14px; min-height: 44px; cursor: pointer; display: inline-flex; align-items: center; gap: 6px">{{m.label}}<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="transform: {{m.chev}}; transition: transform .2s ease"><path d="M6 9l6 6 6-6"></path></svg></button>
+<sc-if value="{{m.open}}" hint-placeholder-val="{{ false }}">
+<div class="drop" style="position: absolute; top: 54px; left: -8px; width: 360px; background: rgba(12,16,26,0.97); backdrop-filter: blur(18px); border: 1px solid rgba(244,239,230,0.1); border-radius: 18px; padding: 8px; box-shadow: 0 30px 80px -20px rgba(0,0,0,0.85); z-index: 3">
+<sc-for list="{{m.items}}" as="mi" hint-placeholder-count="5">
+<a href="{{mi.href}}" class="menuitem" onClick="{{close}}" style="text-decoration: none; border-radius: 12px; padding: 12px 14px; display: flex; gap: 14px; align-items: flex-start">
+<span style="flex: none; width: 34px; height: 34px; border-radius: 10px; background: radial-gradient(circle at 35% 25%, #26314A, #0B101B); box-shadow: inset 0 1px 0 rgba(255,255,255,0.12), 0 0 0 1px rgba({{t.rgb}},0.35); display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="{{t.c}}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{mi.icon}}"></path></svg></span>
+<span style="display: flex; flex-direction: column; gap: 3px"><span style="font-weight: 500; font-size: 15px; color: #F4EFE6">{{mi.t}}</span><span style="font-size: 14px; color: #BAC2D0; line-height: 1.45">{{mi.d}}</span></span>
+</a>
+</sc-for>
+</div>
+</sc-if>
+</div>
+</sc-for>
+<sc-for list="{{links}}" as="l" hint-placeholder-count="2">
+<a href="{{l.href}}" class="navbtn" aria-current="{{l.cur}}" style="color: {{l.fg}}; text-decoration: none; padding: 10px 14px; border-radius: 999px">{{l.t}}</a>
+</sc-for>
+</nav>
+<div style="display: flex; gap: 8px; align-items: center">
+<a href="FreeAudit.dc.html" class="pill navcta" style="background: {{t.g}}; background-size: 220% 100%; color: {{t.ink}}; text-decoration: none; font-weight: 600; font-size: 15px; padding: 11px 20px; border-radius: 999px; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center">Book my free audit</a>
+<button type="button" class="menubtn" onClick="{{toggleSheet}}" aria-expanded="{{sheetExpanded}}" aria-label="Open menu" style="width: 44px; height: 44px; border-radius: 999px; border: 1px solid rgba(244,239,230,0.15); background: transparent; align-items: center; justify-content: center; cursor: pointer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F4EFE6" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 8h16M4 16h16"></path></svg></button>
+</div>
+</div>
+<sc-if value="{{sheetOpen}}" hint-placeholder-val="{{ false }}">
+<div class="drop" style="border-top: 1px solid rgba(244,239,230,0.08); padding: 8px 28px 24px; display: flex; flex-direction: column; max-height: 80vh; overflow-y: auto">
+<sc-for list="{{sheetLinks}}" as="sl" hint-placeholder-count="9">
+<a href="{{sl.href}}" onClick="{{close}}" style="text-decoration: none; color: #F4EFE6; font-size: 20px; font-weight: 500; letter-spacing: -0.02em; padding: 13px 0; border-bottom: 1px solid rgba(244,239,230,0.07)">{{sl.t}}</a>
+</sc-for>
+<a href="FreeAudit.dc.html" onClick="{{close}}" style="margin-top: 18px; background: {{t.g}}; color: {{t.ink}}; text-decoration: none; font-weight: 600; font-size: 16px; padding: 15px; border-radius: 999px; text-align: center">Book my free audit</a>
+</div>
+</sc-if>
+</header>
+<sc-if value="{{anyMenu}}" hint-placeholder-val="{{ false }}">
+<button type="button" onClick="{{close}}" aria-label="Close menu" style="position: fixed; inset: 0; background: transparent; border: 0; z-index: 49; cursor: default"></button>
+</sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","default":"violet","options":["ice","platinum","violet","gold"]},"current":{"editor":"text","default":"home"},"$preview":{"width":1440,"height":80}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { menu: null, sheet: false }; }
+  renderVals() {
+    const TH = {
+      ice: { c: '#7DB9FF', l: '#CFE6FF', rgb: '125,185,255', ink: '#04101F', s: ['#3E78C9', '#CFE6FF', '#7DB9FF', '#F3F9FF', '#4F8BD9'] },
+      platinum: { c: '#DDE3EE', l: '#FFFFFF', rgb: '220,228,240', ink: '#0A0C10', s: ['#8E97A8', '#F6F8FC', '#C3CAD6', '#FFFFFF', '#9AA3B3'] },
+      violet: { c: '#A78BFF', l: '#DCD2FF', rgb: '167,139,255', ink: '#120A2A', s: ['#6C4FE0', '#DCD2FF', '#A78BFF', '#F3EEFF', '#7A5CF0'] },
+      gold: { c: '#F0C462', l: '#FFE3A0', rgb: '240,196,98', ink: '#1A1206', s: ['#A9792A', '#F7DC94', '#E0B04E', '#FFF3C8', '#B8893A'] }
+    };
+    const T0 = TH[this.props.theme] || TH.violet;
+    const t = { ...T0, g: 'linear-gradient(110deg, ' + T0.s[0] + ' 0%, ' + T0.s[1] + ' 28%, ' + T0.s[2] + ' 52%, ' + T0.s[3] + ' 72%, ' + T0.s[4] + ' 100%)' };
+    const cur = this.props.current || 'home';
+    const I = {
+      brand: 'M12 3l7 6-7 12-7-12z M5 9h14',
+      web: 'M3 5h18v14H3z M3 9h18 M8 14h6',
+      ads: 'M12 12m-8 0a8 8 0 1 0 16 0a8 8 0 1 0-16 0 M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0-6 0',
+      social: 'M12 20s-7-4.3-8.8-8.6C2 8.3 4 5 7.2 5c1.9 0 3.3 1.1 4.8 3 1.5-1.9 2.9-3 4.8-3C20 5 22 8.3 20.8 11.4 19 15.7 12 20 12 20z',
+      auto: 'M12 8a4 4 0 1 0 0 8a4 4 0 1 0 0-8z M12 2v3 M12 19v3 M2 12h3 M19 12h3 M4.9 4.9l2.1 2.1 M17 17l2.1 2.1 M4.9 19.1L7 17 M17 7l2.1-2.1',
+      chart: 'M4 20V10 M10 20V4 M16 20v-7 M22 20H2',
+      fork: 'M7 3v8 M5 3v4a2 2 0 0 0 4 0V3 M7 11v10 M17 3c-2 0-3 2-3 5s1 4 3 4v9',
+      spark: 'M12 3v4 M12 17v4 M3 12h4 M17 12h4 M6 6l2.5 2.5 M15.5 15.5L18 18 M6 18l2.5-2.5 M15.5 8.5L18 6',
+      home: 'M3 11l9-7 9 7 M5 10v10h14V10'
+    };
+    const menuDefs = [
+      { id: 'services', label: 'Services', items: [
+        { t: 'Brand and design', d: 'Identity, brand kits, templates', href: 'Brand.dc.html', icon: I.brand, k: 'brand' },
+        { t: 'Websites', d: 'Premium sites, live in 14 days', href: 'Websites.dc.html', icon: I.web, k: 'websites' },
+        { t: 'Paid ads', d: 'Meta and Google, tracked end to end', href: 'Ads.dc.html', icon: I.ads, k: 'ads' },
+        { t: 'Social growth', d: 'Content systems that post themselves', href: 'Social.dc.html', icon: I.social, k: 'social' },
+        { t: 'Automation', d: 'Missed calls, follow-up, reviews, content', href: 'Automation.dc.html', icon: I.auto, k: 'automation' }
+      ] },
+      { id: 'industries', label: 'Industries', items: [
+        { t: 'Creators, traders and experts', d: 'Content that publishes itself', href: 'Work.dc.html', icon: I.chart },
+        { t: 'Restaurants and food', d: 'Menus and ordering that update themselves', href: 'Work.dc.html', icon: I.fork },
+        { t: 'Med spas and aesthetics', d: 'Consults booked, clients rebooked', href: 'Automation.dc.html', icon: I.spark },
+        { t: 'Home services', d: 'HVAC, plumbing, roofing, cleaning', href: 'Automation.dc.html', icon: I.home }
+      ] }
+    ];
+    const close = () => this.setState({ menu: null, sheet: false });
+    const isServ = ['brand', 'websites', 'ads', 'social', 'automation'].indexOf(cur) >= 0;
+    const menus = menuDefs.map((m) => {
+      const open = this.state.menu === m.id;
+      const active = m.id === 'services' && isServ;
+      return { label: m.label, open, expanded: open ? 'true' : 'false', fg: open || active ? '#F4EFE6' : '#C9CFDB',
+        chev: open ? 'rotate(180deg)' : 'none', toggle: () => this.setState({ menu: open ? null : m.id, sheet: false }), items: m.items };
+    });
+    const links = [['Work', 'Work.dc.html', 'work'], ['Pricing', 'Pricing.dc.html', 'pricing']].map(([tt, href, k]) => ({ t: tt, href, cur: k === cur ? 'page' : 'false', fg: k === cur ? t.l : '#C9CFDB' }));
+    const sheetLinks = [['Home', 'Main.dc.html'], ['Brand and design', 'Brand.dc.html'], ['Websites', 'Websites.dc.html'], ['Paid ads', 'Ads.dc.html'], ['Social growth', 'Social.dc.html'], ['Automation', 'Automation.dc.html'], ['Work', 'Work.dc.html'], ['Pricing', 'Pricing.dc.html']].map(([tt, href]) => ({ t: tt, href }));
+    return { t, menus, links, sheetLinks, close, anyMenu: this.state.menu !== null,
+      sheetOpen: this.state.sheet, sheetExpanded: this.state.sheet ? 'true' : 'false',
+      toggleSheet: () => this.setState({ sheet: !this.state.sheet, menu: null }) };
+  }
+}
+</script>
+</body>
+</html>

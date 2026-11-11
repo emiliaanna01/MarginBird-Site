@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Automation | MarginBird</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="/_blob/f901add9d736276c532f1e80529fbc09">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Fraunces:opsz,wght@9..144,300;9..144,400&amp;display=swap" rel="stylesheet">
+<style>body{margin:0;background:#040507}</style>
+</helmet>
+<div style="--acc: {{t.c}}; --accl: {{t.l}}; --rgb: {{t.rgb}}; font-family: Geist, system-ui, sans-serif; color: #F4EFE6; background: {{t.base}}; width: 100%; box-sizing: border-box; overflow: hidden">
+<dc-import name="Nav" theme="{{theme}}" current="automation" hint-size="100%,72px"></dc-import>
+
+<!-- HERO + MISSED CALL SHOWCASE -->
+<section style="position: relative; padding: 150px 28px 40px">
+<div aria-hidden="true" class="beam" style="position: absolute; top: -240px; left: 50%; width: 1400px; height: 600px; background: radial-gradient(closest-side, rgba({{t.rgb}},0.45), rgba({{t.rgb}},0.14) 45%, transparent 75%); filter: blur(30px); pointer-events: none"></div>
+<div style="position: relative; max-width: 1000px; margin: 0 auto; text-align: center">
+<h1 class="fade" style="font-weight: 500; font-size: clamp(48px, 7.4vw, 108px); line-height: 0.96; letter-spacing: -0.055em; margin: 0">Work that runs while you don't.</h1>
+<p class="fade" style="animation-delay: .3s; font-size: 20px; line-height: 1.6; color: #BAC2D0; margin: 26px auto 0; max-width: 44ch">Missed calls, follow-ups, reviews, reminders and content, handled by systems we build once and keep tuned.</p>
+</div>
+
+<div style="position: relative; max-width: 1080px; margin: 80px auto 0; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 28px">
+<!-- BEFORE PHONE -->
+<div style="display: flex; flex-direction: column; align-items: center; gap: 16px">
+<span style="font-size: 15px; color: #A7B0C0">Before: no automation</span>
+<div style="width: 300px; height: 600px; box-sizing: border-box; border-radius: 46px; padding: 12px; background: linear-gradient(160deg, #2A3142, #0C0F17 40%, #1B2130); box-shadow: inset 0 1px 0 rgba(255,255,255,0.15), 0 40px 80px -30px rgba(0,0,0,0.9)">
+<div style="height: 100%; border-radius: 36px; background: #07090E; padding: 22px 20px; box-sizing: border-box; display: flex; flex-direction: column; position: relative; overflow: hidden">
+<div style="display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: #A7B0C0"><span>7:42 PM</span><span style="width: 80px; height: 22px; border-radius: 12px; background: #000"></span><span>5G</span></div>
+<div style="font-size: 24px; font-weight: 600; margin-top: 22px">Recents</div>
+<div class="mcCall" style="display: flex; gap: 12px; align-items: center; padding: 16px 0; border-bottom: 1px solid rgba(244,239,230,0.08)"><span class="ringing" style="width: 34px; height: 34px; border-radius: 50%; background: rgba(240,90,90,0.15); display: flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF7A7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2 M16 3l5 5 M21 3l-5 5"></path></svg></span><div><div style="font-size: 16px; font-weight: 600; color: #FF7A7A">Sarah M.</div><div style="font-size: 13px; color: #8F99AD">Missed call · 7:42 PM</div></div></div>
+<div style="display: flex; gap: 12px; align-items: center; padding: 16px 0; border-bottom: 1px solid rgba(244,239,230,0.08)"><span style="width: 34px; height: 34px; border-radius: 50%; background: rgba(240,90,90,0.12); display: flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF7A7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2 M16 3l5 5 M21 3l-5 5"></path></svg></span><div><div style="font-size: 16px; font-weight: 600; color: #FF7A7A">(305) 555-0199</div><div style="font-size: 13px; color: #8F99AD">Missed call · 6:15 PM</div></div></div>
+<div style="text-align: center; font-size: 14px; color: #77809A; margin-top: 46px">No text sent. No follow-up.</div>
+<div class="mcLost" style="margin-top: auto; border-radius: 18px; padding: 18px; background: linear-gradient(180deg, rgba(240,90,90,0.14), rgba(240,90,90,0.05)); box-shadow: inset 0 0 0 1px rgba(255,122,122,0.45), 0 0 40px -12px rgba(255,90,90,0.6)">
+<div style="font-size: 16px; font-weight: 600">Lead lost</div>
+<div style="font-size: 14px; line-height: 1.5; color: #DCE1EA; margin-top: 6px">Sarah calls the next spa on Google and books there.</div>
+<div style="font-size: 14px; font-weight: 600; color: #FF8A8A; margin-top: 8px">About $400 consult gone</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- FLOW ARROW -->
+<div style="display: flex; flex-direction: column; align-items: center; gap: 12px; width: 150px">
+<span style="font-size: 14px; color: {{t.l}}">add the flow</span>
+<div style="position: relative; width: 140px; height: 2px; background: linear-gradient(90deg, rgba(244,239,230,0.1), {{t.c}})"><span class="blink" style="position: absolute; right: -6px; top: -5px; width: 12px; height: 12px; border-radius: 50%; background: {{t.l}}; box-shadow: 0 0 18px {{t.c}}"></span></div>
+<span style="font-family: Fraunces, serif; font-weight: 300; font-size: 34px; background: {{t.g}}; -webkit-background-clip: text; background-clip: text; color: transparent">10 sec</span>
+<span style="font-size: 13px; color: #8F99AD; text-align: center">to the first text</span>
+</div>
+
+<!-- AFTER PHONE -->
+<div style="display: flex; flex-direction: column; align-items: center; gap: 16px">
+<span style="font-size: 15px; color: {{t.l}}">After: automation on</span>
+<div style="width: 300px; height: 600px; box-sizing: border-box; border-radius: 46px; padding: 1.5px; background: linear-gradient(160deg, {{t.l}}, rgba({{t.rgb}},0.2) 40%, {{t.c}}); box-shadow: 0 40px 80px -30px rgba(0,0,0,0.9), 0 0 80px -20px rgba({{t.rgb}},0.6)">
+<div style="height: 100%; border-radius: 45px; padding: 10.5px; box-sizing: border-box; background: linear-gradient(160deg, #2A3142, #0C0F17 40%, #1B2130)">
+<div style="height: 100%; border-radius: 36px; background: #07090E; padding: 22px 16px; box-sizing: border-box; display: flex; flex-direction: column; gap: 9px; overflow: hidden">
+<div style="display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: #A7B0C0"><span>7:42 PM</span><span style="width: 80px; height: 22px; border-radius: 12px; background: #000"></span><span>5G</span></div>
+<div style="text-align: center; margin-top: 10px"><div style="font-size: 17px; font-weight: 600">Glow Med Spa</div><div style="font-size: 12px; color: #8F99AD">fictional demo business</div></div>
+<div class="mcCall" style="text-align: center; font-size: 12px; color: #A7B0C0">Missed call · 7:42 PM</div>
+<div class="mc1" style="align-self: flex-end; max-width: 86%"><div style="background: {{t.g}}; color: {{t.ink}}; border-radius: 16px 16px 4px 16px; padding: 10px 12px; font-size: 13.5px; line-height: 1.4">Sorry we missed you, Sarah! Want to book your consult? Reply YES.</div><div style="font-size: 11px; color: #8F99AD; text-align: right; margin-top: 3px">auto-text, 10 seconds later</div></div>
+<div class="mc2" style="align-self: flex-start; background: #1C2232; border-radius: 16px 16px 16px 4px; padding: 9px 14px; font-size: 13.5px; font-weight: 600">YES</div>
+<div class="mc3" style="align-self: flex-end; max-width: 86%; background: {{t.g}}; color: {{t.ink}}; border-radius: 16px 16px 4px 16px; padding: 10px 12px; font-size: 13.5px; line-height: 1.4">Great! Pick a time: glowspa.demo/book</div>
+<div class="mc5" style="align-self: center; display: inline-flex; align-items: center; gap: 8px; padding: 9px 14px; border-radius: 999px; background: rgba(95,208,138,0.14); box-shadow: inset 0 0 0 1px rgba(95,208,138,0.6), 0 0 30px -8px rgba(95,208,138,0.7); font-size: 13px; font-weight: 600; color: #9BF0BC"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#9BF0BC" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"></path></svg>Booked: Thu 3:00 PM consult</div>
+<div class="mc6" style="align-self: flex-end; max-width: 86%"><div style="font-size: 11px; color: #8F99AD; text-align: center; margin-bottom: 4px">next day, automatically</div><div style="background: {{t.g}}; color: {{t.ink}}; border-radius: 16px 16px 4px 16px; padding: 10px 12px; font-size: 13.5px; line-height: 1.4">Thanks for coming in! Mind leaving us a Google review? glowspa.demo/r</div></div>
+<div class="mc7" style="margin-top: auto; text-align: center; font-size: 15px; font-weight: 600; color: #9BF0BC">Lead saved, review earned</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- STATS -->
+<section style="max-width: 1180px; margin: 0 auto; padding: 100px 28px 20px">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px">
+<sc-for list="{{stats}}" as="s" hint-placeholder-count="4">
+<div style="border-radius: 24px; padding: 28px; background: linear-gradient(180deg, #121B2C, #080B13); box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), 0 0 0 1px rgba(244,239,230,0.07)">
+<div style="font-family: Fraunces, serif; font-weight: 300; font-size: 60px; line-height: 1; letter-spacing: -0.04em; background: {{t.g}}; -webkit-background-clip: text; background-clip: text; color: transparent">{{s.n}}</div>
+<div style="font-size: 16px; line-height: 1.5; color: #DCE1EA; margin-top: 12px">{{s.l}}</div>
+<div style="font-size: 13px; color: #8F99AD; margin-top: 8px">{{s.src}}</div>
+</div>
+</sc-for>
+</div>
+</section>
+
+<!-- TIME SAVED -->
+<section style="max-width: 1180px; margin: 0 auto; padding: 60px 28px 20px">
+<dc-import name="TimeSaved" theme="{{theme}}" rows="{{saved}}" headline="13" note="MarginBird estimates for a service business handling 20–30 leads and 40–60 appointments a week." hint-size="100%,420px"></dc-import>
+</section>
+
+<!-- SIX SYSTEMS -->
+<section style="max-width: 1180px; margin: 0 auto; padding: 120px 28px 40px">
+<h2 style="font-weight: 500; font-size: clamp(40px, 5vw, 68px); line-height: 1; letter-spacing: -0.045em; margin: 0; text-align: center">Six systems, step by step.</h2>
+<div role="tablist" aria-label="Automations" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 40px">
+<sc-for list="{{tabs}}" as="tb" hint-placeholder-count="6">
+<button type="button" role="tab" aria-selected="{{tb.sel}}" onClick="{{tb.pick}}" style="font-family: Geist, sans-serif; font-size: 15px; font-weight: 500; padding: 11px 18px; min-height: 44px; border-radius: 999px; cursor: pointer; border: 1px solid {{tb.border}}; background: {{tb.bg}}; color: {{tb.fg}}; box-shadow: {{tb.glow}}">{{tb.label}}</button>
+</sc-for>
+</div>
+<div style="margin-top: 36px">
+<sc-for list="{{flows}}" as="f" hint-placeholder-count="1">
+<sc-if value="{{f.on}}" hint-placeholder-val="{{ true }}">
+<dc-import name="Player" theme="{{theme}}" steps="{{f.steps}}" label="{{f.label}}" hint-size="100%,420px"></dc-import>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; margin-top: 16px; font-size: 14px; color: #A7B0C0"><span>Built with {{f.tools}}</span><span style="color: {{t.l}}">{{f.saved}}</span></div>
+</sc-if>
+</sc-for>
+</div>
+</section>
+
+<!-- PROOF -->
+<section style="max-width: 1180px; margin: 0 auto; padding: 120px 28px 40px">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px">
+<sc-for list="{{proof}}" as="p" hint-placeholder-count="2">
+<a href="Work.dc.html" class="lift" style="text-decoration: none; color: #F4EFE6; border-radius: 26px; padding: 34px; background: linear-gradient(180deg, #141D30, #0A0F1A); box-shadow: inset 0 1px 0 rgba(255,255,255,0.09), 0 0 0 1px rgba(244,239,230,0.07); display: flex; flex-direction: column; gap: 14px">
+<span style="font-size: 14px; color: #A7B0C0">{{p.who}}</span>
+<span style="font-weight: 500; font-size: 28px; line-height: 1.1; letter-spacing: -0.03em">{{p.line}}</span>
+<span style="display: flex; align-items: baseline; gap: 14px; margin-top: 8px"><span style="font-family: Fraunces, serif; font-weight: 300; font-size: 28px; color: #8F99AD; text-decoration: line-through">{{p.before}}</span><span style="font-family: Fraunces, serif; font-weight: 300; font-size: 44px; background: {{t.g}}; -webkit-background-clip: text; background-clip: text; color: transparent">{{p.after}}</span></span>
+<span style="font-size: 15px; color: {{t.l}}">Read the case study</span>
+</a>
+</sc-for>
+</div>
+</section>
+
+<!-- CTA -->
+<section style="position: relative; padding: 140px 28px 120px; text-align: center">
+<div aria-hidden="true" class="breathe" style="position: absolute; bottom: -140px; left: 50%; transform: translateX(-50%); width: 1200px; height: 560px; background: radial-gradient(closest-side, rgba({{t.rgb}},0.4), rgba({{t.rgb}},0.12) 45%, transparent 75%); filter: blur(40px); pointer-events: none"></div>
+<h2 style="position: relative; font-weight: 500; font-size: clamp(44px, 6.4vw, 92px); line-height: 0.96; letter-spacing: -0.05em; margin: 0">Which of these is costing you most?</h2>
+<p style="position: relative; font-size: 19px; color: #DCE1EA; margin: 22px auto 0; max-width: 44ch">The free audit tells you, with the first system we would build.</p>
+<a href="FreeAudit.dc.html" class="pill" style="position: relative; display: inline-block; margin-top: 34px; background: {{t.g}}; color: {{t.ink}}; text-decoration: none; font-weight: 600; font-size: 17px; padding: 17px 28px; border-radius: 999px">Book my free audit</a>
+</section>
+
+<dc-import name="Footer" theme="{{theme}}" hint-size="100%,300px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","default":"violet","options":["ice","platinum","violet","gold"]},"$preview":{"width":1440,"height":6400}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { tab: 0 }; }
+  renderVals() {
+    const TH = {
+      ice: { c: '#7DB9FF', l: '#CFE6FF', rgb: '125,185,255', ink: '#04101F', base: '#040507', s: ['#3E78C9', '#CFE6FF', '#7DB9FF', '#F3F9FF', '#4F8BD9'] },
+      platinum: { c: '#DDE3EE', l: '#FFFFFF', rgb: '220,228,240', ink: '#0A0C10', base: '#050506', s: ['#8E97A8', '#F6F8FC', '#C3CAD6', '#FFFFFF', '#9AA3B3'] },
+      violet: { c: '#A78BFF', l: '#DCD2FF', rgb: '167,139,255', ink: '#120A2A', base: '#06050B', s: ['#6C4FE0', '#DCD2FF', '#A78BFF', '#F3EEFF', '#7A5CF0'] },
+      gold: { c: '#F0C462', l: '#FFE3A0', rgb: '240,196,98', ink: '#1A1206', base: '#07090F', s: ['#A9792A', '#F7DC94', '#E0B04E', '#FFF3C8', '#B8893A'] }
+    };
+    const theme = this.props.theme || 'violet';
+    const T0 = TH[theme] || TH.violet;
+    const t = { ...T0, g: 'linear-gradient(110deg, ' + T0.s[0] + ' 0%, ' + T0.s[1] + ' 28%, ' + T0.s[2] + ' 52%, ' + T0.s[3] + ' 72%, ' + T0.s[4] + ' 100%)' };
+    const F = [
+      { label: 'Missed-call text-back', tools: 'Twilio, GoHighLevel, OpenAI', saved: 'About 3–5 h/wk back (estimate)', steps: [
+        { t: 'A call goes unanswered', d: 'The phone system spots a missed or after-hours call the moment it happens.', icon: 'missed' },
+        { t: 'A text goes out in seconds', d: 'The caller gets a friendly text from your business number before they dial anyone else.', icon: 'send', auto: true },
+        { t: 'They reply by text', d: 'The conversation lands in one shared inbox, so nothing gets lost in voicemail.', icon: 'chat', auto: true },
+        { t: 'AI qualifies the request', d: 'It asks what they need and when, and offers your booking link.', icon: 'wand', auto: true },
+        { t: 'Contact logged in your CRM', d: 'Name, number and request are saved as a new lead without anyone typing.', icon: 'crm', auto: true },
+        { t: 'You get the hot ones', d: 'Ready-to-book leads ping your phone, so you only call back the ones worth it.', icon: 'bell' }
+      ] },
+      { label: 'Speed to lead', tools: 'GoHighLevel, Zapier or Make, OpenAI', saved: 'About 4–5 h/wk back (estimate)', steps: [
+        { t: 'A form comes in', d: 'A website, Facebook or Google lead lands in your CRM.', icon: 'form' },
+        { t: 'Reply in under a minute', d: 'A personal text and email go out with your booking link.', icon: 'bolt', auto: true },
+        { t: 'Questions answered', d: 'An assistant handles FAQs, pricing ranges and availability day or night.', icon: 'chat', auto: true },
+        { t: 'Polite follow-ups', d: 'No reply? Nudges go out on day 1, 3 and 7 by text and email.', icon: 'loop', auto: true },
+        { t: 'Booking stops the sequence', d: 'The appointment syncs to your calendar and the pipeline updates itself.', icon: 'calendar', auto: true },
+        { t: 'Cold leads parked', d: 'Leads who go quiet move to a reactivation list for later.', icon: 'users', auto: true }
+      ] },
+      { label: 'Review requests', tools: 'GoHighLevel, Birdeye or NiceJob', saved: 'About 2 h/wk back (estimate)', steps: [
+        { t: 'Job marked done', d: 'A finished appointment or job triggers the flow.', icon: 'check' },
+        { t: 'A one-tap request', d: 'A few hours later the customer gets a text with your Google review link.', icon: 'star', auto: true },
+        { t: 'One gentle reminder', d: 'If they have not left one, a reminder goes out three days later.', icon: 'bell', auto: true },
+        { t: 'Replies drafted for you', d: 'New reviews get a drafted response for you to approve or edit.', icon: 'pen', auto: true },
+        { t: 'Weekly rating report', d: 'You see review count and average rating move week by week.', icon: 'chart', auto: true }
+      ] },
+      { label: 'Reminders and rebooking', tools: 'GoHighLevel, Vagaro or Jobber, Twilio', saved: 'About 4–5 h/wk back (estimate)', steps: [
+        { t: 'A booking is made', d: 'Online, by phone or in your booking system.', icon: 'calendar' },
+        { t: 'Instant confirmation', d: 'Text and email with the details and an add-to-calendar link.', icon: 'send', auto: true },
+        { t: 'Reminders at 24h and 2h', d: 'One tap to confirm or reschedule, so fewer no-shows.', icon: 'bell', auto: true },
+        { t: 'No-shows rebooked', d: 'Missed appointments get a reschedule link automatically.', icon: 'loop', auto: true },
+        { t: 'Thank-you and rebook', d: 'After the visit: a thank-you, a review request and a nudge to book the next one.', icon: 'star', auto: true }
+      ] },
+      { label: 'Content pipeline', tools: 'Drive or Slack, OpenAI, Canva, Make, Buffer', saved: 'Jake: $2,000/mo down to about $300/mo', steps: [
+        { t: 'Drop the raw material', d: 'A screenshot, screen recording or voice note goes into one folder.', icon: 'camera' },
+        { t: 'Words written for you', d: 'Captions, hooks and threads drafted in your voice.', icon: 'wand', auto: true },
+        { t: 'Brand applied', d: 'Each piece is formatted into on-brand posts and clips for every channel.', icon: 'palette', auto: true },
+        { t: 'Scheduled everywhere', d: 'Posts go out to fixed channels at set times.', icon: 'send', auto: true },
+        { t: 'Community kept warm', d: 'Slack announcements go out and member questions are routed.', icon: 'users', auto: true },
+        { t: 'Weekly results', d: 'Engagement comes back in a short report.', icon: 'chart', auto: true }
+      ] },
+      { label: 'Menu auto-update', tools: 'OpenAI vision, Make, your CMS', saved: 'Le Bobadel: a monthly hire replaced for about $200–$250/mo', steps: [
+        { t: 'Snap the board', d: 'Staff photograph the handwritten daily menu.', icon: 'camera' },
+        { t: 'AI reads the handwriting', d: 'Dishes, prices and dietary tags are pulled out.', icon: 'eye', auto: true },
+        { t: 'Cleaned into house style', d: 'Items are formatted the same way every day.', icon: 'grid', auto: true },
+        { t: 'One-tap approval', d: 'A preview arrives by text, if you want to check it.', icon: 'check' },
+        { t: 'Live on schedule', d: 'The website menu updates at the same time every day.', icon: 'globe', auto: true },
+        { t: 'Shared everywhere', d: 'The same menu goes to Google and an Instagram story.', icon: 'send', auto: true }
+      ] }
+    ];
+    const tab = this.state.tab;
+    return {
+      t, theme,
+      tabs: F.map((f, i) => { const on = i === tab; return { label: f.label, sel: on ? 'true' : 'false', pick: () => this.setState({ tab: i }),
+        bg: on ? 'rgba(' + T0.rgb + ',0.14)' : 'transparent', fg: on ? T0.l : '#C9CFDB', border: on ? 'rgba(' + T0.rgb + ',0.6)' : 'rgba(244,239,230,0.14)', glow: on ? '0 0 30px -10px ' + T0.c : 'none' }; }),
+      flows: F.map((f, i) => ({ ...f, on: i === tab })),
+      stats: [
+        { n: '62%', l: 'of calls to businesses go unanswered by a live person', src: '411 Locals, 2024' },
+        { n: '7×', l: 'more likely to qualify a lead when you reply within an hour', src: 'Harvard Business Review, 2011' },
+        { n: '21×', l: 'better odds of qualifying at 5 minutes than at 30', src: 'MIT / InsideSales, 2007' },
+        { n: '83%', l: 'of customers asked for a review go on to leave one', src: 'BrightLocal, 2026' }
+      ],
+      saved: [
+        { label: 'Missed calls', before: 4, after: 0.75 },
+        { label: 'Lead follow-up', before: 5, after: 1 },
+        { label: 'Review requests', before: 2.5, after: 0.25 },
+        { label: 'Reminders and rebooking', before: 5, after: 0.75 }
+      ],
+      proof: [
+        { who: 'Jake the Stock Guy · content pipeline', line: 'He went back to trading. The content runs itself.', before: '$2,000/mo', after: '$300/mo' },
+        { who: 'Le Bobadel Market · menu auto-update', line: 'We were automating before it was trendy.', before: 'A monthly hire', after: '$200–$250/mo' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

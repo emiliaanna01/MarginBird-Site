@@ -1,0 +1,20 @@
+{
+  "name": "marginbird-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "esbuild": "^0.24.0",
+    "parse5": "^7.2.1",
+    "preact": "^10.24.3",
+    "preact-render-to-string": "^6.5.11",
+    "sharp": "^0.33.5"
+  },
+  "type": "module"
+}

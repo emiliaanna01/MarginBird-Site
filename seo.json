@@ -1,0 +1,357 @@
+{
+  "site": {
+    "name": "MarginBird",
+    "url": "https://marginbird.netlify.app",
+    "defaultOgAlt": "MarginBird: Agencies sell tasks. We build business systems."
+  },
+  "pages": {
+    "/": {
+      "title": "MarginBird: Brand, Websites, Ads and Automation Agency",
+      "description": "Digital agency for US small businesses: brand, websites, Meta and Google ads, social and automation, built as systems you own. Book a free audit.",
+      "h1Check": "Agencies sell tasks. We build business systems."
+    },
+    "/services/automation": {
+      "title": "Small Business Automation: Leads and Reviews | MarginBird",
+      "description": "Small business automation for missed-call text-back, speed to lead, review requests, reminders and content pipelines. Built once, kept tuned, owned by you.",
+      "h1Check": "Work that runs while you don't."
+    },
+    "/services/paid-ads": {
+      "title": "Meta and Google Ads for Local Businesses | MarginBird",
+      "description": "Meta and Google ads management with working tracking and leads texted in under a minute. Launch from $597, management $697/mo. We never mark up ad spend.",
+      "h1Check": "Ads that end in a booked call."
+    },
+    "/services/websites": {
+      "title": "Small Business Websites Live in 14 Days | MarginBird",
+      "description": "Premium small business websites live in 14 days, built to load in under two seconds and take bookings on their own. See client sites and get a speed check.",
+      "h1Check": "Live in 14 days. Fast forever."
+    },
+    "/services/social-growth": {
+      "title": "Social Media Content System: Reels and Posts | MarginBird",
+      "description": "A social media content system that turns one recording into reels, carousels and stories, scheduled and answered for you. Record once, post all month.",
+      "h1Check": "Record once. Post all month."
+    },
+    "/services/brand-and-design": {
+      "title": "Brand Identity Design and Template System | MarginBird",
+      "description": "Brand identity design for small businesses: logo, colour and type system, plus locked templates so every post, page and ad stays on-brand. Kit from $750.",
+      "h1Check": "Look as established as you are."
+    },
+    "/work": {
+      "title": "Client Work: Systems, Websites and Social | MarginBird",
+      "description": "Agency case studies and client work: automation systems, websites and Instagram audiences we run for creators, restaurants, med spas and home services.",
+      "h1Check": "Real clients. Real numbers."
+    },
+    "/pricing": {
+      "title": "Agency Pricing: Websites, Growth and Ads Plans | MarginBird",
+      "description": "Published agency pricing: Launch $997 plus $149/mo care, Grow $997/mo, Scale $1,997/mo, ads from $597. Written scope with exact deliverables for every client.",
+      "h1Check": "Published prices. Written scope."
+    },
+    "/free-audit": {
+      "title": "Free Business Audit for Small Businesses | MarginBird",
+      "description": "Get a free business audit: a short video review of your brand, website, ads, social and tools, plus one fix you can use right away. Reply in one business day.",
+      "h1Check": "Your first fix is on us."
+    },
+    "/privacy": {
+      "title": "Privacy Policy: How We Handle Your Data | MarginBird",
+      "description": "MarginBird privacy policy: what information MarginBird LLC collects through this website, why we collect it and the choices you have, in plain English.",
+      "h1Check": "Plain English, no small print."
+    },
+    "/terms": {
+      "title": "Terms of Service for Website and Clients | MarginBird",
+      "description": "MarginBird terms of service: the terms for using the MarginBird website, operated by MarginBird LLC, and the basics of how we work with client businesses.",
+      "h1Check": "Plain English, no small print."
+    },
+    "/sms-terms": {
+      "title": "SMS Terms for Text Messages and Opt-Out | MarginBird",
+      "description": "MarginBird SMS terms cover text messages sent by MarginBird LLC and by texting systems MarginBird builds and manages for client businesses, in plain English.",
+      "h1Check": "Plain English, no small print."
+    }
+  },
+  "schema": {
+    "organization": {
+      "@context": "https://schema.org",
+      "@type": [
+        "Organization",
+        "ProfessionalService"
+      ],
+      "@id": "https://marginbird.netlify.app/#org",
+      "name": "MarginBird",
+      "legalName": "MarginBird LLC",
+      "url": "https://marginbird.netlify.app",
+      "logo": "https://marginbird.netlify.app/icon-512.png",
+      "image": "https://marginbird.netlify.app/icon-512.png",
+      "slogan": "Agencies sell tasks. We build business systems.",
+      "description": "MarginBird is an international digital agency serving mostly US small businesses: creators, traders and experts, restaurants, med spas and home services. It builds brand and design, websites, Meta and Google ads, social content systems and automations that clients own.",
+      "founder": [
+        {
+          "@type": "Person",
+          "name": "Khandaker Ayman",
+          "jobTitle": "Founder"
+        },
+        {
+          "@type": "Person",
+          "name": "Manjir Ahmed Bin Rouf Rahat",
+          "jobTitle": "Co-founder & Chief Design Officer"
+        }
+      ],
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      },
+      "sameAs": [
+        "https://www.fiverr.com/humanbeing489/do-professional-instagram-and-facebook-management"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "url": "https://marginbird.netlify.app/free-audit",
+        "areaServed": "US",
+        "availableLanguage": "English"
+      },
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "name": "Launch",
+          "description": "Website plan: $997 one-time plus $149/mo care, month-to-month.",
+          "price": "997",
+          "priceCurrency": "USD",
+          "url": "https://marginbird.netlify.app/pricing",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Launch website plan"
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Grow",
+          "description": "$997 a month plus $500 setup. 3-month minimum, then monthly.",
+          "price": "997",
+          "priceCurrency": "USD",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "997",
+            "priceCurrency": "USD",
+            "unitText": "MONTH"
+          },
+          "url": "https://marginbird.netlify.app/pricing",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Grow growth plan"
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Scale",
+          "description": "$1,997 a month plus $500 setup, adds paid ads. 3-month minimum. Ad spend is billed to the client.",
+          "price": "1997",
+          "priceCurrency": "USD",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "1997",
+            "priceCurrency": "USD",
+            "unitText": "MONTH"
+          },
+          "url": "https://marginbird.netlify.app/pricing",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Scale growth and paid ads plan"
+          }
+        }
+      ]
+    },
+    "services": {
+      "/services/automation": {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "@id": "https://marginbird.netlify.app/services/automation#service",
+        "name": "Business automation",
+        "serviceType": "Business process automation",
+        "url": "https://marginbird.netlify.app/services/automation",
+        "provider": {
+          "@id": "https://marginbird.netlify.app/#org"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "United States"
+        },
+        "description": "Missed-call text-back, speed-to-lead follow-up, review requests, reminders and rebooking, content pipelines and menu auto-updates, built once and kept tuned, with leads logged in your CRM."
+      },
+      "/services/paid-ads": {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "@id": "https://marginbird.netlify.app/services/paid-ads#service",
+        "name": "Paid ads on Meta and Google",
+        "serviceType": "Pay-per-click advertising management",
+        "url": "https://marginbird.netlify.app/services/paid-ads",
+        "provider": {
+          "@id": "https://marginbird.netlify.app/#org"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "United States"
+        },
+        "description": "Meta and Google campaigns with tested tracking, an offer-specific landing page, 4 to 6 creatives and leads routed to your CRM with a text in under a minute. Ad spend is paid directly to the platform and never marked up.",
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "Campaign launch",
+            "price": "597",
+            "priceCurrency": "USD",
+            "description": "Tracking, one campaign, 4-6 creatives, a landing page and 30 days of management."
+          },
+          {
+            "@type": "Offer",
+            "name": "Ads management",
+            "price": "697",
+            "priceCurrency": "USD",
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "price": "697",
+              "priceCurrency": "USD",
+              "unitText": "MONTH"
+            },
+            "description": "One platform, up to $3K spend, 4 new creatives a month, monthly Loom report."
+          },
+          {
+            "@type": "Offer",
+            "name": "Launch and 3 months",
+            "price": "2197",
+            "priceCurrency": "USD",
+            "description": "Everything in the launch, then three months of management."
+          }
+        ]
+      },
+      "/services/websites": {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "@id": "https://marginbird.netlify.app/services/websites#service",
+        "name": "Websites",
+        "serviceType": "Website design and development",
+        "url": "https://marginbird.netlify.app/services/websites",
+        "provider": {
+          "@id": "https://marginbird.netlify.app/#org"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "United States"
+        },
+        "description": "Premium websites live in 14 days, built to load in under two seconds, take bookings on their own and stay up to date, with a performance check on every launch and every month after."
+      },
+      "/services/social-growth": {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "@id": "https://marginbird.netlify.app/services/social-growth#service",
+        "name": "Social growth",
+        "serviceType": "Social media content and management",
+        "url": "https://marginbird.netlify.app/services/social-growth",
+        "provider": {
+          "@id": "https://marginbird.netlify.app/#org"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "United States"
+        },
+        "description": "A content system that turns one recording session into reels, carousels and stories, scheduled and answered for you."
+      },
+      "/services/brand-and-design": {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "@id": "https://marginbird.netlify.app/services/brand-and-design#service",
+        "name": "Brand and design",
+        "serviceType": "Brand identity design",
+        "url": "https://marginbird.netlify.app/services/brand-and-design",
+        "provider": {
+          "@id": "https://marginbird.netlify.app/#org"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "United States"
+        },
+        "description": "A brand identity and a locked template system: positioning and voice, logo, colour and type system, brand kit, templates and rollout, so every post, page and ad comes out on-brand.",
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "Brand starter kit",
+            "price": "750",
+            "priceCurrency": "USD",
+            "description": "Logo suite, colours, type and locked templates. One-time, or included in Scale."
+          }
+        ]
+      }
+    },
+    "breadcrumbs": true
+  },
+  "llms_txt": "# MarginBird\n\n> MarginBird (MarginBird LLC) is an international digital agency serving mostly US small businesses: creators, traders and experts, restaurants, med spas and home services. Its positioning is \"Agencies sell tasks. We build business systems.\" It builds brand and design, websites, paid ads on Meta and Google, social content systems and automations, set up in the client's name so the client owns everything. It publishes its prices and offers a free business audit: a short video audit plus one fix you can use right away.\n\n## Services\n\n- [Brand and design](https://marginbird.netlify.app/services/brand-and-design): Brand identity and a locked template system so every post, page and ad stays on-brand. Brand starter kit $750 one-time, or included in Scale.\n- [Websites](https://marginbird.netlify.app/services/websites): Premium websites live in 14 days, built to load in under two seconds and take bookings on their own.\n- [Paid ads](https://marginbird.netlify.app/services/paid-ads): Meta and Google campaigns with working tracking and leads texted in under a minute. Ad spend is paid directly to the platform and never marked up.\n- [Social growth](https://marginbird.netlify.app/services/social-growth): A content system that turns one recording into reels, carousels and stories, scheduled and answered.\n- [Automation](https://marginbird.netlify.app/services/automation): Missed-call text-back, lead follow-up, review requests, reminders and rebooking, content automation, CRM and AI assistants.\n\n## Pricing\n\n- [Pricing](https://marginbird.netlify.app/pricing): Launch $997 once plus $149/mo care (month-to-month). Grow $997/mo plus $500 setup (3-month minimum). Scale $1,997/mo plus $500 setup, adds paid ads (3-month minimum; ad spend billed to the client).\n- Paid ads: campaign launch $597; management $697/mo; launch and 3 months $2,197.\n- Guarantees stated on the pricing page: site live in 14 days or the first month of care is free; ad campaigns live within 7 days of approval.\n- [Free business audit](https://marginbird.netlify.app/free-audit): Free short video audit of brand, website, ads, social and tools, with one fix you can use right away.\n\n## Company\n\n- Legal name: MarginBird LLC\n- Founders: Khandaker Ayman (Founder); Manjir Ahmed Bin Rouf Rahat (Co-founder & Chief Design Officer)\n- Area served: United States\n- Book a 30-minute call: https://calendly.com/aymankhak10/30min\n- Founder's Fiverr gig (Instagram and Facebook management): https://www.fiverr.com/humanbeing489/do-professional-instagram-and-facebook-management\n\n## Pages\n\n- [Home](https://marginbird.netlify.app/): Overview of services, client results, process, pricing and the free audit.\n- [Work](https://marginbird.netlify.app/work): Case studies, client websites and Instagram audiences run for clients.\n- [Pricing](https://marginbird.netlify.app/pricing): Published plans, ads pricing, brand kit and guarantees.\n- [Free audit](https://marginbird.netlify.app/free-audit): Request the free business audit.\n- [Privacy Policy](https://marginbird.netlify.app/privacy): What MarginBird LLC collects through the website and why.\n- [Terms of Service](https://marginbird.netlify.app/terms): Terms for using the website and working with MarginBird.\n- [SMS Terms](https://marginbird.netlify.app/sms-terms): Terms for text messages sent by MarginBird and the texting systems it builds for clients.\n",
+  "keywords_per_page": {
+    "/": [
+      "digital agency for small businesses",
+      "small business marketing agency",
+      "website ads and automation agency",
+      "business systems agency",
+      "free business audit"
+    ],
+    "/services/automation": [
+      "small business automation",
+      "missed call text back",
+      "automated review requests",
+      "speed to lead automation",
+      "appointment reminder automation"
+    ],
+    "/services/paid-ads": [
+      "meta and google ads management",
+      "facebook ads for local business",
+      "med spa ads agency",
+      "google ads management small business",
+      "ads with no markup on ad spend"
+    ],
+    "/services/websites": [
+      "small business website design",
+      "website in 14 days",
+      "fast website for small business",
+      "website with online booking"
+    ],
+    "/services/social-growth": [
+      "social media content system",
+      "instagram reels management",
+      "social media management for small business",
+      "content repurposing service"
+    ],
+    "/services/brand-and-design": [
+      "brand identity design",
+      "small business branding kit",
+      "logo and brand templates",
+      "brand starter kit"
+    ],
+    "/work": [
+      "digital agency case studies",
+      "small business website examples",
+      "instagram growth results",
+      "automation case study"
+    ],
+    "/pricing": [
+      "digital agency pricing",
+      "website design pricing",
+      "social media management pricing",
+      "ads management pricing"
+    ],
+    "/free-audit": [
+      "free business audit",
+      "free marketing audit",
+      "free website audit",
+      "free video audit small business"
+    ],
+    "/privacy": [
+      "marginbird privacy policy",
+      "marginbird data collection"
+    ],
+    "/terms": [
+      "marginbird terms of service",
+      "marginbird client terms",
+      "marginbird website terms"
+    ],
+    "/sms-terms": [
+      "marginbird sms terms",
+      "sms opt out terms",
+      "text message terms small business"
+    ]
+  }
+}

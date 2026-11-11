@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Site footer</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="/_blob/f901add9d736276c532f1e80529fbc09">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>body{margin:0}</style>
+</helmet>
+<footer style="font-family: Geist, system-ui, sans-serif; color: #F4EFE6; border-top: 1px solid rgba(244,239,230,0.07)">
+<div style="max-width: 1180px; margin: 0 auto; padding: 64px 28px 40px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px">
+<div style="max-width: 340px">
+<a href="Main.dc.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #F4EFE6"><svg width="30" height="22" viewBox="0 0 30 22" fill="none" aria-hidden="true"><path d="M12.5 12.5c3.2-5.4 7.2-7.4 11.6-6.2l5.4-4.8-1.8 7.4c-2 4-6.6 6-12.6 5.3z" fill="{{c}}"></path></svg><span style="font-weight: 600; font-size: 19px; letter-spacing: -0.03em">MarginBird</span></a>
+<p style="font-size: 15px; line-height: 1.6; color: #A7B0C0; margin: 14px 0 0">Agencies sell tasks. We build business systems.</p>
+<a href="FreeAudit.dc.html" style="display: inline-block; margin-top: 18px; font-size: 15px; color: {{l}}; text-decoration-color: {{c}}; text-underline-offset: 4px">Book my free audit</a>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 56px; font-size: 15px">
+<div style="display: flex; flex-direction: column; gap: 12px"><span style="color: #8F99AD">Services</span>
+<a href="Brand.dc.html" style="text-decoration: none; color: #DCE1EA">Brand and design</a>
+<a href="Websites.dc.html" style="text-decoration: none; color: #DCE1EA">Websites</a>
+<a href="Ads.dc.html" style="text-decoration: none; color: #DCE1EA">Paid ads</a>
+<a href="Social.dc.html" style="text-decoration: none; color: #DCE1EA">Social growth</a>
+<a href="Automation.dc.html" style="text-decoration: none; color: #DCE1EA">Automation</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px"><span style="color: #8F99AD">Company</span>
+<a href="Main.dc.html" style="text-decoration: none; color: #DCE1EA">Home</a>
+<a href="Work.dc.html" style="text-decoration: none; color: #DCE1EA">Work</a>
+<a href="Pricing.dc.html" style="text-decoration: none; color: #DCE1EA">Pricing</a>
+<a href="FreeAudit.dc.html" style="text-decoration: none; color: #DCE1EA">Free audit</a>
+</div>
+</div>
+</div>
+<div style="max-width: 1180px; margin: 0 auto; padding: 24px 28px 36px; border-top: 1px solid rgba(244,239,230,0.06); display: flex; flex-wrap: wrap; gap: 12px 28px; justify-content: space-between; font-size: 14px; color: #8F99AD">
+<span>© 2026 {{bizName}}. All rights reserved.</span>
+<span style="display: flex; flex-wrap: wrap; gap: 20px"><a href="mailto:{{email}}" style="color: #BAC2D0; text-decoration: none">{{email}}</a><a href="Legal.dc.html" style="color: #BAC2D0; text-decoration: none">Privacy</a><a href="Legal.dc.html" style="color: #BAC2D0; text-decoration: none">Terms</a><a href="Legal.dc.html" style="color: #BAC2D0; text-decoration: none">SMS Terms</a></span>
+</div>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","default":"violet","options":["ice","platinum","violet","gold"]},"bizName":{"editor":"text","default":"MarginBird LLC"},"email":{"editor":"text","default":"[Business email]"},"$preview":{"width":1440,"height":300}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const TH = { ice: ['#7DB9FF', '#CFE6FF'], platinum: ['#DDE3EE', '#FFFFFF'], violet: ['#A78BFF', '#DCD2FF'], gold: ['#F0C462', '#FFE3A0'] };
+    const v = TH[this.props.theme] || TH.violet;
+    return { c: v[0], l: v[1], bizName: this.props.bizName ?? 'MarginBird LLC', email: this.props.email ?? '[Business email]' };
+  }
+}
+</script>
+</body>
+</html>

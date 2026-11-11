@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Paid ads | MarginBird</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="/_blob/f901add9d736276c532f1e80529fbc09">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Fraunces:opsz,wght@9..144,300;9..144,400&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#040507}
+@keyframes adServe{0%,8%{opacity:0;transform:translateY(14px) scale(.9)}16%,86%{opacity:1;transform:none}96%,100%{opacity:0}}
+@keyframes adClick{0%,40%{box-shadow:none;filter:none}46%,60%{box-shadow:0 0 0 2px var(--acc),0 0 24px var(--acc);filter:brightness(1.3)}70%,100%{box-shadow:none;filter:none}}
+@keyframes adTravel{0%,46%{left:0%;opacity:0}50%{opacity:1}74%{left:100%;opacity:1}80%,100%{left:100%;opacity:0}}
+@keyframes adRow{0%,70%{opacity:0;transform:translateY(-10px)}76%,92%{opacity:1;transform:none}100%{opacity:0}}
+@keyframes adSms{0%,78%{opacity:0;transform:translateY(8px) scale(.95)}84%,92%{opacity:1;transform:none}100%{opacity:0}}
+.adServe{animation:adServe 9s cubic-bezier(.2,.7,.1,1) infinite}
+.adClick{animation:adClick 9s ease infinite}
+.adTravel{animation:adTravel 9s cubic-bezier(.45,0,.55,1) infinite}
+.adRow{animation:adRow 9s cubic-bezier(.2,.7,.1,1) infinite}
+.adSms{animation:adSms 9s cubic-bezier(.2,.7,.1,1) infinite}
+@media (prefers-reduced-motion: reduce){.adServe,.adClick,.adTravel,.adRow,.adSms{animation:none;opacity:1}}
+</style>
+</helmet>
+<div style="--acc: {{t.c}}; --accl: {{t.l}}; --rgb: {{t.rgb}}; font-family: Geist, system-ui, sans-serif; color: #F4EFE6; background: {{t.base}}; width: 100%; box-sizing: border-box; overflow: hidden">
+<dc-import name="Nav" theme="{{theme}}" current="ads" hint-size="100%,72px"></dc-import>
+
+<section style="position: relative; padding: 150px 28px 40px">
+<div aria-hidden="true" class="beam" style="position: absolute; top: -240px; left: 50%; width: 1400px; height: 600px; background: radial-gradient(closest-side, rgba({{t.rgb}},0.42), rgba({{t.rgb}},0.12) 45%, transparent 75%); filter: blur(30px); pointer-events: none"></div>
+<div style="position: relative; max-width: 1000px; margin: 0 auto; text-align: center">
+<h1 class="fade" style="font-weight: 500; font-size: clamp(48px, 7.4vw, 108px); line-height: 0.96; letter-spacing: -0.055em; margin: 0">Ads that end in a booked call.</h1>
+<p class="fade" style="animation-delay: .3s; font-size: 20px; line-height: 1.6; color: #BAC2D0; margin: 26px auto 0; max-width: 46ch">Meta and Google campaigns with tracking that works, wired straight into a reply in under a minute.</p>
+</div>
+
+<!-- served → click → lead → reply -->
+<div style="position: relative; max-width: 1120px; margin: 80px auto 0; overflow-x: auto">
+<div style="min-width: 980px; display: flex; align-items: center; gap: 28px; padding: 10px">
+<div style="display: grid; grid-template-columns: repeat(2, 120px); gap: 16px">
+<sc-for list="{{phones}}" as="p" hint-placeholder-count="4">
+<div style="height: 200px; border-radius: 24px; padding: 6px; background: linear-gradient(160deg, #2A3142, #0C0F17 40%, #1B2130); box-shadow: inset 0 1px 0 rgba(255,255,255,0.14), 0 20px 40px -20px rgba(0,0,0,0.9)">
+<div style="height: 100%; border-radius: 19px; background: #07090E; padding: 14px 10px; box-sizing: border-box">
+<div class="adServe" style="animation-delay: {{p.d}}; border-radius: 10px; background: #121827; box-shadow: inset 0 0 0 1px rgba(244,239,230,0.08); padding: 6px">
+<div style="display: flex; align-items: center; gap: 5px; margin-bottom: 5px"><span style="width: 14px; height: 14px; border-radius: 50%; background: {{t.g}}"></span><span style="font-size: 8.5px; font-weight: 600; line-height: 1.1">Glow Med Spa<span style="display: block; font-weight: 400; color: #8F99AD">Sponsored</span></span></div>
+<div style="position: relative; height: 62px; border-radius: 6px; overflow: hidden; background: radial-gradient(circle at 30% 30%, rgba({{t.rgb}},0.55), #1B2338 60%, #0B101B); display: flex; align-items: flex-end; padding: 6px; box-sizing: border-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F4EFE6" stroke-width="1.6" stroke-linecap="round" aria-hidden="true" style="position: absolute; right: 6px; top: 6px; filter: drop-shadow(0 0 6px {{t.c}})"><path d="M12 3v4 M12 17v4 M3 12h4 M17 12h4 M6 6l2.5 2.5 M15.5 15.5L18 18 M6 18l2.5-2.5 M15.5 8.5L18 6"></path></svg><span style="font-size: 10px; font-weight: 700; line-height: 1.1; letter-spacing: -0.01em">{{p.offer}}</span></div>
+<div style="font-size: 8.5px; color: #BAC2D0; margin-top: 5px; line-height: 1.25">{{p.line}}</div>
+<div class="{{p.cls}}" style="margin-top: 6px; border-radius: 6px; background: {{t.g}}; color: {{t.ink}}; font-size: 9px; font-weight: 700; text-align: center; padding: 4px 0">Book now</div>
+</div>
+</div>
+</div>
+</sc-for>
+</div>
+<div style="flex: 1; position: relative; height: 2px; background: linear-gradient(90deg, rgba(244,239,230,0.08), rgba({{t.rgb}},0.5))">
+<span class="adTravel" style="position: absolute; top: -8px; width: 18px; height: 18px; margin-left: -9px; border-radius: 50%; background: {{t.l}}; box-shadow: 0 0 0 6px rgba({{t.rgb}},0.18), 0 0 30px 8px {{t.c}}"></span>
+<span style="position: absolute; left: 50%; top: 14px; transform: translateX(-50%); font-size: 13px; color: #A7B0C0; white-space: nowrap">tap becomes a lead</span>
+</div>
+<div style="width: 300px; border-radius: 22px; padding: 18px; background: linear-gradient(180deg, #141D30, #0A0F1A); box-shadow: inset 0 1px 0 rgba(255,255,255,0.1), 0 0 0 1px rgba(244,239,230,0.08), 0 0 60px -20px rgba({{t.rgb}},0.5)">
+<div style="display: flex; justify-content: space-between; font-size: 13px; color: #A7B0C0"><span>Leads</span><span>CRM</span></div>
+<div class="adRow" style="display: flex; align-items: center; gap: 10px; margin-top: 12px; padding: 10px; border-radius: 12px; background: rgba({{t.rgb}},0.12); box-shadow: inset 0 0 0 1px rgba({{t.rgb}},0.5)"><span style="width: 28px; height: 28px; border-radius: 50%; background: {{t.g}}; color: {{t.ink}}; font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center">SM</span><div style="flex: 1"><div style="font-size: 14px; font-weight: 600">Sarah M.</div><div style="font-size: 12px; color: #A7B0C0">HydraFacial · Meta ad · just now</div></div><span style="font-size: 11px; font-weight: 700; color: {{t.ink}}; background: {{t.g}}; padding: 3px 8px; border-radius: 999px">New</span></div>
+<div style="display: flex; align-items: center; gap: 10px; margin-top: 8px; padding: 10px; border-radius: 12px; background: rgba(244,239,230,0.03)"><span style="width: 28px; height: 28px; border-radius: 50%; background: #222C40; color: #DCE1EA; font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center">JR</span><div style="flex: 1"><div style="font-size: 14px; font-weight: 500">James R.</div><div style="font-size: 12px; color: #8F99AD">Botox consult · Google · booked</div></div><span style="font-size: 11px; color: #9BF0BC">Booked</span></div>
+<div style="display: flex; align-items: center; gap: 10px; margin-top: 8px; padding: 10px; border-radius: 12px; background: rgba(244,239,230,0.03)"><span style="width: 28px; height: 28px; border-radius: 50%; background: #222C40; color: #DCE1EA; font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center">AL</span><div style="flex: 1"><div style="font-size: 14px; font-weight: 500">Ana L.</div><div style="font-size: 12px; color: #8F99AD">Laser package · Meta · replied</div></div><span style="font-size: 11px; color: {{t.l}}">Replied</span></div>
+<div style="font-size: 11px; color: #77809A; margin-top: 10px">Demo data, fictional med spa</div>
+<div class="adSms" style="margin-top: 14px; display: flex; align-items: flex-end; gap: 8px"><div style="flex: 1; background: {{t.g}}; color: {{t.ink}}; border-radius: 14px 14px 4px 14px; padding: 9px 12px; font-size: 13px; line-height: 1.4">Hi! Thanks for reaching out. Here is a link to pick a time.</div></div>
+<div class="adSms" style="text-align: right; font-size: 12px; color: {{t.l}}; margin-top: 6px">sent in 42 seconds</div>
+</div>
+</div>
+</div>
+</section>
+
+<section style="max-width: 1180px; margin: 0 auto; padding: 120px 28px 20px">
+<h2 style="font-weight: 500; font-size: clamp(40px, 5vw, 68px); line-height: 1; letter-spacing: -0.045em; margin: 0 0 40px; text-align: center">From offer to booked call.</h2>
+<dc-import name="Player" theme="{{theme}}" steps="{{steps}}" label="Launch and run a campaign" hint-size="100%,420px"></dc-import>
+</section>
+
+<section style="max-width: 1180px; margin: 0 auto; padding: 100px 28px 20px">
+<dc-import name="TimeSaved" theme="{{theme}}" rows="{{saved}}" headline="7" note="MarginBird estimates for an owner running ads alone versus a managed, automated setup." hint-size="100%,420px"></dc-import>
+</section>
+
+<section style="max-width: 1180px; margin: 0 auto; padding: 80px 28px 20px">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px">
+<sc-for list="{{stats}}" as="s" hint-placeholder-count="4">
+<div style="border-radius: 24px; padding: 28px; background: linear-gradient(180deg, #121B2C, #080B13); box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), 0 0 0 1px rgba(244,239,230,0.07)">
+<div style="font-family: Fraunces, serif; font-weight: 300; font-size: 56px; line-height: 1; letter-spacing: -0.04em; background: {{t.g}}; -webkit-background-clip: text; background-clip: text; color: transparent">{{s.n}}</div>
+<div style="font-size: 16px; line-height: 1.5; color: #DCE1EA; margin-top: 12px">{{s.l}}</div>
+<div style="font-size: 13px; color: #8F99AD; margin-top: 8px">{{s.src}}</div>
+</div>
+</sc-for>
+</div>
+</section>
+
+<section style="max-width: 1180px; margin: 0 auto; padding: 120px 28px 20px">
+<h2 style="font-weight: 500; font-size: clamp(40px, 5vw, 68px); line-height: 1; letter-spacing: -0.045em; margin: 0; text-align: center">Two ways to start.</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-top: 48px">
+<sc-for list="{{offers}}" as="o" hint-placeholder-count="3">
+<a href="Pricing.dc.html" class="lift" style="text-decoration: none; color: #F4EFE6; border-radius: 26px; padding: 1px; background: {{o.ring}}">
+<div style="height: 100%; box-sizing: border-box; border-radius: 25px; padding: 30px; background: linear-gradient(180deg, #141D30, #0A0F1A); display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; justify-content: space-between; gap: 10px; align-items: center"><span style="font-size: 22px; font-weight: 500">{{o.name}}</span><sc-if value="{{o.hot}}" hint-placeholder-val="{{ false }}"><span style="font-size: 12px; font-weight: 600; padding: 5px 10px; border-radius: 999px; background: {{t.g}}; color: {{t.ink}}">Most popular</span></sc-if></div>
+<div style="display: flex; align-items: baseline; gap: 10px"><sc-if value="{{o.was}}" hint-placeholder-val="{{ false }}"><span style="font-size: 20px; color: #77809A; text-decoration: line-through">$2,688</span></sc-if><span style="font-family: Fraunces, serif; font-weight: 300; font-size: 56px; letter-spacing: -0.04em">{{o.price}}</span><span style="font-size: 15px; color: #A7B0C0">{{o.unit}}</span></div>
+<span style="font-size: 15px; line-height: 1.55; color: #BAC2D0">{{o.d}}</span>
+</div>
+</a>
+</sc-for>
+</div>
+<p style="font-size: 14px; color: #8F99AD; margin: 18px 0 0; text-align: center">You pay ad spend directly to Meta or Google. We never mark it up, and the ad account is yours.</p>
+</section>
+
+<section style="position: relative; padding: 140px 28px 120px; text-align: center">
+<div aria-hidden="true" class="breathe" style="position: absolute; bottom: -140px; left: 50%; transform: translateX(-50%); width: 1200px; height: 560px; background: radial-gradient(closest-side, rgba({{t.rgb}},0.4), rgba({{t.rgb}},0.12) 45%, transparent 75%); filter: blur(40px); pointer-events: none"></div>
+<h2 style="position: relative; font-weight: 500; font-size: clamp(44px, 6.4vw, 92px); line-height: 0.96; letter-spacing: -0.05em; margin: 0">Is your tracking even working?</h2>
+<p style="position: relative; font-size: 19px; color: #DCE1EA; margin: 22px auto 0; max-width: 44ch">The free audit checks your pixel, your offer and where your leads go after the click.</p>
+<a href="FreeAudit.dc.html" class="pill" style="position: relative; display: inline-block; margin-top: 34px; background: {{t.g}}; color: {{t.ink}}; text-decoration: none; font-weight: 600; font-size: 17px; padding: 17px 28px; border-radius: 999px">Book my free audit</a>
+</section>
+
+<dc-import name="Footer" theme="{{theme}}" hint-size="100%,300px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","default":"violet","options":["ice","platinum","violet","gold"]},"$preview":{"width":1440,"height":5200}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const TH = {
+      ice: { c: '#7DB9FF', l: '#CFE6FF', rgb: '125,185,255', ink: '#04101F', base: '#040507', s: ['#3E78C9', '#CFE6FF', '#7DB9FF', '#F3F9FF', '#4F8BD9'] },
+      platinum: { c: '#DDE3EE', l: '#FFFFFF', rgb: '220,228,240', ink: '#0A0C10', base: '#050506', s: ['#8E97A8', '#F6F8FC', '#C3CAD6', '#FFFFFF', '#9AA3B3'] },
+      violet: { c: '#A78BFF', l: '#DCD2FF', rgb: '167,139,255', ink: '#120A2A', base: '#06050B', s: ['#6C4FE0', '#DCD2FF', '#A78BFF', '#F3EEFF', '#7A5CF0'] },
+      gold: { c: '#F0C462', l: '#FFE3A0', rgb: '240,196,98', ink: '#1A1206', base: '#07090F', s: ['#A9792A', '#F7DC94', '#E0B04E', '#FFF3C8', '#B8893A'] }
+    };
+    const theme = this.props.theme || 'violet';
+    const T0 = TH[theme] || TH.violet;
+    const t = { ...T0, g: 'linear-gradient(110deg, ' + T0.s[0] + ' 0%, ' + T0.s[1] + ' 28%, ' + T0.s[2] + ' 52%, ' + T0.s[3] + ' 72%, ' + T0.s[4] + ' 100%)' };
+    return {
+      t, theme,
+      phones: [['Glow in 30 minutes', 'HydraFacial for first visits'], ['New client special', 'Book your consult today'], ['Smooth, natural results', 'Botox by licensed injectors'], ['Summer skin reset', 'Laser packages, this month']].map(([offer, line], i) => ({ offer, line, d: (i * 0.35).toFixed(2) + 's', cls: i === 1 ? 'adClick' : '' })),
+      steps: [
+        { t: 'Audit the offer', d: 'We check your offer, past ads and close rate, then set a target cost per lead and per booking.', icon: 'search' },
+        { t: 'Tracking that works', d: 'Meta Pixel with Conversions API and Google enhanced conversions, tested event by event.', icon: 'target' },
+        { t: 'A page built to convert', d: 'One offer-specific landing page with a short form, click-to-call and a booking link.', icon: 'form' },
+        { t: '4 to 6 creatives', d: 'Variations on two or three hooks: video, before and after, offer cards.', icon: 'film', auto: true },
+        { t: 'The right people nearby', d: 'Radius around your service area, high-intent keywords, wasted searches excluded.', icon: 'compass' },
+        { t: 'Launch and route leads', d: 'Every lead lands in your CRM and gets a text in under a minute.', icon: 'bolt', auto: true },
+        { t: 'Shift budget to winners', d: 'Rules pause expensive ads and move spend to what books calls.', icon: 'chart', auto: true },
+        { t: 'A monthly Loom report', d: 'Spend, leads, cost per lead and booked jobs, explained in ten minutes.', icon: 'eye', auto: true }
+      ],
+      saved: [
+        { label: 'Checking and tweaking ads', before: 2.5, after: 0.25 },
+        { label: 'Making creatives', before: 2, after: 0.25 },
+        { label: 'Replying to and chasing leads', before: 3, after: 0.25 },
+        { label: 'Working out what is working', before: 1, after: 0.15 }
+      ],
+      stats: [
+        { n: '17.8%', l: 'lower cost per result with Pixel plus Conversions API', src: 'Meta, via Social Media Today, 2026' },
+        { n: '$66.69', l: 'average cost per lead on Google Search', src: 'LocaliQ benchmarks, 2026' },
+        { n: '$27.66', l: 'average cost per lead on Meta lead campaigns', src: 'WordStream, 2025' },
+        { n: '7×', l: 'more likely to qualify a lead when you reply within an hour', src: 'Harvard Business Review, 2011' }
+      ],
+      offers: [
+        { name: 'Campaign launch', price: '$597', unit: 'one-off', d: 'Tracking, one campaign, 4–6 creatives, a landing page and 30 days of management.', ring: 'rgba(244,239,230,0.1)', hot: false, was: false },
+        { name: 'Launch and 3 months', price: '$2,197', unit: 'total', d: 'Everything in the launch, then three months of management. Save $491.', ring: 'linear-gradient(160deg, rgba(' + T0.rgb + ',0.9), rgba(' + T0.rgb + ',0.15) 45%, rgba(244,239,230,0.08))', hot: true, was: true },
+        { name: 'Ads management', price: '$697', unit: '/mo', d: 'One platform, up to $3K spend, 4 new creatives a month, monthly Loom report.', ring: 'rgba(244,239,230,0.1)', hot: false, was: false }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Social growth | MarginBird</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="/_blob/f901add9d736276c532f1e80529fbc09">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Fraunces:opsz,wght@9..144,300;9..144,400&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#040507}
+@keyframes fmReel{0%,18%{left:50%;top:50%;width:300px;height:170px;transform:translate(-50%,-50%)}40%,84%{left:16%;top:50%;width:150px;height:266px;transform:translate(-50%,-50%) rotate(-4deg)}100%{left:50%;top:50%;width:300px;height:170px;transform:translate(-50%,-50%)}}
+@keyframes fmCar{0%,18%{left:50%;top:50%;width:300px;height:170px;transform:translate(-50%,-50%)}40%,84%{left:50%;top:50%;width:200px;height:200px;transform:translate(-50%,-50%)}100%{left:50%;top:50%;width:300px;height:170px;transform:translate(-50%,-50%)}}
+@keyframes fmStory{0%,18%{left:50%;top:50%;width:300px;height:170px;transform:translate(-50%,-50%)}40%,84%{left:84%;top:50%;width:150px;height:266px;transform:translate(-50%,-50%) rotate(4deg)}100%{left:50%;top:50%;width:300px;height:170px;transform:translate(-50%,-50%)}}
+@keyframes fmSlide{0%,42%{opacity:0;transform:translateX(0)}50%,82%{opacity:1}100%{opacity:0}}
+@keyframes fmCheck{0%,52%{opacity:0;transform:scale(.4)}58%,84%{opacity:1;transform:scale(1)}92%,100%{opacity:0}}
+@keyframes fmPlay{0%{left:0%}18%{left:100%}100%{left:100%}}
+@keyframes fmStoryBar{0%,44%{transform:scaleX(0)}84%,100%{transform:scaleX(1)}}
+.fmReel{animation:fmReel 9s cubic-bezier(.6,0,.2,1) infinite}
+.fmCar{animation:fmCar 9s cubic-bezier(.6,0,.2,1) infinite}
+.fmStory{animation:fmStory 9s cubic-bezier(.6,0,.2,1) infinite}
+.fmSlide{animation:fmSlide 9s ease infinite}
+.fmCheck{animation:fmCheck 9s ease infinite}
+.fmPlay{animation:fmPlay 9s linear infinite}
+.fmStoryBar{transform-origin:left;animation:fmStoryBar 9s linear infinite}
+@media (prefers-reduced-motion: reduce){.fmReel,.fmCar,.fmStory,.fmSlide,.fmCheck,.fmPlay,.fmStoryBar{animation:none}}
+</style>
+</helmet>
+<div style="--acc: {{t.c}}; --accl: {{t.l}}; --rgb: {{t.rgb}}; font-family: Geist, system-ui, sans-serif; color: #F4EFE6; background: {{t.base}}; width: 100%; box-sizing: border-box; overflow: hidden">
+<dc-import name="Nav" theme="{{theme}}" current="social" hint-size="100%,72px"></dc-import>
+
+<section style="position: relative; padding: 150px 28px 40px">
+<div aria-hidden="true" class="beam" style="position: absolute; top: -240px; left: 50%; width: 1400px; height: 600px; background: radial-gradient(closest-side, rgba({{t.rgb}},0.42), rgba({{t.rgb}},0.12) 45%, transparent 75%); filter: blur(30px); pointer-events: none"></div>
+<div style="position: relative; max-width: 1000px; margin: 0 auto; text-align: center">
+<h1 class="fade" style="font-weight: 500; font-size: clamp(48px, 7.4vw, 108px); line-height: 0.96; letter-spacing: -0.055em; margin: 0">Record once. Post all month.</h1>
+<p class="fade" style="animation-delay: .3s; font-size: 20px; line-height: 1.6; color: #BAC2D0; margin: 26px auto 0; max-width: 46ch">A content system that turns one session into reels, carousels and stories, scheduled and answered for you.</p>
+</div>
+
+<div style="position: relative; max-width: 900px; height: 360px; margin: 70px auto 0">
+<div aria-hidden="true" style="position: absolute; inset: 40px 10%; background: radial-gradient(closest-side, rgba({{t.rgb}},0.22), transparent); filter: blur(20px)"></div>
+<!-- reel -->
+<div class="fmReel" style="position: absolute; border-radius: 18px; overflow: hidden; background: #0E1420 url(/_blob/a2650b66213b577b3b5710f793951264) center / cover no-repeat; box-shadow: inset 0 1px 0 rgba(255,255,255,0.15), 0 0 0 1px rgba({{t.rgb}},0.4), 0 30px 60px -20px rgba(0,0,0,0.9)">
+<div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 45%, rgba(4,5,7,0.85))"></div><div style="position: absolute; left: 10px; right: 10px; bottom: 26px; font-size: 12px; font-weight: 700; line-height: 1.25; text-shadow: 0 1px 6px rgba(0,0,0,0.8)">The Sideline Rush · new episode<span style="display: block; font-weight: 400; font-size: 10.5px; color: #DCE1EA; margin-top: 3px">Reel cut from one recording</span></div>
+<div style="position: absolute; left: 10px; right: 10px; bottom: 14px; height: 3px; border-radius: 2px; background: rgba(255,255,255,0.15)"><span class="fmPlay" style="position: absolute; top: -3px; width: 9px; height: 9px; margin-left: -4px; border-radius: 50%; background: {{t.l}}; box-shadow: 0 0 10px {{t.c}}"></span></div>
+<span class="fmCheck" style="position: absolute; top: 10px; right: 10px; width: 26px; height: 26px; border-radius: 50%; background: {{t.g}}; display: flex; align-items: center; justify-content: center"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="{{t.ink}}" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"></path></svg></span>
+</div>
+<!-- carousel -->
+<div class="fmCar" style="position: absolute; border-radius: 18px; background: linear-gradient(160deg, #2C3754, #111829); box-shadow: inset 0 1px 0 rgba(255,255,255,0.15), 0 0 0 1px rgba({{t.rgb}},0.4), 0 30px 60px -20px rgba(0,0,0,0.9)">
+<span class="fmSlide" style="position: absolute; inset: 0; border-radius: 18px; background: linear-gradient(160deg, #222C42, #0E1420); transform: translateX(14px) rotate(6deg); z-index: -1; box-shadow: 0 0 0 1px rgba(244,239,230,0.08)"></span>
+<span class="fmSlide" style="position: absolute; inset: 0; border-radius: 18px; background: linear-gradient(160deg, #1C2538, #0B101B); transform: translateX(26px) rotate(11deg); z-index: -2; box-shadow: 0 0 0 1px rgba(244,239,230,0.06)"></span>
+<div style="position: absolute; left: 16px; top: 16px; right: 16px; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 10px; font-weight: 700; color: {{t.l}}">1 / 5</span><span style="font-size: 17px; font-weight: 700; line-height: 1.1; letter-spacing: -0.02em">3 chart setups I trade every week</span><span style="font-size: 10.5px; color: #BAC2D0">@jakethestockguy_ · swipe</span></div>
+<div style="position: absolute; bottom: 12px; left: 0; right: 0; display: flex; justify-content: center; gap: 5px"><span style="width: 6px; height: 6px; border-radius: 50%; background: {{t.l}}"></span><span style="width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.3)"></span><span style="width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.3)"></span><span style="width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.3)"></span></div>
+<span class="fmCheck" style="position: absolute; top: -10px; right: -10px; width: 26px; height: 26px; border-radius: 50%; background: {{t.g}}; display: flex; align-items: center; justify-content: center"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="{{t.ink}}" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"></path></svg></span>
+</div>
+<!-- story -->
+<div class="fmStory" style="position: absolute; border-radius: 18px; overflow: hidden; background: #0E1420 url(/_blob/2f99a65cf719702bb8c95027b628b377) center / cover no-repeat; box-shadow: inset 0 1px 0 rgba(255,255,255,0.15), 0 0 0 1px rgba({{t.rgb}},0.4), 0 30px 60px -20px rgba(0,0,0,0.9)">
+<div style="position: absolute; left: 10px; right: 10px; top: 10px; height: 3px; border-radius: 2px; background: rgba(255,255,255,0.18); overflow: hidden"><span class="fmStoryBar" style="display: block; height: 100%; background: {{t.l}}"></span></div>
+<div style="position: absolute; left: 10px; right: 10px; bottom: 44px; text-align: center"><span style="display: inline-block; font-size: 11px; font-weight: 700; padding: 6px 10px; border-radius: 999px; background: {{t.g}}; color: {{t.ink}}; box-shadow: 0 0 18px {{t.c}}">Listen now</span></div>
+<span class="fmCheck" style="position: absolute; bottom: 10px; right: 10px; width: 26px; height: 26px; border-radius: 50%; background: {{t.g}}; display: flex; align-items: center; justify-content: center"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="{{t.ink}}" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"></path></svg></span>
+</div>
+</div>
+<div style="display: flex; justify-content: center; gap: 60px; flex-wrap: wrap; margin-top: 10px; font-size: 15px; color: #A7B0C0"><span>Reel</span><span>Carousel</span><span>Story</span></div>
+</section>
+
+<section style="max-width: 1180px; margin: 0 auto; padding: 120px 28px 20px">
+<h2 style="font-weight: 500; font-size: clamp(40px, 5vw, 68px); line-height: 1; letter-spacing: -0.045em; margin: 0 0 40px; text-align: center">The content system, step by step.</h2>
+<dc-import name="Player" theme="{{theme}}" steps="{{steps}}" label="One month of content" hint-size="100%,420px"></dc-import>
+</section>
+
+<section style="max-width: 1180px; margin: 0 auto; padding: 100px 28px 20px">
+<dc-import name="TimeSaved" theme="{{theme}}" rows="{{saved}}" headline="7" note="MarginBird estimates, anchored to surveys showing owners spend 5–10 hours a week on social (Constant Contact 2024, BIA/Kelsey)." hint-size="100%,420px"></dc-import>
+</section>
+
+<section style="max-width: 1180px; margin: 0 auto; padding: 80px 28px 20px">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px">
+<sc-for list="{{stats}}" as="s" hint-placeholder-count="4">
+<div style="border-radius: 24px; padding: 28px; background: linear-gradient(180deg, #121B2C, #080B13); box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), 0 0 0 1px rgba(244,239,230,0.07)">
+<div style="font-family: Fraunces, serif; font-weight: 300; font-size: 56px; line-height: 1; letter-spacing: -0.04em; background: {{t.g}}; -webkit-background-clip: text; background-clip: text; color: transparent">{{s.n}}</div>
+<div style="font-size: 16px; line-height: 1.5; color: #DCE1EA; margin-top: 12px">{{s.l}}</div>
+<div style="font-size: 13px; color: #8F99AD; margin-top: 8px">{{s.src}}</div>
+</div>
+</sc-for>
+</div>
+<div style="text-align: center; margin-top: 36px"><a href="Work.dc.html" class="ghost" style="display: inline-block; border: 1px solid rgba(244,239,230,0.18); color: #F4EFE6; text-decoration: none; font-size: 16px; padding: 14px 24px; border-radius: 999px">See the accounts we run</a></div>
+</section>
+
+<dc-import name="Reviews" theme="{{theme}}" hint-size="100%,1100px"></dc-import>
+
+<section style="position: relative; padding: 140px 28px 120px; text-align: center">
+<div aria-hidden="true" class="breathe" style="position: absolute; bottom: -140px; left: 50%; transform: translateX(-50%); width: 1200px; height: 560px; background: radial-gradient(closest-side, rgba({{t.rgb}},0.4), rgba({{t.rgb}},0.12) 45%, transparent 75%); filter: blur(40px); pointer-events: none"></div>
+<h2 style="position: relative; font-weight: 500; font-size: clamp(44px, 6.4vw, 92px); line-height: 0.96; letter-spacing: -0.05em; margin: 0">Gone quiet on Instagram?</h2>
+<p style="position: relative; font-size: 19px; color: #DCE1EA; margin: 22px auto 0; max-width: 44ch">The free audit shows what is working on your account and what to post next.</p>
+<a href="FreeAudit.dc.html" class="pill" style="position: relative; display: inline-block; margin-top: 34px; background: {{t.g}}; color: {{t.ink}}; text-decoration: none; font-weight: 600; font-size: 17px; padding: 17px 28px; border-radius: 999px">Book my free audit</a>
+</section>
+
+<dc-import name="Footer" theme="{{theme}}" hint-size="100%,300px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","default":"violet","options":["ice","platinum","violet","gold"]},"$preview":{"width":1440,"height":5200}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const TH = {
+      ice: { c: '#7DB9FF', l: '#CFE6FF', rgb: '125,185,255', ink: '#04101F', base: '#040507', s: ['#3E78C9', '#CFE6FF', '#7DB9FF', '#F3F9FF', '#4F8BD9'] },
+      platinum: { c: '#DDE3EE', l: '#FFFFFF', rgb: '220,228,240', ink: '#0A0C10', base: '#050506', s: ['#8E97A8', '#F6F8FC', '#C3CAD6', '#FFFFFF', '#9AA3B3'] },
+      violet: { c: '#A78BFF', l: '#DCD2FF', rgb: '167,139,255', ink: '#120A2A', base: '#06050B', s: ['#6C4FE0', '#DCD2FF', '#A78BFF', '#F3EEFF', '#7A5CF0'] },
+      gold: { c: '#F0C462', l: '#FFE3A0', rgb: '240,196,98', ink: '#1A1206', base: '#07090F', s: ['#A9792A', '#F7DC94', '#E0B04E', '#FFF3C8', '#B8893A'] }
+    };
+    const theme = this.props.theme || 'violet';
+    const T0 = TH[theme] || TH.violet;
+    const t = { ...T0, g: 'linear-gradient(110deg, ' + T0.s[0] + ' 0%, ' + T0.s[1] + ' 28%, ' + T0.s[2] + ' 52%, ' + T0.s[3] + ' 72%, ' + T0.s[4] + ' 100%)' };
+    return {
+      t, theme,
+      steps: [
+        { t: 'Audit what already works', d: 'The last 90 days of insights show which formats, topics and times land.', icon: 'search' },
+        { t: 'Pillars and voice', d: 'Three to five content pillars, a voice guide and a weekly mix of reels, carousels and stories.', icon: 'compass' },
+        { t: 'One capture session', d: 'One 60 to 90 minute session a month, run from a shot list, gives a month of material.', icon: 'camera' },
+        { t: 'Cut into every format', d: 'Each recording becomes reels, carousel slides, stories and quote cards.', icon: 'film', auto: true },
+        { t: 'Batch production', d: 'Brand templates, auto-captions and voiceovers, checked by a person.', icon: 'wand', auto: true },
+        { t: 'Scheduled for you', d: 'The approved month goes out at the best times for each account.', icon: 'calendar', auto: true },
+        { t: 'Replies sorted', d: 'Comments and DMs are sorted into leads, questions and spam. You only see what needs you.', icon: 'inbox', auto: true },
+        { t: 'Weekly report', d: 'Reach, interactions and top posts. Each month we drop the weakest format and double the best.', icon: 'chart', auto: true }
+      ],
+      saved: [
+        { label: 'Shooting and editing', before: 3.5, after: 0.4 },
+        { label: 'Captions and design', before: 1.5, after: 0.1 },
+        { label: 'Replies and DMs', before: 1.5, after: 0.35 },
+        { label: 'Planning and posting', before: 1.75, after: 0.1 }
+      ],
+      stats: [
+        { n: '1.5M', l: 'accounts reached for one client in a single insights period', src: 'Banksy Store, managed by MarginBird' },
+        { n: '+36%', l: 'more reach for reels than carousels, and 125% more than single images', src: 'Buffer, 4M+ posts, 2024' },
+        { n: '5×', l: 'more engagement per post for accounts that post consistently', src: 'Buffer, 2025' },
+        { n: '73%', l: 'of consumers would buy from a competitor if a brand does not respond', src: 'Sprout Social Index, 2025' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

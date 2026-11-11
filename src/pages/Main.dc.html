@@ -1,0 +1,626 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>MarginBird homepage</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="/_blob/f901add9d736276c532f1e80529fbc09">
+<script src="/_blob/4a480fe534e568be8b0f686ebffbec25"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Fraunces:opsz,wght@9..144,300;9..144,400&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#07090F}
+a{color:#F4EFE6}a:hover{color:var(--accl)}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--accl);outline-offset:3px}
+.navlinks{display:flex}.menubtn{display:none}
+@media (max-width: 920px){.navlinks{display:none}.menubtn{display:inline-flex}.navcta{display:none}}
+.navbtn{transition:color .2s ease, background .2s ease}
+.navbtn:hover{background:rgba(244,239,230,0.06)}
+.menuitem{transition:background .15s ease}
+.menuitem:hover{background:rgba(244,239,230,0.05)}
+.pill{transition:transform .25s ease, box-shadow .25s ease, background .25s ease}
+.pill:hover{transform:translateY(-1px);box-shadow:0 10px 40px -10px rgba(var(--rgb),0.7)}
+.ghost{transition:border-color .25s ease, background .25s ease}
+.ghost:hover{border-color:rgba(244,239,230,0.4);background:rgba(244,239,230,0.04)}
+.spot{transition:box-shadow .4s ease}
+@keyframes autoscroll{0%,8%{transform:translateY(0)}48%,58%{transform:translateY(calc(-100% + 560px))}98%,100%{transform:translateY(0)}}
+@keyframes growbar{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.autoscroll{animation:autoscroll 22s cubic-bezier(.45,0,.55,1) infinite}
+.siteframe:hover .autoscroll{animation-play-state:paused}
+.growbar{transform-origin:left center;animation:growbar 1.6s cubic-bezier(.2,.7,.1,1) both}
+.fan1{transform:translateX(-80%) rotate(-9deg);transition:transform .5s cubic-bezier(.2,.7,.1,1)}
+.fan2{transform:translateX(-20%) rotate(7deg);transition:transform .5s cubic-bezier(.2,.7,.1,1)}
+.fan:hover .fan1{transform:translateX(-105%) rotate(-14deg) translateY(-6px)}
+.fan:hover .fan2{transform:translateX(5%) rotate(12deg) translateY(-6px)}
+@media (prefers-reduced-motion: reduce){.autoscroll,.growbar{animation:none}.fan1,.fan2{transition:none}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes spinr{to{transform:rotate(-360deg)}}
+@keyframes beat{0%,100%{transform:scale(1)}12%{transform:scale(1.14)}24%{transform:scale(1)}36%{transform:scale(1.08)}}
+@keyframes ping{0%{transform:scale(.6);opacity:.9}100%{transform:scale(1.5);opacity:0}}
+@keyframes sweep{0%{left:-50%}60%,100%{left:130%}}
+@keyframes sheen{0%,100%{background-position:0% 0}50%{background-position:100% 0}}
+.orbit{animation:spin 9s linear infinite}
+.beat{animation:beat 2.4s ease-in-out infinite}
+.ping{animation:ping 2.2s ease-out infinite}
+.gear1{animation:spin 6s linear infinite}
+.gear2{animation:spinr 4.2s linear infinite}
+.sweep{animation:sweep 5s ease-in-out infinite}
+.pill{animation:sheen 6s ease-in-out infinite}
+@media (prefers-reduced-motion: reduce){.orbit,.beat,.ping,.gear1,.gear2,.sweep,.pill{animation:none}}
+@keyframes travel{0%{left:0%}100%{left:100%}}
+@keyframes trackfill{0%{background-position:-40% 0}100%{background-position:140% 0}}
+@keyframes litup{0%,3%{box-shadow:0 0 0 0 transparent;border-color:rgba(244,239,230,0.09)}7%,18%{box-shadow:0 0 50px -12px var(--acc), inset 0 0 0 1px var(--acc);border-color:var(--acc)}26%,100%{box-shadow:0 0 0 0 transparent;border-color:rgba(244,239,230,0.09)}}
+@keyframes pop{0%,60%{transform:scale(0)}70%{transform:scale(1.25)}78%,100%{transform:scale(1)}}
+@keyframes clickc{0%,50%{transform:translate(10px,10px)}65%{transform:translate(-14px,-6px)}70%{transform:translate(-14px,-6px) scale(.85)}75%,100%{transform:translate(-14px,-6px)}}
+@keyframes press{0%,60%{filter:none}66%{filter:brightness(1.5)}72%,100%{filter:none}}
+@keyframes bubble{0%,20%{opacity:0;transform:translateY(6px)}30%,100%{opacity:1;transform:none}}
+.traveler{animation:travel 10s cubic-bezier(.45,0,.55,1) infinite}
+.tracklit{animation:trackfill 10s cubic-bezier(.45,0,.55,1) infinite}
+.lit{animation:litup 10s ease infinite}
+.heart{animation:pop 3.2s ease infinite}
+.cursor{animation:clickc 3.2s ease infinite}
+.press{animation:press 3.2s ease infinite}
+.b1{animation:bubble 4s ease infinite}.b2{animation:bubble 4s ease .5s infinite}.b3{animation:bubble 4s ease 1s infinite}.b4{animation:bubble 4s ease 1.5s infinite}
+@media (prefers-reduced-motion: reduce){.traveler,.tracklit,.lit,.heart,.cursor,.press,.b1,.b2,.b3,.b4{animation:none}}
+.faqrow{transition:background .2s ease}
+.faqrow:hover{background:rgba(244,239,230,0.02)}
+@keyframes rise{from{transform:translateY(18px)}to{transform:none}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes drift{0%{transform:translate(-50%,0) rotate(-8deg)}50%{transform:translate(-46%,18px) rotate(-5deg)}100%{transform:translate(-50%,0) rotate(-8deg)}}
+@keyframes breathe{0%,100%{opacity:.55}50%{opacity:.9}}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes run{0%{opacity:.32}6%{opacity:1}80%{opacity:1}100%{opacity:.32}}
+@keyframes tick{0%,5%{background:transparent;border-color:#2A3348}9%,80%{background:var(--acc);border-color:var(--acc)}100%{background:transparent;border-color:#2A3348}}
+@keyframes scan{0%{transform:translateY(-100%)}100%{transform:translateY(420%)}}
+@keyframes dropIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.w{display:inline-block;animation:rise .9s cubic-bezier(.2,.7,.1,1) both}
+.fade{animation:fadeIn 1.2s ease both}
+.beam{animation:drift 14s ease-in-out infinite}
+.breathe{animation:breathe 6s ease-in-out infinite}
+.track{animation:marquee 38s linear infinite}
+.runrow{animation:run 9.6s ease infinite}
+.runbox{animation:tick 9.6s ease infinite}
+.scanline{animation:scan 4.8s linear infinite}
+.drop{animation:dropIn .18s ease-out}
+.offscreen,.offscreen *{animation-play-state:paused !important}
+.mbar{display:none}
+@media (max-width:920px){.mbar{display:flex;position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:55}}
+@media (prefers-reduced-motion: reduce){.w,.fade,.beam,.breathe,.track,.runrow,.runbox,.scanline,.drop{animation:none}.pill,.ghost,.spot,.navbtn{transition:none}}
+</style>
+</helmet>
+<div ref="{{setRoot}}" style="--acc: {{accent}}; --accl: {{accentLight}}; --rgb: {{rgb}}; font-family: Geist, system-ui, sans-serif; color: #F4EFE6; background: {{base}}; width: 100%; box-sizing: border-box; overflow: hidden">
+
+<svg width="0" height="0" aria-hidden="true" style="position: absolute"><defs><linearGradient id="mbGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="{{s1}}"></stop><stop offset="0.3" stop-color="{{s2}}"></stop><stop offset="0.52" stop-color="{{s3}}"></stop><stop offset="0.74" stop-color="{{s4}}"></stop><stop offset="1" stop-color="{{s5}}"></stop></linearGradient></defs></svg>
+<!-- NAV -->
+<dc-import name="Nav" theme="{{themeId}}" current="home" hint-size="100%,72px"></dc-import>
+
+<!-- HERO -->
+<section id="top" style="position: relative; padding: 120px 28px 72px">
+<div aria-hidden="true" class="beam" style="position: absolute; top: -260px; left: 50%; width: 1500px; height: 620px; background: radial-gradient(closest-side, {{glowStrong}}, {{glowSoft}} 45%, transparent 75%); filter: blur(30px); pointer-events: none"></div>
+<div aria-hidden="true" class="breathe" style="position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, {{accent}} 50%, transparent)"></div>
+<div style="position: relative; max-width: 1180px; margin: 0 auto; text-align: center">
+<a href="Work.dc.html" class="ghost fade" style="display: inline-flex; align-items: center; gap: 10px; border: 1px solid rgba(244,239,230,0.14); border-radius: 999px; padding: 7px 8px 7px 16px; text-decoration: none; font-size: 14px; color: #DCE1EA; background: rgba(244,239,230,0.03)">Jake cut his content bill from $2,000 to $300 a month <span style="background: rgba(244,239,230,0.08); color: #F4EFE6; border-radius: 999px; padding: 4px 10px">Read the case</span></a>
+<h1 aria-label="Agencies sell tasks. We build business systems." style="font-weight: 500; font-size: clamp(52px, 8.6vw, 128px); line-height: 0.95; letter-spacing: -0.055em; margin: 34px auto 0; max-width: 13ch">
+<span aria-hidden="true" style="display: block; color: #8F99AD"><sc-for list="{{line1}}" as="w" hint-placeholder-count="3"><span class="w" style="animation-delay: {{w.d}}">{{w.t}}&nbsp;</span></sc-for></span>
+<span aria-hidden="true" style="display: block"><sc-for list="{{line2}}" as="w" hint-placeholder-count="4"><span class="w" style="animation-delay: {{w.d}}">{{w.t}}&nbsp;</span></sc-for></span>
+</h1>
+<p class="fade" style="animation-delay: .9s; font-size: 20px; line-height: 1.6; color: #BAC2D0; margin: 30px auto 0; max-width: 40ch">We start with your numbers, then build the brand, website, ads and automations that keep running after we hand them over.</p>
+<div class="fade" style="animation-delay: 1.05s; display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 36px">
+<a href="FreeAudit.dc.html" class="pill" style="background: {{goldGrad}}; background-size: 220% 100%; color: {{ink}}; text-decoration: none; font-weight: 600; font-size: 17px; padding: 17px 28px; border-radius: 999px; min-height: 44px; box-sizing: border-box">Book my free audit</a>
+<a href="Work.dc.html" class="ghost" style="border: 1px solid rgba(244,239,230,0.18); color: #F4EFE6; text-decoration: none; font-weight: 500; font-size: 17px; padding: 16px 26px; border-radius: 999px; min-height: 44px; box-sizing: border-box">See the systems</a>
+</div>
+</div>
+
+<!-- live system console -->
+<div class="fade" style="animation-delay: 1.3s; position: relative; max-width: 1080px; margin: 88px auto 0">
+<div aria-hidden="true" style="position: absolute; inset: -60px -40px auto; height: 300px; background: radial-gradient(closest-side, {{glowSoft}}, transparent); filter: blur(40px)"></div>
+<div style="position: relative; border-radius: 26px; padding: 1px; background: linear-gradient(180deg, rgba(244,239,230,0.22), rgba(244,239,230,0.04) 40%, {{glowEdge}})">
+<div style="border-radius: 25px; background: linear-gradient(180deg, #0E1420, #0A0E17); overflow: hidden">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 22px; border-bottom: 1px solid rgba(244,239,230,0.07); flex-wrap: wrap">
+<div style="display: flex; align-items: center; gap: 10px; font-size: 14px; color: #DCE1EA"><span style="width: 8px; height: 8px; border-radius: 50%; background: #5FD08A; box-shadow: 0 0 12px #5FD08A"></span>Jake the Stock Guy · content system</div>
+<span style="font-size: 13px; color: #8F99AD">Demo replay of a real client system</span>
+</div>
+<div style="display: flex; flex-wrap: wrap">
+<div style="flex: 1.5 1 480px; min-width: 0; padding: 26px; position: relative">
+<div aria-hidden="true" class="scanline" style="position: absolute; left: 0; right: 0; top: 0; height: 25%; background: linear-gradient(180deg, transparent, rgba({{rgb}},0.05), transparent); pointer-events: none"></div>
+<sc-for list="{{runs}}" as="r" hint-placeholder-count="4">
+<div class="runrow" style="animation-delay: {{r.d}}; display: flex; align-items: center; gap: 16px; padding: 16px 4px; border-bottom: 1px solid rgba(244,239,230,0.06)">
+<span class="runbox" style="animation-delay: {{r.d}}; flex: none; width: 22px; height: 22px; border-radius: 7px; border: 1.5px solid #2A3348; display: flex; align-items: center; justify-content: center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#07090F" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"></path></svg></span>
+<div style="flex: 1; min-width: 0"><div style="font-size: 16px; font-weight: 500">{{r.t}}</div><div style="font-size: 14px; color: #A7B0C0; margin-top: 2px">{{r.d2}}</div></div>
+<span style="font-size: 13px; color: #8F99AD; font-variant-numeric: tabular-nums">{{r.time}}</span>
+</div>
+</sc-for>
+<div style="font-size: 13px; color: #8F99AD; margin-top: 16px">Runs every trading day. Nobody touches it.</div>
+</div>
+<div style="flex: 1 1 300px; min-width: 0; padding: 26px; border-left: 1px solid rgba(244,239,230,0.07); display: flex; flex-direction: column; justify-content: center; gap: 22px; background: radial-gradient(400px circle at 100% 100%, {{glowSoft}}, transparent 70%)">
+<div><div style="font-size: 14px; color: #A7B0C0">Before, every month</div><div style="font-family: Fraunces, serif; font-weight: 300; font-size: 54px; letter-spacing: -0.03em; color: #A7B0C0; text-decoration: line-through; text-decoration-thickness: 1px">$2,000</div></div>
+<div><div style="font-size: 14px; color: #A7B0C0">After, every month</div><div style="font-family: Fraunces, serif; font-weight: 300; font-size: 84px; line-height: 1; letter-spacing: -0.04em; background: {{goldGrad}}; -webkit-background-clip: text; background-clip: text; color: transparent; filter: drop-shadow(0 0 16px rgba({{rgb}},0.45))">$300</div></div>
+<div style="font-size: 13px; color: #A7B0C0; margin-top: -10px">After a one-time setup.</div>
+<div style="font-size: 15px; line-height: 1.55; color: #DCE1EA">He went back to trading. The content runs itself.</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- MARQUEE -->
+<section aria-label="Platforms we build on" style="padding: 40px 0 24px">
+<p style="text-align: center; font-size: 14px; color: #8F99AD; margin: 0 0 22px">Systems we build on</p>
+<div style="position: relative; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 15%, #000 85%, transparent); mask-image: linear-gradient(90deg, transparent, #000 15%, #000 85%, transparent)">
+<div class="track" style="display: flex; gap: 64px; width: max-content; padding-right: 64px">
+<sc-for list="{{tools}}" as="tl" hint-placeholder-count="20">
+<span style="font-size: 24px; font-weight: 500; letter-spacing: -0.02em; color: #77809A; white-space: nowrap">{{tl}}</span>
+</sc-for>
+</div>
+</div>
+</section>
+
+<div aria-hidden="true" style="height: 1px; max-width: 1080px; margin: 72px auto 0; background: linear-gradient(90deg, transparent, rgba(244,239,230,0.18), transparent)"></div>
+
+<!-- PROBLEM -->
+<section style="max-width: 1180px; margin: 0 auto; padding: 120px 28px 40px; display: flex; flex-wrap: wrap; gap: 40px 80px; align-items: flex-start">
+<h2 style="flex: 1 1 460px; font-weight: 500; font-size: clamp(40px, 5vw, 68px); line-height: 1; letter-spacing: -0.045em; margin: 0">You're paying people to do work a system could do.</h2>
+<div style="flex: 1 1 400px; display: flex; flex-direction: column; gap: 22px; padding-top: 10px">
+<p style="font-size: 19px; line-height: 1.65; color: #BAC2D0; margin: 0">Most agencies sell tasks: twelve posts, one landing page, a monthly report. You keep paying, and nothing keeps working once they stop.</p>
+<p style="font-size: 19px; line-height: 1.65; color: #BAC2D0; margin: 0">We look at where your time and money go first. Then we build the brand, the growth engine and the automations that run without you.</p>
+</div>
+</section>
+
+<!-- WORK / CASE STUDIES -->
+<section id="work" style="max-width: 1180px; margin: 0 auto; padding: 80px 28px 40px">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 20px">
+<sc-for list="{{cases}}" as="c" hint-placeholder-count="2">
+<article class="spot" onMouseMove="{{c.move}}" onMouseLeave="{{c.leave}}" style="position: relative; border-radius: 28px; padding: 1px; background: {{c.ring}}; box-shadow: {{c.glow}}">
+<div style="position: relative; overflow: hidden; border-radius: 27px; background: linear-gradient(180deg, #141D30 0%, #0A0F1A 100%); box-shadow: inset 0 1px 0 rgba(255,255,255,0.09); padding: 40px; min-height: 460px; box-sizing: border-box; display: flex; flex-direction: column">
+<div aria-hidden="true" style="position: absolute; inset: 0; background: {{c.spot}}; pointer-events: none"></div>
+<div style="position: relative; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: 14px; color: #A7B0C0"><span>{{c.who}}</span><span>{{c.kind}}</span></div>
+<h3 style="position: relative; font-weight: 500; font-size: 36px; line-height: 1.08; letter-spacing: -0.035em; margin: 26px 0 0; max-width: 16ch">{{c.line}}</h3>
+<p style="position: relative; font-size: 17px; line-height: 1.6; color: #BAC2D0; margin: 18px 0 0; max-width: 44ch">{{c.body}}</p>
+<div style="position: relative; margin-top: auto; padding-top: 34px; display: flex; gap: 36px; flex-wrap: wrap; align-items: flex-end">
+<div><div style="font-size: 14px; color: #8F99AD">Before</div><div style="font-family: Fraunces, serif; font-weight: 300; font-size: 34px; color: #A7B0C0">{{c.before}}</div></div>
+<div><div style="font-size: 14px; color: #8F99AD">After</div><div style="font-family: Fraunces, serif; font-weight: 300; font-size: 50px; line-height: 1; letter-spacing: -0.03em; background: {{goldGrad}}; -webkit-background-clip: text; background-clip: text; color: transparent; filter: drop-shadow(0 0 16px rgba({{rgb}},0.45))">{{c.after}}</div></div>
+</div>
+</div>
+</article>
+</sc-for>
+</div>
+</section>
+
+<!-- WORK SHOWCASE -->
+<section aria-label="Websites we designed" style="position: relative; padding: 140px 0 40px">
+<div aria-hidden="true" class="breathe" style="position: absolute; top: 160px; left: 50%; transform: translateX(-50%); width: 1100px; height: 520px; background: radial-gradient(closest-side, {{glowSoft}}, transparent); filter: blur(50px); pointer-events: none"></div>
+<h2 style="position: relative; text-align: center; font-weight: 500; font-size: clamp(40px, 5vw, 68px); line-height: 1; letter-spacing: -0.045em; margin: 0 28px">Websites, built to be scrolled.</h2>
+<div style="position: relative; display: flex; justify-content: center; align-items: center; gap: 28px; margin-top: 72px; padding: 0 28px; flex-wrap: wrap">
+<sc-for list="{{sites}}" as="st" hint-placeholder-count="3">
+<button type="button" class="siteframe" onClick="{{st.pick}}" aria-pressed="{{st.pressed}}" aria-label="{{st.aria}}" style="font-family: inherit; color: inherit; border: 0; padding: 1px; cursor: pointer; border-radius: 22px; background: {{st.ring}}; box-shadow: {{st.glow}}; transform: {{st.scale}}; transition: transform .5s cubic-bezier(.2,.7,.1,1), box-shadow .5s ease; flex: none">
+<div style="width: 330px; border-radius: 21px; overflow: hidden; background: #0A0F1A">
+<div style="display: flex; align-items: center; gap: 6px; padding: 11px 14px; background: linear-gradient(180deg, #1A2335, #121A29); border-bottom: 1px solid rgba(244,239,230,0.08)"><span style="width: 9px; height: 9px; border-radius: 50%; background: #3A4459"></span><span style="width: 9px; height: 9px; border-radius: 50%; background: #3A4459"></span><span style="width: 9px; height: 9px; border-radius: 50%; background: #3A4459"></span><span style="margin-left: 10px; flex: 1; text-align: center; font-size: 12px; color: #A7B0C0; background: rgba(244,239,230,0.06); border-radius: 999px; padding: 4px 10px">{{st.name}}</span></div>
+<div style="position: relative; height: 560px; overflow: hidden">
+<img class="autoscroll" src="{{st.src}}" alt="{{st.alt}}" style="display: block; width: 100%; animation-delay: {{st.delay}}">
+<div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(160deg, rgba(255,255,255,0.08), transparent 30%); pointer-events: none"></div>
+</div>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 10px; padding: 16px 8px 4px; text-align: left"><span style="font-size: 17px; font-weight: 500; letter-spacing: -0.01em">{{st.name}}</span><span style="font-size: 14px; color: #A7B0C0">{{st.kind}}</span></div>
+</button>
+</sc-for>
+</div>
+<p style="position: relative; text-align: center; font-size: 15px; color: #8F99AD; margin: 28px 0 0">Hover to pause. Tap a site to bring it forward.</p>
+</section>
+
+<section aria-label="Social accounts we manage" style="max-width: 1180px; margin: 0 auto; padding: 140px 28px 40px">
+<h2 style="font-weight: 500; font-size: clamp(40px, 5vw, 68px); line-height: 1; letter-spacing: -0.045em; margin: 0; text-align: center">Audiences we've grown and run.</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 64px">
+<sc-for list="{{bigStats}}" as="b" hint-placeholder-count="3">
+<div style="position: relative; border-radius: 26px; padding: 34px 30px; background: linear-gradient(180deg, #141D30 0%, #0A0F1A 100%); box-shadow: inset 0 1px 0 rgba(255,255,255,0.09), 0 0 0 1px rgba(244,239,230,0.07); overflow: hidden">
+<div aria-hidden="true" style="position: absolute; right: -60px; top: -60px; width: 220px; height: 220px; background: radial-gradient(closest-side, {{glowSoft}}, transparent)"></div>
+<div style="position: relative; font-family: Fraunces, serif; font-weight: 300; font-size: 76px; line-height: 1; letter-spacing: -0.04em; background: {{goldGrad}}; -webkit-background-clip: text; background-clip: text; color: transparent; filter: drop-shadow(0 0 18px rgba({{rgb}},0.4))">{{b.n}}</div>
+<div style="position: relative; font-size: 17px; color: #DCE1EA; margin-top: 14px">{{b.l}}</div>
+<div style="position: relative; font-size: 14px; color: #8F99AD; margin-top: 4px">{{b.src}}</div>
+</div>
+</sc-for>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 16px; margin-top: 16px; align-items: stretch">
+<div style="flex: 1.6 1 520px; min-width: 0; border-radius: 26px; padding: 30px 30px 18px; background: linear-gradient(180deg, #141D30 0%, #0A0F1A 100%); box-shadow: inset 0 1px 0 rgba(255,255,255,0.09), 0 0 0 1px rgba(244,239,230,0.07)">
+<div style="display: flex; justify-content: space-between; font-size: 14px; color: #8F99AD; padding-bottom: 8px"><span>Account</span><span>Followers</span></div>
+<sc-for list="{{accounts}}" as="a" hint-placeholder-count="6">
+<div style="display: flex; align-items: center; gap: 16px; padding: 14px 0; border-top: 1px solid rgba(244,239,230,0.07)">
+<span style="flex: none; width: 46px; height: 46px; border-radius: 50%; padding: 2px; background: {{goldGrad}}; box-shadow: 0 0 16px -2px rgba({{rgb}},0.5)"><span style="width: 100%; height: 100%; border-radius: 50%; background: radial-gradient(circle at 35% 25%, #2A3654, #0B101B); display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 600; color: {{accentLight}}; box-sizing: border-box; border: 2px solid #07090F">{{a.ini}}</span></span>
+<div style="flex: 0 0 210px; min-width: 0"><div style="font-size: 16px; font-weight: 500">{{a.name}}</div><div style="font-size: 13px; color: #8F99AD; margin-top: 2px">{{a.kind}}</div></div>
+<div style="flex: 1; height: 8px; border-radius: 4px; background: rgba(244,239,230,0.06); overflow: hidden"><div class="growbar" style="height: 100%; width: {{a.w}}; border-radius: 4px; background: {{goldGrad}}; box-shadow: 0 0 14px rgba({{rgb}},0.6); animation-delay: {{a.d}}"></div></div>
+<span style="flex: none; width: 70px; text-align: right; font-family: Fraunces, serif; font-weight: 300; font-size: 24px; color: #F4EFE6">{{a.f}}</span>
+</div>
+</sc-for>
+</div>
+
+<div style="flex: 1 1 340px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<div style="position: relative; border-radius: 26px; padding: 1px; background: linear-gradient(160deg, rgba({{rgb}},0.8), rgba({{rgb}},0.1) 45%, rgba(244,239,230,0.06))">
+<div style="border-radius: 25px; padding: 28px; background: radial-gradient(360px circle at 100% 0%, {{glowSoft}}, transparent 70%), linear-gradient(180deg, #141D30, #0A0F1A)">
+<div style="font-size: 14px; color: #A7B0C0">One post · Banksy Store</div>
+<div style="font-family: Fraunces, serif; font-weight: 300; font-size: 62px; line-height: 1; letter-spacing: -0.04em; margin-top: 10px; background: {{goldGrad}}; -webkit-background-clip: text; background-clip: text; color: transparent">107,746</div>
+<div style="font-size: 15px; color: #DCE1EA; margin-top: 6px">people reached</div>
+<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin-top: 24px">
+<sc-for list="{{postStats}}" as="ps" hint-placeholder-count="4">
+<div style="text-align: center; padding: 14px 4px; border-radius: 14px; background: rgba(244,239,230,0.04); box-shadow: inset 0 1px 0 rgba(255,255,255,0.06)">
+<svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" style="filter: drop-shadow(0 0 6px rgba({{rgb}},0.7))"><path d="{{ps.icon}}" fill="url(#mbGold)"></path></svg>
+<div style="font-size: 16px; font-weight: 600; margin-top: 6px; font-variant-numeric: tabular-nums">{{ps.n}}</div>
+<div style="font-size: 12px; color: #8F99AD; margin-top: 2px">{{ps.l}}</div>
+</div>
+</sc-for>
+</div>
+</div>
+</div>
+<div class="fan" style="position: relative; flex: 1; min-height: 250px; border-radius: 26px; background: linear-gradient(180deg, #141D30, #0A0F1A); box-shadow: inset 0 1px 0 rgba(255,255,255,0.09), 0 0 0 1px rgba(244,239,230,0.07); overflow: hidden">
+<div style="position: absolute; left: 24px; top: 22px; font-size: 14px; color: #A7B0C0">Podcast artwork · The Sideline Rush</div>
+<img class="fan1" src="/_blob/a2650b66213b577b3b5710f793951264" alt="The Sideline Rush, episode 6 cover" style="position: absolute; left: 50%; top: 60px; width: 170px; height: 170px; object-fit: cover; border-radius: 14px; box-shadow: 0 20px 40px -10px rgba(0,0,0,0.9), 0 0 0 1px rgba({{rgb}},0.4)">
+<img class="fan2" src="/_blob/2f99a65cf719702bb8c95027b628b377" alt="The Sideline Rush, episode 18 cover" style="position: absolute; left: 50%; top: 60px; width: 170px; height: 170px; object-fit: cover; border-radius: 14px; box-shadow: 0 20px 40px -10px rgba(0,0,0,0.9), 0 0 0 1px rgba({{rgb}},0.4)">
+</div>
+</div>
+</div>
+<p style="font-size: 14px; color: #8F99AD; margin: 18px 0 0">Follower counts and post insights as shown in each account's Instagram app. Two clients asked to stay unnamed.</p>
+</section>
+
+<!-- SERVICES BENTO -->
+<section id="services" style="max-width: 1180px; margin: 0 auto; padding: 120px 28px 40px">
+<h2 style="font-weight: 500; font-size: clamp(40px, 5vw, 68px); line-height: 1; letter-spacing: -0.045em; margin: 0; text-align: center">Five teams. One machine.</h2>
+
+<!-- the machine: a customer travels left to right -->
+<div style="--acc: {{accent}}; --accl: {{accentLight}}; --glow: {{glowSoft}}; overflow-x: auto; margin-top: 64px; padding: 10px 4px 4px">
+<div style="position: relative; min-width: 1040px">
+<div aria-hidden="true" style="position: absolute; left: 70px; right: 70px; top: 104px; height: 2px; background: linear-gradient(90deg, rgba(244,239,230,0.05), rgba(244,239,230,0.16), rgba(244,239,230,0.05))"></div>
+<div aria-hidden="true" class="tracklit" style="position: absolute; left: 70px; right: 70px; top: 104px; height: 2px; background: linear-gradient(90deg, transparent, var(--acc), transparent); background-size: 30% 100%; background-repeat: no-repeat"></div>
+<div aria-hidden="true" style="position: absolute; left: 70px; right: 70px; top: 96px; height: 18px">
+<span class="traveler" style="position: absolute; top: 0; width: 18px; height: 18px; margin-left: -9px; border-radius: 50%; background: var(--accl); box-shadow: 0 0 0 6px var(--glow), 0 0 30px 8px var(--acc)"></span>
+</div>
+<div style="position: relative; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 18px">
+<sc-for list="{{stations}}" as="s" hint-placeholder-count="6">
+<a href="{{s.href}}" onMouseEnter="{{s.enter}}" onFocus="{{s.enter}}" aria-label="{{s.aria}}" style="text-decoration: none; font-family: inherit; color: inherit; background: transparent; border: 0; padding: 0; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 16px">
+<div class="{{s.cls}}" style="animation-delay: {{s.delay}}; width: 100%; aspect-ratio: 1 / 1.05; border-radius: 22px; border: 1px solid {{s.border}}; background: linear-gradient(180deg, #141D30 0%, #0A0F1A 100%); box-shadow: inset 0 1px 0 rgba(255,255,255,0.09); box-shadow: {{s.glow}}; transform: {{s.lift}}; transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden">
+
+<div aria-hidden="true" style="position: absolute; inset: 0; border-radius: inherit; background: linear-gradient(160deg, rgba(255,255,255,0.10) 0%, rgba(255,255,255,0.02) 32%, transparent 55%); pointer-events: none"></div><div aria-hidden="true" class="sweep" style="position: absolute; top: 0; bottom: 0; width: 40%; background: linear-gradient(100deg, transparent, rgba({{rgb}},0.10), transparent); pointer-events: none"></div>
+<sc-if value="{{s.isBrand}}" hint-placeholder-val="{{ false }}">
+<div class="emblem" style="position: relative; width: 108px; height: 108px; border-radius: 50%; background: radial-gradient(circle at 35% 25%, #2A3654 0%, #121A2B 55%, #070A12 100%); box-shadow: inset 0 2px 1px rgba(255,255,255,0.18), inset 0 -8px 18px rgba(0,0,0,0.6), 0 0 0 1.5px rgba({{rgb}},0.55), 0 0 0 6px rgba({{rgb}},0.06), 0 18px 40px -10px rgba(0,0,0,0.9), 0 0 50px -6px {{glowSoft}}; display: flex; align-items: center; justify-content: center"><svg width="56" height="56" viewBox="0 0 48 48" fill="none" aria-hidden="true" style="filter: drop-shadow(0 0 8px rgba({{rgb}},0.75)) drop-shadow(0 0 22px rgba({{rgb}},0.35))"><path d="M24 5l16 13-16 25L8 18z" fill="url(#mbGold)"></path><path d="M8 18h32M24 5l-6 13 6 25 6-25z" stroke="{{deep}}" stroke-width="1" stroke-linejoin="round" opacity=".7"></path><path d="M24 5l-6 13h12z" fill="{{hi}}" opacity=".55"></path></svg></div>
+</sc-if>
+<sc-if value="{{s.isSocial}}" hint-placeholder-val="{{ false }}">
+<div class="emblem" style="position: relative; width: 108px; height: 108px; border-radius: 50%; background: radial-gradient(circle at 35% 25%, #2A3654 0%, #121A2B 55%, #070A12 100%); box-shadow: inset 0 2px 1px rgba(255,255,255,0.18), inset 0 -8px 18px rgba(0,0,0,0.6), 0 0 0 1.5px rgba({{rgb}},0.55), 0 0 0 6px rgba({{rgb}},0.06), 0 18px 40px -10px rgba(0,0,0,0.9), 0 0 50px -6px {{glowSoft}}; display: flex; align-items: center; justify-content: center"><div class="orbit" aria-hidden="true" style="position: absolute; inset: 8px; border-radius: 50%; border: 1px dashed rgba({{rgb}},0.45)"><span style="position: absolute; top: -4px; left: 50%; width: 8px; height: 8px; margin-left: -4px; border-radius: 50%; background: {{accentLight}}; box-shadow: 0 0 10px #F0C462"></span></div><svg class="beat" width="50" height="50" viewBox="0 0 48 48" aria-hidden="true" style="filter: drop-shadow(0 0 8px rgba({{rgb}},0.75)) drop-shadow(0 0 22px rgba({{rgb}},0.35))"><path d="M24 41s-15-9.2-19-18.4C2.3 15.9 6.4 8 13.6 8c4.1 0 7.1 2.4 10.4 6.4C27.3 10.4 30.3 8 34.4 8 41.6 8 45.7 15.9 43 22.6 39 31.8 24 41 24 41z" fill="url(#mbGold)"></path><path d="M13 13c-3 0-5 2.6-5 5.4" stroke="{{hi}}" stroke-width="2" stroke-linecap="round" fill="none" opacity=".8"></path></svg></div>
+</sc-if>
+<sc-if value="{{s.isAds}}" hint-placeholder-val="{{ false }}">
+<div class="emblem" style="position: relative; width: 108px; height: 108px; border-radius: 50%; background: radial-gradient(circle at 35% 25%, #2A3654 0%, #121A2B 55%, #070A12 100%); box-shadow: inset 0 2px 1px rgba(255,255,255,0.18), inset 0 -8px 18px rgba(0,0,0,0.6), 0 0 0 1.5px rgba({{rgb}},0.55), 0 0 0 6px rgba({{rgb}},0.06), 0 18px 40px -10px rgba(0,0,0,0.9), 0 0 50px -6px {{glowSoft}}; display: flex; align-items: center; justify-content: center"><span class="ping" aria-hidden="true" style="position: absolute; inset: 22px; border-radius: 50%; border: 1.5px solid rgba({{rgb}},0.7)"></span><svg width="56" height="56" viewBox="0 0 48 48" fill="none" aria-hidden="true" style="filter: drop-shadow(0 0 8px rgba({{rgb}},0.75)) drop-shadow(0 0 22px rgba({{rgb}},0.35))"><circle cx="24" cy="24" r="17" stroke="url(#mbGold)" stroke-width="3"></circle><circle cx="24" cy="24" r="10" stroke="url(#mbGold)" stroke-width="3"></circle><circle cx="24" cy="24" r="4" fill="url(#mbGold)"></circle><path d="M24 24l15-15M33 7l6 2 2 6" stroke="{{hi}}" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+</sc-if>
+<sc-if value="{{s.isWeb}}" hint-placeholder-val="{{ false }}">
+<div class="emblem" style="position: relative; width: 108px; height: 108px; border-radius: 50%; background: radial-gradient(circle at 35% 25%, #2A3654 0%, #121A2B 55%, #070A12 100%); box-shadow: inset 0 2px 1px rgba(255,255,255,0.18), inset 0 -8px 18px rgba(0,0,0,0.6), 0 0 0 1.5px rgba({{rgb}},0.55), 0 0 0 6px rgba({{rgb}},0.06), 0 18px 40px -10px rgba(0,0,0,0.9), 0 0 50px -6px {{glowSoft}}; display: flex; align-items: center; justify-content: center"><svg width="60" height="60" viewBox="0 0 48 48" fill="none" aria-hidden="true" style="filter: drop-shadow(0 0 8px rgba({{rgb}},0.75)) drop-shadow(0 0 22px rgba({{rgb}},0.35))"><rect x="5" y="9" width="38" height="28" rx="4" stroke="url(#mbGold)" stroke-width="2.6"></rect><path d="M5 16h38" stroke="url(#mbGold)" stroke-width="2.2"></path><circle cx="10" cy="12.5" r="1.3" fill="{{hi}}"></circle><circle cx="14.5" cy="12.5" r="1.3" fill="{{hi}}"></circle><rect x="11" y="21" width="16" height="3" rx="1.5" fill="url(#mbGold)"></rect><rect x="11" y="27" width="10" height="4.5" rx="2.2" fill="url(#mbGold)"></rect><path d="M30 28l11 5-4.6 1.5L34.8 39z" fill="{{hi}}" stroke="{{deep}}" stroke-width=".8" stroke-linejoin="round"></path></svg></div>
+</sc-if>
+<sc-if value="{{s.isAuto}}" hint-placeholder-val="{{ false }}">
+<div class="emblem" style="position: relative; width: 108px; height: 108px; border-radius: 50%; background: radial-gradient(circle at 35% 25%, #2A3654 0%, #121A2B 55%, #070A12 100%); box-shadow: inset 0 2px 1px rgba(255,255,255,0.18), inset 0 -8px 18px rgba(0,0,0,0.6), 0 0 0 1.5px rgba({{rgb}},0.55), 0 0 0 6px rgba({{rgb}},0.06), 0 18px 40px -10px rgba(0,0,0,0.9), 0 0 50px -6px {{glowSoft}}; display: flex; align-items: center; justify-content: center"><svg width="66" height="66" viewBox="0 0 48 48" fill="none" aria-hidden="true" style="filter: drop-shadow(0 0 8px rgba({{rgb}},0.75)) drop-shadow(0 0 22px rgba({{rgb}},0.35))"><g class="gear1" style="transform-origin: 19px 20px"><circle cx="19" cy="20" r="10" stroke="url(#mbGold)" stroke-width="5" stroke-dasharray="3.4 2.9"></circle><circle cx="19" cy="20" r="7" stroke="url(#mbGold)" stroke-width="2.4"></circle><circle cx="19" cy="20" r="2.4" fill="{{hi}}"></circle></g><g class="gear2" style="transform-origin: 33px 33px"><circle cx="33" cy="33" r="6.5" stroke="url(#mbGold)" stroke-width="4" stroke-dasharray="2.6 2.5"></circle><circle cx="33" cy="33" r="4.4" stroke="url(#mbGold)" stroke-width="2"></circle><circle cx="33" cy="33" r="1.6" fill="{{hi}}"></circle></g></svg></div>
+</sc-if>
+<sc-if value="{{s.isDone}}" hint-placeholder-val="{{ false }}">
+<div class="emblem" style="position: relative; width: 108px; height: 108px; border-radius: 50%; background: radial-gradient(circle at 35% 25%, #2A3654 0%, #121A2B 55%, #070A12 100%); box-shadow: inset 0 2px 1px rgba(255,255,255,0.18), inset 0 -8px 18px rgba(0,0,0,0.6), 0 0 0 1.5px rgba({{rgb}},0.55), 0 0 0 6px rgba({{rgb}},0.06), 0 18px 40px -10px rgba(0,0,0,0.9), 0 0 50px -6px {{glowSoft}}; display: flex; align-items: center; justify-content: center"><svg width="58" height="58" viewBox="0 0 48 48" fill="none" aria-hidden="true" style="filter: drop-shadow(0 0 8px rgba({{rgb}},0.75)) drop-shadow(0 0 22px rgba({{rgb}},0.35))"><rect x="7" y="10" width="34" height="31" rx="5" fill="url(#mbGold)"></rect><rect x="7" y="10" width="34" height="9" rx="4" fill="{{deep}}"></rect><path d="M15 6v8M33 6v8" stroke="{{hi}}" stroke-width="3" stroke-linecap="round"></path><path class="tickdraw" d="M16 29l6 6 11-12" stroke="{{ink}}" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="30" stroke-dashoffset="0"></path></svg></div>
+</sc-if>
+
+</div>
+<span style="font-size: 16px; font-weight: 500; color: {{s.labelFg}}">{{s.label}}</span>
+</a>
+</sc-for>
+</div>
+</div>
+</div>
+<p aria-live="polite" style="text-align: center; font-size: 18px; color: #DCE1EA; margin: 36px auto 0; max-width: 52ch; min-height: 28px"><span style="color: {{accentLight}}">{{svcNow.label}}.</span> {{svcNow.line}}</p>
+</section>
+
+<!-- PROCESS -->
+<section style="max-width: 1180px; margin: 0 auto; padding: 120px 28px 40px">
+<h2 style="font-weight: 500; font-size: clamp(40px, 5vw, 68px); line-height: 1; letter-spacing: -0.045em; margin: 0; max-width: 15ch">How a system gets built.</h2>
+<ol style="list-style: none; padding: 0; margin: 64px 0 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 0">
+<sc-for list="{{steps}}" as="st" hint-placeholder-count="5">
+<li style="position: relative; padding: 34px 24px 8px 0; border-top: 1px solid rgba(244,239,230,0.12)">
+<span aria-hidden="true" style="position: absolute; top: -1px; left: 0; width: {{st.bar}}; height: 1px; background: linear-gradient(90deg, {{accent}}, transparent); box-shadow: 0 0 12px {{glowSoft}}"></span>
+<div style="font-family: Fraunces, serif; font-weight: 300; font-size: 22px; background: {{goldGrad}}; -webkit-background-clip: text; background-clip: text; color: transparent; filter: drop-shadow(0 0 16px rgba({{rgb}},0.45))">{{st.n}}</div>
+<h3 style="font-weight: 500; font-size: 24px; letter-spacing: -0.025em; margin: 14px 0 0">{{st.t}}</h3>
+<p style="font-size: 16px; line-height: 1.55; color: #BAC2D0; margin: 10px 0 0">{{st.b}}</p>
+</li>
+</sc-for>
+</ol>
+</section>
+
+<!-- PROMISES -->
+<section style="max-width: 1180px; margin: 0 auto; padding: 120px 28px 40px">
+<div style="border-radius: 28px; border: 1px solid rgba(244,239,230,0.09); background: linear-gradient(180deg, #0C111C, #07090F); padding: 56px; display: flex; flex-wrap: wrap; gap: 40px 72px">
+<div style="flex: 1 1 340px">
+<h2 style="font-weight: 500; font-size: clamp(34px, 3.8vw, 52px); line-height: 1.02; letter-spacing: -0.04em; margin: 0">You own everything we build.</h2>
+<p style="font-size: 17px; line-height: 1.65; color: #BAC2D0; margin: 18px 0 0; max-width: 40ch">Domains, ad accounts, pages and automations are set up in your name from day one. If we part ways, nothing goes with us.</p>
+</div>
+<ul style="flex: 1.3 1 420px; list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0 32px">
+<sc-for list="{{promises}}" as="p" hint-placeholder-count="6">
+<li style="display: flex; gap: 12px; padding: 16px 0; border-bottom: 1px solid rgba(244,239,230,0.07); font-size: 16px; line-height: 1.5; color: #DCE1EA"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="{{accent}}" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 2px"><path d="M5 12l5 5 9-10"></path></svg>{{p}}</li>
+</sc-for>
+</ul>
+</div>
+</section>
+
+<!-- TEAM ON THE LINE -->
+<dc-import name="Team" theme="{{themeId}}" hint-size="100%,1000px"></dc-import>
+
+<!-- FIVERR REVIEWS -->
+<dc-import name="Reviews" theme="{{themeId}}" hint-size="100%,1100px"></dc-import>
+
+<!-- PRICING -->
+<section id="pricing" style="position: relative; padding: 140px 28px 60px">
+<div aria-hidden="true" class="breathe" style="position: absolute; top: 40px; left: 50%; transform: translateX(-50%); width: 900px; height: 360px; background: radial-gradient(closest-side, {{glowSoft}}, transparent); filter: blur(50px); pointer-events: none"></div>
+<div style="position: relative; max-width: 1180px; margin: 0 auto">
+<div style="text-align: center; max-width: 720px; margin: 0 auto">
+<h2 style="font-weight: 500; font-size: clamp(40px, 5vw, 68px); line-height: 1; letter-spacing: -0.045em; margin: 0">Published prices. Written scope.</h2>
+<p style="font-size: 18px; line-height: 1.65; color: #BAC2D0; margin: 20px auto 0; max-width: 50ch">Every client gets a written scope with exact deliverables. We take on 6 new clients a month so each build gets senior attention.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; margin-top: 64px">
+<sc-for list="{{plans}}" as="pl" hint-placeholder-count="3">
+<article class="spot" onMouseMove="{{pl.move}}" onMouseLeave="{{pl.leave}}" style="text-align: left; border-radius: 26px; padding: 1px; background: {{pl.ring}}; box-shadow: {{pl.glow}}; transform: {{pl.lift}}; transition: transform .35s ease, box-shadow .35s ease">
+<div style="position: relative; overflow: hidden; border-radius: 25px; background: linear-gradient(180deg, #141D30 0%, #0A0F1A 100%); box-shadow: inset 0 1px 0 rgba(255,255,255,0.09); padding: 32px; height: 100%; box-sizing: border-box; display: flex; flex-direction: column; gap: 20px">
+<div aria-hidden="true" style="position: absolute; inset: 0; pointer-events: none; background: {{pl.spot}}"></div>
+<div style="position: relative; display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap"><span style="font-weight: 500; font-size: 24px; letter-spacing: -0.02em">{{pl.name}}</span><span style="font-size: 13px; font-weight: 500; padding: 6px 12px; border-radius: 999px; border: 1px solid {{pl.pillBorder}}; color: {{pl.pillFg}}; background: {{pl.pillBg}}">{{pl.pill}}</span></div>
+<div style="position: relative"><div style="font-size: 14px; color: #A7B0C0">Starting at</div><div style="display: flex; align-items: baseline; gap: 8px; margin-top: 6px"><span style="font-family: Fraunces, serif; font-weight: 300; font-size: 64px; line-height: 1; letter-spacing: -0.04em">{{pl.price}}</span><span style="font-size: 24px; font-weight: 500; letter-spacing: -0.02em; color: #DCE1EA">{{pl.unit}}</span></div><div style="font-size: 15px; color: #A7B0C0; margin-top: 8px">{{pl.extra}}</div></div>
+<a href="{{pl.href}}" style="position: relative; display: block; text-align: center; text-decoration: none; font-weight: 600; font-size: 16px; padding: 15px; min-height: 44px; box-sizing: border-box; border-radius: 999px; background: {{pl.btnBg}}; color: {{pl.btnFg}}; border: 1px solid {{pl.btnBorder}}">{{pl.btn}}</a>
+<div style="position: relative; display: flex; flex-direction: column; gap: 11px; padding-top: 6px">
+<sc-for list="{{pl.items}}" as="it" hint-placeholder-count="5">
+<div style="display: flex; gap: 10px; font-size: 15px; line-height: 1.5; color: #DCE1EA"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="{{accent}}" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 3px"><path d="M5 12l5 5 9-10"></path></svg><span>{{it}}</span></div>
+</sc-for>
+</div>
+<div style="position: relative; font-size: 14px; color: #8F99AD; margin-top: auto; padding-top: 6px">{{pl.term}}</div>
+</div>
+</article>
+</sc-for>
+</div>
+<div style="margin-top: 18px; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px">
+<sc-for list="{{guarantees}}" as="gu" hint-placeholder-count="3">
+<div style="display: flex; gap: 14px; align-items: flex-start; padding: 20px 22px; border-radius: 20px; background: rgba({{rgb}},0.06); border: 1px solid rgba({{rgb}},0.22)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="{{accentLight}}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 1px"><path d="{{gu.icon}}"></path></svg><span><span style="display: block; font-size: 16px; font-weight: 500">{{gu.t}}</span><span style="display: block; font-size: 14px; line-height: 1.5; color: #A7B0C0; margin-top: 4px">{{gu.d}}</span></span></div>
+</sc-for>
+</div>
+<div style="margin-top: 18px; border-radius: 26px; border: 1px solid rgba(244,239,230,0.09); background: #0A0E17; padding: 30px 32px; display: flex; flex-wrap: wrap; gap: 28px; align-items: center; justify-content: space-between">
+<div style="flex: 1 1 320px; min-width: 0"><h3 style="font-weight: 500; font-size: 26px; letter-spacing: -0.025em; margin: 0">Paid ads on Meta and Google</h3><p style="font-size: 15px; color: #A7B0C0; margin: 8px 0 0">You pay ad spend directly to the platform. We never mark it up.</p></div>
+<div style="display: flex; flex-wrap: wrap; gap: 40px">
+<div><div style="font-size: 14px; color: #A7B0C0">Campaign launch</div><div style="font-family: Fraunces, serif; font-weight: 300; font-size: 36px">$597</div></div>
+<div><div style="font-size: 14px; color: #A7B0C0">Management</div><div style="font-family: Fraunces, serif; font-weight: 300; font-size: 36px">$697<span style="font-family: Geist, sans-serif; font-size: 15px; color: #A7B0C0">/mo</span></div></div>
+<div><div style="font-size: 14px; color: #A7B0C0">Launch and 3 months</div><div style="display: flex; align-items: baseline; gap: 10px"><span style="font-size: 18px; color: #8F99AD; text-decoration: line-through">$2,688</span><span style="font-family: Fraunces, serif; font-weight: 300; font-size: 36px; background: {{goldGrad}}; -webkit-background-clip: text; background-clip: text; color: transparent; filter: drop-shadow(0 0 16px rgba({{rgb}},0.45))">$2,197</span></div></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" style="max-width: 900px; margin: 0 auto; padding: 120px 28px 40px">
+<h2 style="font-weight: 500; font-size: clamp(40px, 5vw, 68px); line-height: 1; letter-spacing: -0.045em; margin: 0">Questions owners ask us.</h2>
+<div style="margin-top: 48px; border-top: 1px solid rgba(244,239,230,0.1)">
+<sc-for list="{{faqs}}" as="f" hint-placeholder-count="6">
+<div style="border-bottom: 1px solid rgba(244,239,230,0.1)">
+<button type="button" class="faqrow" onClick="{{f.toggle}}" aria-expanded="{{f.expanded}}" style="width: 100%; text-align: left; background: transparent; border: 0; color: #F4EFE6; font-family: Geist, sans-serif; font-size: 20px; font-weight: 500; letter-spacing: -0.015em; padding: 26px 4px; display: flex; justify-content: space-between; align-items: center; gap: 20px; cursor: pointer">{{f.q}}<span aria-hidden="true" style="flex: none; width: 32px; height: 32px; border-radius: 50%; border: 1px solid rgba(244,239,230,0.18); display: flex; align-items: center; justify-content: center; transform: {{f.rot}}; transition: transform .3s ease"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#F4EFE6" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></span></button>
+<sc-if value="{{f.open}}" hint-placeholder-val="{{ false }}">
+<p class="drop" style="font-size: 17px; line-height: 1.65; color: #BAC2D0; margin: 0; padding: 0 56px 28px 4px">{{f.a}}</p>
+</sc-if>
+</div>
+</sc-for>
+</div>
+</section>
+
+<!-- CLOSING CTA -->
+<section id="audit" style="position: relative; padding: 160px 28px 140px; text-align: center">
+<div aria-hidden="true" class="breathe" style="position: absolute; bottom: -120px; left: 50%; transform: translateX(-50%); width: 1300px; height: 620px; background: radial-gradient(closest-side, {{glowStrong}}, {{glowSoft}} 45%, transparent 75%); filter: blur(40px); pointer-events: none"></div>
+<div aria-hidden="true" style="position: absolute; top: 60px; left: 50%; transform: translateX(-50%); width: 70%; height: 1px; background: linear-gradient(90deg, transparent, rgba(244,239,230,0.18), transparent)"></div>
+<div style="position: relative; max-width: 980px; margin: 0 auto">
+<h2 style="font-weight: 500; font-size: clamp(52px, 8vw, 116px); line-height: 0.95; letter-spacing: -0.055em; margin: 0">Your first fix is on us.</h2>
+<p style="font-size: 20px; line-height: 1.6; color: #DCE1EA; margin: 28px auto 0; max-width: 46ch">A free business audit across brand, website, ads, social and automation. We find what you pay people or tools for that a system could do, and hand you one fix you can use right away.</p>
+<sc-if value="{{notSent}}" hint-placeholder-val="{{ true }}">
+<form onSubmit="{{submitAudit}}" style="margin: 44px auto 0; max-width: 620px; display: flex; flex-wrap: wrap; gap: 10px; padding: 8px; border-radius: 999px; background: rgba(14,20,32,0.8); border: 1px solid rgba(244,239,230,0.14); backdrop-filter: blur(10px)">
+<label style="flex: 1 1 240px; display: flex; align-items: center"><span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Work email</span><input name="email" type="email" required autocomplete="email" placeholder="you@yourbusiness.com" style="width: 100%; background: transparent; border: 0; color: #F4EFE6; font-family: Geist, sans-serif; font-size: 17px; padding: 14px 18px"></label>
+<input type="text" name="company_url" tabindex="-1" autocomplete="off" aria-hidden="true" style="position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0">
+<button type="submit" class="pill" style="flex: 0 1 auto; background: {{goldGrad}}; background-size: 220% 100%; color: {{ink}}; border: 0; border-radius: 999px; padding: 15px 26px; font-family: Geist, sans-serif; font-size: 16px; font-weight: 600; cursor: pointer; min-height: 44px">Book my free audit</button>
+</form>
+</sc-if>
+<sc-if value="{{sent}}" hint-placeholder-val="{{ false }}">
+<div class="pop" role="status" style="margin: 44px auto 0; max-width: 620px; padding: 28px; border-radius: 28px; background: rgba(14,20,32,0.85); border: 1px solid rgba({{rgb}},0.45); box-shadow: 0 0 60px -20px rgba({{rgb}},0.6)">
+<p style="margin: 0; font-size: 22px; font-weight: 500; letter-spacing: -0.02em">You are on the list. Check your inbox.</p>
+<p style="margin: 10px 0 0; font-size: 16px; line-height: 1.6; color: #BAC2D0">Two quick details make your video sharper: your website and what takes most of your week.</p>
+<a href="FreeAudit.dc.html" class="pill" style="display: inline-block; margin-top: 20px; background: {{goldGrad}}; background-size: 220% 100%; color: {{ink}}; text-decoration: none; font-weight: 600; font-size: 16px; padding: 14px 24px; border-radius: 999px; min-height: 44px; box-sizing: border-box">Add two details</a>
+</div>
+</sc-if>
+<p style="font-size: 14px; color: #8F99AD; margin: 16px 0 0">Reply within one business day. No sales script. <a href="Legal.dc.html" style="color: #BAC2D0">Privacy</a></p>
+<p style="font-size: 15px; color: #DCE1EA; margin: 14px 0 0">Rather talk? <a href="FreeAudit.dc.html#book-call" style="color: {{accentLight}}; text-underline-offset: 4px">Book a 30-minute call</a></p>
+</div>
+</section>
+
+<!-- MOBILE STICKY CTA -->
+<div class="mbar" style="gap: 8px; padding: 8px; border-radius: 999px; background: rgba(10,8,20,0.9); border: 1px solid rgba(244,239,230,0.12); box-shadow: 0 16px 40px -12px rgba(0,0,0,0.9)">
+<a href="FreeAudit.dc.html" style="flex: 1; text-align: center; background: {{goldGrad}}; color: {{ink}}; text-decoration: none; font-weight: 600; font-size: 16px; padding: 13px; border-radius: 999px; min-height: 44px; box-sizing: border-box">Book my free audit</a>
+<a href="FreeAudit.dc.html#book-call" aria-label="Book a 30-minute call" style="flex: none; width: 46px; height: 46px; border-radius: 50%; border: 1px solid rgba(244,239,230,0.18); display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F4EFE6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"></path></svg></a>
+</div>
+
+<!-- FOOTER -->
+<dc-import name="Footer" theme="{{themeId}}" hint-size="100%,300px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","default":"violet","options":["ice","platinum","violet","gold"]},"$preview":{"width":1440,"height":9600}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { menu: null, sheet: false, selected: 'grow', hover: null, faq: 0, sent: false }; }
+  componentDidMount() {
+    if (!this.root || typeof IntersectionObserver === 'undefined') return;
+    this.io = new IntersectionObserver((es) => es.forEach((en) => en.target.classList.toggle('offscreen', !en.isIntersecting)), { rootMargin: '200px 0px' });
+    this.root.querySelectorAll('section').forEach((el) => this.io.observe(el));
+  }
+  componentWillUnmount() { if (this.io) this.io.disconnect(); }
+  renderVals() {
+    const THEMES = {
+      ice: { name: 'Ice blue', c: '#7DB9FF', l: '#CFE6FF', hi: '#F3F9FF', rgb: '125,185,255', ink: '#04101F', deep: '#1F4E8C', base: '#040507', s: ['#3E78C9', '#CFE6FF', '#7DB9FF', '#F3F9FF', '#4F8BD9'] },
+      platinum: { name: 'Platinum', c: '#DDE3EE', l: '#FFFFFF', hi: '#FFFFFF', rgb: '220,228,240', ink: '#0A0C10', deep: '#5A6272', base: '#050506', s: ['#8E97A8', '#F6F8FC', '#C3CAD6', '#FFFFFF', '#9AA3B3'] },
+      violet: { name: 'Violet', c: '#A78BFF', l: '#DCD2FF', hi: '#F3EEFF', rgb: '167,139,255', ink: '#120A2A', deep: '#3E2A8C', base: '#06050B', s: ['#6C4FE0', '#DCD2FF', '#A78BFF', '#F3EEFF', '#7A5CF0'] },
+      gold: { name: 'Gold', c: '#F0C462', l: '#FFE3A0', hi: '#FFF3C8', rgb: '240,196,98', ink: '#1A1206', deep: '#7A5A1E', base: '#07090F', s: ['#A9792A', '#F7DC94', '#E0B04E', '#FFF3C8', '#B8893A'] }
+    };
+    const themeId = this.props.theme || 'violet';
+    const T = THEMES[themeId] || THEMES.violet;
+    const A = { c: T.c, l: T.l, rgb: T.rgb, g: 'linear-gradient(110deg, ' + T.s[0] + ' 0%, ' + T.s[1] + ' 28%, ' + T.s[2] + ' 52%, ' + T.s[3] + ' 72%, ' + T.s[4] + ' 100%)' };
+    const glowStrong = 'rgba(' + A.rgb + ',0.5)', glowSoft = 'rgba(' + A.rgb + ',0.2)', glowEdge = 'rgba(' + A.rgb + ',0.5)';
+    const at = 'var(--mx, 50%) var(--my, 0%)';
+    const card = (id, base) => {
+      const on = this.state.hover === id;
+      return {
+        ring: on ? 'radial-gradient(360px circle at ' + at + ', rgba(' + A.rgb + ',0.9), rgba(' + A.rgb + ',0.18) 45%, rgba(244,239,230,0.08) 75%)' : (base || 'rgba(244,239,230,0.08)'),
+        glow: on ? '0 0 60px -20px rgba(' + A.rgb + ',0.55)' : 'none',
+        spot: on ? 'radial-gradient(420px circle at ' + at + ', rgba(' + A.rgb + ',0.10), transparent 60%)' : 'none',
+        move: (e) => { const el = e.currentTarget, r = el.getBoundingClientRect(); el.style.setProperty('--mx', Math.round(e.clientX - r.left) + 'px'); el.style.setProperty('--my', Math.round(e.clientY - r.top) + 'px'); if (this.state.hover !== id) this.setState({ hover: id }); },
+        leave: () => this.setState({ hover: null })
+      };
+    };
+    const menuDefs = [
+      { id: 'services', label: 'Services', items: [
+        { t: 'Brand and design', d: 'Brand identity, brand kits, UI/UX, pitch decks', href: '#services' },
+        { t: 'Websites', d: 'Premium websites in 14 days, landing pages, funnels', href: '#services' },
+        { t: 'Paid ads', d: 'Meta and Google campaigns with tracking', href: '#services' },
+        { t: 'Social growth', d: 'Content systems, reels, community management', href: '#services' },
+        { t: 'Automation', d: 'Content and workflow automation, CRM, AI assistants', href: '#services' }
+      ] },
+      { id: 'industries', label: 'Industries', items: [
+        { t: 'Creators, traders and experts', d: 'Content that publishes itself', href: '#work' },
+        { t: 'Restaurants and food', d: 'Menus, ordering and local search', href: '#work' },
+        { t: 'Med spas and aesthetics', d: 'Consult bookings and rebooking', href: '#work' },
+        { t: 'Home services', d: 'HVAC, plumbing, roofing, cleaning', href: '#work' }
+      ] }
+    ];
+    const menus = menuDefs.map((m) => {
+      const open = this.state.menu === m.id;
+      return { label: m.label, open, expanded: open ? 'true' : 'false', fg: open ? '#F4EFE6' : '#DCE1EA',
+        chev: open ? 'rotate(180deg)' : 'none', toggle: () => this.setState({ menu: open ? null : m.id, sheet: false }), items: m.items };
+    });
+    const words = (s, start) => s.split(' ').map((t, i) => ({ t, d: (start + i * 0.09).toFixed(2) + 's' }));
+    const activeId = this.state.hover && this.state.hover.indexOf('plan-') === 0 ? this.state.hover.slice(5) : this.state.selected;
+    const planDefs = [
+      { id: 'launch', name: 'Launch', pill: 'Get online fast', price: '$997', unit: 'once', extra: 'plus $149/mo care', btn: 'Start with Launch',
+        items: ['Premium 5-page website in 14 days', 'Booking and hosting set up', 'Missed-call text-back', 'Review requests', 'Google profile set up'], term: 'Care plan is month-to-month' },
+      { id: 'grow', name: 'Grow', pill: 'Most popular', price: '$997', unit: 'a month', extra: 'plus $500 setup', btn: 'Start with Grow',
+        items: ['Everything in Launch', 'Content system: 12 posts a month, 4 reels', 'Lead follow-up by text and email', 'Brand kit refresh in month one', 'One-page monthly report'], term: '3-month minimum, then monthly' },
+      { id: 'scale', name: 'Scale', pill: 'Adds paid ads', price: '$1,997', unit: 'a month', extra: 'plus $500 setup', btn: 'Start with Scale',
+        items: ['Everything in Grow', '20 posts and 8 reels a month', 'Meta or Google ads management', 'Monthly landing pages and local SEO', 'Report every two weeks and a monthly call'], term: '3-month minimum. Ad spend is billed to you.' }
+    ];
+    const plans = planDefs.map((pl) => {
+      const active = activeId === pl.id;
+      return { ...pl,
+        ring: active ? 'radial-gradient(420px circle at ' + at + ', rgba(' + A.rgb + ',1), rgba(' + A.rgb + ',0.25) 40%, rgba(244,239,230,0.08) 75%)' : 'rgba(244,239,230,0.08)',
+        glow: active ? '0 0 80px -20px rgba(' + A.rgb + ',0.6)' : 'none',
+        lift: active ? 'translateY(-4px)' : 'none',
+        spot: active ? 'radial-gradient(420px circle at ' + at + ', rgba(' + A.rgb + ',0.12), transparent 60%)' : 'none',
+        btnBg: active ? A.g : 'transparent', btnFg: active ? T.ink : '#F4EFE6', btnBorder: active ? A.c : 'rgba(244,239,230,0.18)',
+        pillBg: pl.id === 'grow' ? 'rgba(' + A.rgb + ',0.14)' : 'transparent', pillFg: pl.id === 'grow' ? A.l : '#BAC2D0', pillBorder: pl.id === 'grow' ? 'rgba(' + A.rgb + ',0.4)' : 'rgba(244,239,230,0.12)',
+        move: (e) => { const el = e.currentTarget, r = el.getBoundingClientRect(); el.style.setProperty('--mx', Math.round(e.clientX - r.left) + 'px'); el.style.setProperty('--my', Math.round(e.clientY - r.top) + 'px'); if (this.state.hover !== 'plan-' + pl.id) this.setState({ hover: 'plan-' + pl.id }); },
+        leave: () => this.setState({ hover: null }),
+        href: 'FreeAudit.dc.html?plan=' + pl.id };
+    });
+    const stDefs = [
+      { k: 'brand', href: 'Brand.dc.html', label: 'Brand', line: 'Design team. An identity and brand kit that make you look as established as you are.' },
+      { k: 'social', href: 'Social.dc.html', label: 'Social', line: 'Social team. A content system that keeps you visible every week.' },
+      { k: 'ads', href: 'Ads.dc.html', label: 'Ads', line: 'Ads team. Meta and Google campaigns with tracking from day one.' },
+      { k: 'web', href: 'Websites.dc.html', label: 'Website', line: 'Development team. A premium website, live in 14 days.' },
+      { k: 'auto', href: 'Automation.dc.html', label: 'Automation', line: 'Automation team. Every call and message followed up on its own.' },
+      { k: 'done', href: 'FreeAudit.dc.html', label: 'Booked', line: 'The result: a customer on your calendar, and nothing dropped on the way.' }
+    ];
+    const svcIdx = this.state.svc ?? 5;
+    const siteIdx = this.state.site ?? 1;
+    const siteDefs = [
+      { name: 'Atlas Global', kind: 'Sports management', src: '/_blob/c4f962f9394b5ed792bb9206f48d9fa0', alt: 'Full-page design for Atlas Global, a sports and talent management firm' },
+      { name: 'RevMar', kind: 'B2B growth firm', src: '/_blob/5814c8521916c7dead661ddd2f41a626', alt: 'Full-page design for RevMar, a B2B growth firm' },
+      { name: 'Kidz Economy', kind: 'Financial education', src: '/_blob/2c7ddba0b74c45c94c24c487f12efc81', alt: 'Full-page design for Kidz Economy, financial education for children' }
+    ];
+    const svc = [
+      { id: 's1', span: 'span 3', team: 'Design and UI/UX team', name: 'Brand and design', flag: 'Brand identity and a brand kit that makes you look as established as you are.', also: 'Also UI/UX design, pitch decks and social templates' },
+      { id: 's2', span: 'span 3', team: 'Development and WordPress team', name: 'Websites', flag: 'A premium website, live in 14 days.', also: 'Also redesigns, landing pages, funnels and UX audits' },
+      { id: 's3', span: 'span 2', team: 'Facebook and Google Ads team', name: 'Paid ads', flag: 'Campaign launch with tracking from day one.', also: 'Also monthly management, creatives and retargeting' },
+      { id: 's4', span: 'span 2', team: 'Social and marketing team', name: 'Social growth', flag: 'A content system and monthly management.', also: 'Also reels, carousels, voiceovers and community' },
+      { id: 's5', span: 'span 2', team: 'Automation team', name: 'Automation', flag: 'Content and workflow automation that runs on its own.', also: 'Also missed-call text-back, CRM, follow-up and AI assistants' }
+    ];
+    const close = () => this.setState({ menu: null, sheet: false });
+    const faqDefs = [
+      ['What happens in the free business audit?', 'We look at your brand, website, ads, social and the tools you pay for. You get a short video with what we found and one fix you can use right away, whether or not you hire us.'],
+      ['Why are your prices lower than most US agencies?', 'We run a lean team with no account-manager layers, and we build systems once instead of billing for the same task every month. The savings go into your price, not our overhead.'],
+      ['Where is your team?', 'We are an international team working on US business hours for calls. Changes you send by 5pm Eastern are usually done by the next morning.'],
+      ['Do I have to sign a long contract?', 'No. Launch care is month-to-month. Grow and Scale have a 3-month minimum so the system has time to work, then you can cancel any month.'],
+      ['What if I am not happy with the work?', 'Tell us and we fix it inside your written scope. If your website is not live in 14 days, your first month of care is free.'],
+      ['Who owns the website, ad accounts and automations?', 'You do. Everything is set up in your name from the start. If we stop working together, you keep all of it.'],
+      ['Do you mark up ad spend?', 'No. You pay Meta or Google directly. Our fee is fixed and written into your scope.'],
+      ['How long until something is live?', 'Websites go live within 14 days. Ad campaigns launch within 7 days of approval. Automations depend on scope, and we give you a date before we start.'],
+      ['Do I need to give you my passwords?', 'No. You add us as a user on your accounts, so you can remove our access at any time and never share a password.'],
+      ['How do you handle customer data and texting rules?', 'We register texting for you (A2P 10DLC), add consent wording to your forms and keep sensitive details, like health information, off them.'],
+      ['What tools do you use?', 'Tools you can keep: WordPress or Shopify, Meta and Google Ads, Zapier or Make, and a CRM. We pick what fits, and nothing is locked to us.'],
+      ['Do you only work with one industry?', 'No. We work with creators and experts, restaurants, med spas and home-service businesses, and we tailor each system to how your customers buy.']
+    ];
+    return {
+      themeId, accent: A.c, accentLight: A.l, goldGrad: A.g, rgb: T.rgb, hi: T.hi, ink: T.ink, deep: T.deep, base: T.base, s1: T.s[0], s2: T.s[1], s3: T.s[2], s4: T.s[3], s5: T.s[4],
+      glowStrong, glowSoft, glowEdge,
+      menus, anyMenu: this.state.menu !== null, closeMenus: close,
+      sheetOpen: this.state.sheet, sheetExpanded: this.state.sheet ? 'true' : 'false',
+      toggleSheet: () => this.setState({ sheet: !this.state.sheet, menu: null }), closeSheet: close,
+      sheetLinks: [['Services', '#services'], ['Work', '#work'], ['Pricing', '#pricing'], ['FAQ', '#faq']].map(([t, href]) => ({ t, href })),
+      line1: words('Agencies sell tasks.', 0.1), line2: words('We build business systems.', 0.4),
+      runs: [
+        { t: 'Chart captured from the trading session', d2: 'Screenshots and screen recording saved', time: '08:02', d: '0s' },
+        { t: 'Voiceover recorded and cleaned', d2: 'Jake talks; the system trims and levels it', time: '08:04', d: '2.4s' },
+        { t: 'Branded post generated', d2: 'Chart, caption and voiceover in his brand kit', time: '08:05', d: '4.8s' },
+        { t: 'Published to every channel', d2: 'Socials and the Slack community, on schedule', time: '08:06', d: '7.2s' }
+      ],
+      sites: siteDefs.map((st, i) => { const on = siteIdx === i; return { ...st, pressed: on ? 'true' : 'false', aria: st.name + ', ' + st.kind + ' website design',
+        ring: on ? 'linear-gradient(160deg, rgba(' + A.rgb + ',0.95), rgba(' + A.rgb + ',0.15) 40%, rgba(244,239,230,0.08))' : 'rgba(244,239,230,0.1)',
+        glow: on ? '0 30px 80px -30px rgba(0,0,0,0.9), 0 0 70px -18px rgba(' + A.rgb + ',0.6)' : '0 30px 60px -30px rgba(0,0,0,0.9)',
+        scale: on ? 'translateY(-14px) scale(1.04)' : 'scale(0.96)', delay: (i * -6) + 's', pick: () => this.setState({ site: i }) }; }),
+      bigStats: [
+        { n: '1.5M', l: 'accounts reached', src: 'Banksy Store, one insights period' },
+        { n: '99K+', l: 'followers across six accounts', src: 'Combined, as of the latest screenshots' },
+        { n: '82K', l: 'content interactions', src: 'Banksy Store, same period' }
+      ],
+      accounts: [['Banksy Store', 'Art store', 35.2, '35.2K', 'BS'], ['Entrepreneur and consultant', 'Real client, name withheld', 18.2, '18.2K', 'EC'], ['Concrete Kin', 'House music label', 15.2, '15.2K', 'CK'], ['Recording artist', 'Real client, name withheld', 13.6, '13.6K', 'RA'], ['Jake the Stock Guy', 'Options alerts, 1,000+ member Slack', 12.6, '12.6K', 'JS'], ['DFNE NYC', 'Clothing brand', 4.849, '4,849', 'DF']].map(([name, kind, v, f, ini], i) => ({ name, kind, f, ini, w: Math.round(v / 35.2 * 100) + '%', d: (0.2 + i * 0.12).toFixed(2) + 's' })),
+      postStats: [
+        { n: '5,546', l: 'Likes', icon: 'M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.6 4.5c2.1 0 3.6 1.2 5.4 3.2 1.8-2 3.3-3.2 5.4-3.2 3.6 0 5.7 3.9 4.2 7.3C19.5 16.4 12 21 12 21z' },
+        { n: '32', l: 'Comments', icon: 'M12 3C6.5 3 2 6.9 2 11.7c0 2.4 1.1 4.6 3 6.2L4 22l4.6-2.3c1.1.3 2.2.4 3.4.4 5.5 0 10-3.9 10-8.7S17.5 3 12 3z' },
+        { n: '237', l: 'Shares', icon: 'M22 2L2 10.5l7.5 3L12 21l3.2-7.4z' },
+        { n: '286', l: 'Saves', icon: 'M6 2h12a1 1 0 0 1 1 1v19l-7-5-7 5V3a1 1 0 0 1 1-1z' }
+      ],
+      tools: ['WordPress', 'Shopify', 'Meta Ads', 'Google Ads', 'Slack', 'Zapier', 'Make', 'Notion', 'Canva', 'OpenAI'].concat(['WordPress', 'Shopify', 'Meta Ads', 'Google Ads', 'Slack', 'Zapier', 'Make', 'Notion', 'Canva', 'OpenAI']),
+      cases: [
+        { id: 'c1', who: 'Jake the Stock Guy', kind: 'Trader and educator', line: 'He went back to trading. The content runs itself.', body: 'Jake paid an agency to post his trades, charts and explanations, and to run his Slack community. We built a pipeline that turns his screenshots and recordings into branded posts on fixed channels.', before: '$2,000/mo', after: '$300/mo after setup' },
+        { id: 'c2', who: 'Le Bobadel Market', kind: 'Restaurant', line: 'We were automating before it was trendy.', body: 'The menu changed every day, and someone retyped the handwritten board for the website. Now a photo of the board becomes a website-ready menu, live on a fixed schedule. Built three years ago.', before: 'A monthly hire', after: '$200–$250/mo' }
+      ].map((c) => ({ ...c, ...card(c.id) })),
+      services: svc.map((s) => ({ ...s, ...card(s.id) })),
+      stations: stDefs.map((s, i) => {
+        const on = svcIdx === i;
+        return { label: s.label, href: s.href, aria: s.label + ': ' + s.line, pressed: on ? 'true' : 'false',
+          isBrand: s.k === 'brand', isSocial: s.k === 'social', isAds: s.k === 'ads', isWeb: s.k === 'web', isAuto: s.k === 'auto', isDone: s.k === 'done',
+          delay: (i * 1.67).toFixed(2) + 's', cls: on ? 'stat-on' : 'lit',
+          border: on ? A.c : 'rgba(244,239,230,0.09)',
+          glow: on ? '0 0 60px -14px ' + A.c : 'none',
+          lift: on ? 'translateY(-6px)' : 'none',
+          labelFg: on ? A.l : '#BAC2D0',
+          enter: () => this.setState({ svc: i }) };
+      }),
+      svcNow: stDefs[svcIdx],
+      calendar: Array.from({ length: 20 }, (_, i) => ({ bg: i === 12 ? A.c : (i % 7 === 3 ? '#222C40' : '#161E2E'), glow: i === 12 ? '0 0 14px ' + A.c : 'none' })),
+      steps: [
+        { n: '01', t: 'Audit', b: 'Where your time and money go today.', bar: '30%' },
+        { n: '02', t: 'Plan', b: 'The system worth building first, priced in writing.', bar: '45%' },
+        { n: '03', t: 'Build', b: 'Brand, site, ads and content, made by specialist teams.', bar: '60%' },
+        { n: '04', t: 'Automate', b: 'The repeat work moves off your desk.', bar: '78%' },
+        { n: '05', t: 'Grow', b: 'Monthly tuning, reported in hours and dollars.', bar: '100%' }
+      ],
+      promises: ['Written scope with exact deliverables', 'No hidden fees or surprise charges', 'No fake reviews or fake urgency', 'Real numbers in every case study', 'Ad spend never marked up', 'Accounts always in your name'],
+      notSent: !this.state.sent, sent: this.state.sent,
+      submitAudit: (e) => { if (e && e.preventDefault) e.preventDefault(); const fm = e && e.currentTarget; if (fm && fm.company_url && fm.company_url.value) return; this.setState({ sent: true }); },
+      plans, setRoot: (el) => { this.root = el; },
+      guarantees: [
+        { t: 'Live in 14 days', d: 'Your site goes live within 14 days, or your first month of care is free.', icon: 'M12 3a9 9 0 1 0 0 18a9 9 0 1 0 0-18z M12 7v5l3 2' },
+        { t: 'Ads running in 7 days', d: 'Campaigns launch within 7 days of your approval, with tracking tested first.', icon: 'M13 2L4 14h7l-1 8 9-12h-7z' },
+        { t: 'Leave with everything', d: 'After the minimum term, cancel any month. Every account stays in your name.', icon: 'M6 11h12v10H6z M8 11V8a4 4 0 0 1 7.5-2' }
+      ],
+      faqs: faqDefs.map(([q, a], i) => { const open = this.state.faq === i; return { q, a, open, expanded: open ? 'true' : 'false', rot: open ? 'rotate(45deg)' : 'none', toggle: () => this.setState({ faq: open ? null : i }) }; })
+    };
+  }
+}
+</script>
+</body>
+</html>

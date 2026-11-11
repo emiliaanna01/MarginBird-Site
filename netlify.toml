@@ -1,0 +1,7 @@
+[build]
+  command = "npm ci && node build.mjs"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+  # Set GA4_ID, META_PIXEL_ID and ALERT_TO in Netlify > Project configuration > Environment variables

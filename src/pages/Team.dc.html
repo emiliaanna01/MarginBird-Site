@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>MarginBird team on the line</title>
+<script src="./support.js"></script>
+<script src="/_blob/4a480fe534e568be8b0f686ebffbec25"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&amp;family=Fraunces:opsz,wght@9..144,300;9..144,400&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#040507}
+.tl-canvas{touch-action:pan-y;cursor:grab}
+.tl-canvas:active{cursor:grabbing}
+</style>
+</helmet>
+<section aria-labelledby="team-title" style="font-family: Geist, system-ui, sans-serif; color: #F4EFE6; background: {{base}}; width: 100%; box-sizing: border-box; padding: 120px 28px 40px; overflow: hidden">
+<div style="max-width: 1180px; margin: 0 auto">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px">
+<div>
+<p style="margin: 0 0 14px; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: {{accent}}">The people behind the systems</p>
+<h2 id="team-title" style="font-weight: 500; font-size: clamp(40px, 5vw, 68px); line-height: 1; letter-spacing: -0.045em; margin: 0">Hung out to dry.<br><span style="font-family: Fraunces, serif; font-weight: 300; font-style: italic; color: #BAC2D0">On purpose.</span></h2>
+</div>
+<p style="margin: 0; max-width: 36ch; font-size: 17px; line-height: 1.65; color: #BAC2D0">No faceless agency. Tug the line, bend a card, or swipe across the dotted line to tear off a stub. Sound on.</p>
+</div>
+
+<div style="position: relative; height: 680px; margin-top: 32px">
+<canvas class="tl-canvas" ref="{{setCanvas}}" role="img" aria-label="{{label}}" style="position: absolute; inset: 0; width: 100%; height: 100%; display: block"></canvas>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; min-height: 52px">
+<sc-if value="{{torn}}" hint-placeholder-val="{{ false }}">
+<a href="#audit" style="display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 24px; border-radius: 999px; background: {{accent}}; color: #04101F; font-weight: 600; text-decoration: none">{{tornCta}}</a>
+</sc-if>
+<sc-if value="{{notTorn}}" hint-placeholder-val="{{ true }}">
+<p style="margin: 0; align-self: center; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #6E7788">Double-click to hang fresh cards</p>
+</sc-if>
+</div>
+</div>
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","default":"violet","options":["ice","platinum","violet","gold"]},"founderName":{"editor":"text","default":"Khandaker Ayman"},"founderPhoto":{"editor":"text","default":"/_blob/a0ddcce7a326a31a4202077d6164f3a4"},"designerName":{"editor":"text","default":"Manjir Ahmed Bin Rouf Rahat"},"designerPhoto":{"editor":"text","default":"/_blob/75aea8dc94a97717d6963d11466e4921"},"$preview":{"width":1440,"height":1000}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { torn: -1 }; }
+  opts() {
+    const THEMES = {
+      ice: { c: '#7DB9FF', base: '#040507' }, platinum: { c: '#DDE3EE', base: '#050506' },
+      violet: { c: '#A78BFF', base: '#06050B' }, gold: { c: '#F0C462', base: '#07090F' }
+    };
+    const T = THEMES[this.props.theme] || THEMES.violet;
+    const ini = (s) => (s || '').replace(/[\[\]]/g, '').split(/\s+/).filter(Boolean).slice(0, 2).map((x) => x[0].toUpperCase()).join('') || '?';
+    const fn = this.props.founderName ?? 'Khandaker Ayman', dn = this.props.designerName ?? 'Manjir Ahmed Bin Rouf Rahat';
+    const fp = this.props.founderPhoto ?? '/_blob/a0ddcce7a326a31a4202077d6164f3a4', dp = this.props.designerPhoto ?? '/_blob/75aea8dc94a97717d6963d11466e4921';
+    return {
+      T,
+      accent: T.c,
+      people: [
+        { name: fn, initials: ini(fn), role: 'Founder', code: 'MB-01', cta: 'Book a call', photo: fp, line: 'Reads your numbers before your logo, then builds the system that moves them.' },
+        { name: dn, initials: ini(dn), role: 'Co-founder & Chief Design Officer', code: 'MB-02', cta: 'See the work', photo: dp, line: 'Designs brands that look like they already made it.' }
+      ],
+      onTorn: (n) => this.setState({ torn: n })
+    };
+  }
+  componentDidMount() {
+    const tryMount = () => {
+      if (!this.canvas) return;
+      if (!window.MBLine) { this.wait = setTimeout(tryMount, 120); return; }
+      this.world = window.MBLine.mount(this.canvas, this.opts());
+    };
+    tryMount();
+  }
+  componentDidUpdate(prev) {
+    if (!this.world) return;
+    const p = this.props, q = prev;
+    if (p.theme !== q.theme || p.founderName !== q.founderName || p.designerName !== q.designerName || p.founderPhoto !== q.founderPhoto || p.designerPhoto !== q.designerPhoto) this.world.update(this.opts());
+  }
+  componentWillUnmount() { clearTimeout(this.wait); if (this.world) this.world.destroy(); }
+  renderVals() {
+    const o = this.opts();
+    const t = this.state.torn;
+    return {
+      accent: o.T.c, base: o.T.base,
+      label: o.people[0].name + ', founder, and ' + o.people[1].name + ', co-founder and chief design officer, on holographic cards hanging from a clothesline',
+      torn: t >= 0, notTorn: t < 0,
+      tornCta: t === 1 ? 'See the work ' + o.people[1].name + ' designed' : 'Book a call with ' + o.people[0].name,
+      setCanvas: (el) => { this.canvas = el; }
+    };
+  }
+}
+</script>
+</body>
+</html>

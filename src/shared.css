@@ -1,0 +1,73 @@
+/* MarginBird shared styles. Theme colours come from CSS variables set on each page root: --acc, --accl, --rgb */
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:2px solid var(--accl,#CFE6FF);outline-offset:3px}
+.navbtn{transition:color .2s ease,background .2s ease}
+.navbtn:hover{background:rgba(244,239,230,0.07)}
+.menuitem{transition:background .15s ease}
+.menuitem:hover{background:rgba(244,239,230,0.06)}
+.pill{background-size:220% 100%;transition:transform .25s ease,box-shadow .25s ease;animation:mbSheen 6s ease-in-out infinite}
+.pill:hover{transform:translateY(-1px);box-shadow:0 10px 40px -10px rgba(var(--rgb),0.8)}
+.ghost{transition:border-color .25s ease,background .25s ease}
+.ghost:hover{border-color:rgba(244,239,230,0.4);background:rgba(244,239,230,0.04)}
+.lift{transition:transform .35s cubic-bezier(.2,.7,.1,1),box-shadow .35s ease}
+.lift:hover{transform:translateY(-4px);box-shadow:0 0 60px -18px rgba(var(--rgb),0.6)}
+.navlinks{display:flex}.menubtn{display:none}
+@media (max-width:920px){.navlinks{display:none}.menubtn{display:inline-flex}.navcta{display:none}}
+
+@keyframes mbSheen{0%,100%{background-position:0% 0}50%{background-position:100% 0}}
+@keyframes mbRise{from{transform:translateY(18px)}to{transform:none}}
+@keyframes mbFade{from{opacity:0}to{opacity:1}}
+@keyframes mbDrop{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+@keyframes mbDrift{0%{transform:translate(-50%,0) rotate(-8deg)}50%{transform:translate(-46%,18px) rotate(-5deg)}100%{transform:translate(-50%,0) rotate(-8deg)}}
+@keyframes mbBreathe{0%,100%{opacity:.55}50%{opacity:.95}}
+@keyframes mbSpin{to{transform:rotate(360deg)}}
+@keyframes mbSpinR{to{transform:rotate(-360deg)}}
+@keyframes mbPing{0%{transform:scale(.7);opacity:.9}100%{transform:scale(1.6);opacity:0}}
+@keyframes mbFill{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes mbGrow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes mbPop{0%{opacity:0;transform:translateY(10px) scale(.96)}100%{opacity:1;transform:none}}
+@keyframes mbFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes mbSweep{0%{left:-50%}60%,100%{left:130%}}
+@keyframes mbBlink{0%,100%{opacity:1}50%{opacity:.35}}
+@keyframes mbRing{0%,100%{transform:rotate(0)}10%{transform:rotate(-14deg)}20%{transform:rotate(14deg)}30%{transform:rotate(-10deg)}40%{transform:rotate(10deg)}50%{transform:rotate(0)}}
+
+.w{display:inline-block;animation:mbRise .9s cubic-bezier(.2,.7,.1,1) both}
+.fade{animation:mbFade 1.2s ease both}
+.drop{animation:mbDrop .18s ease-out}
+.beam{animation:mbDrift 14s ease-in-out infinite}
+.breathe{animation:mbBreathe 6s ease-in-out infinite}
+.spin{animation:mbSpin 9s linear infinite}
+.spinr{animation:mbSpinR 6s linear infinite}
+.ping{animation:mbPing 2.2s ease-out infinite}
+.fillnow{transform-origin:left center;animation:mbFill linear both}
+.grow{transform-origin:left center;animation:mbGrow 1.6s cubic-bezier(.2,.7,.1,1) both}
+.pop{animation:mbPop .55s cubic-bezier(.2,.7,.1,1) both}
+.float{animation:mbFloat 5s ease-in-out infinite}
+.sweep{animation:mbSweep 5s ease-in-out infinite}
+.blink{animation:mbBlink 1.4s ease-in-out infinite}
+.ringing{animation:mbRing 1.6s ease-in-out infinite;transform-origin:50% 20%}
+.paused,.paused *{animation-play-state:paused !important}
+
+/* Missed-call showcase: one 14s loop */
+@keyframes mc1{0%,3%{opacity:0;transform:translateY(8px)}7%,92%{opacity:1;transform:none}97%,100%{opacity:0}}
+@keyframes mc2{0%,14%{opacity:0;transform:translateY(8px)}18%,92%{opacity:1;transform:none}97%,100%{opacity:0}}
+@keyframes mc3{0%,26%{opacity:0;transform:translateY(8px)}30%,92%{opacity:1;transform:none}97%,100%{opacity:0}}
+@keyframes mc4{0%,37%{opacity:0;transform:translateY(8px)}41%,92%{opacity:1;transform:none}97%,100%{opacity:0}}
+@keyframes mc5{0%,49%{opacity:0;transform:translateY(8px) scale(.9)}54%,92%{opacity:1;transform:none}97%,100%{opacity:0}}
+@keyframes mc6{0%,63%{opacity:0;transform:translateY(8px)}67%,92%{opacity:1;transform:none}97%,100%{opacity:0}}
+@keyframes mc7{0%,76%{opacity:0;transform:translateY(8px)}80%,92%{opacity:1;transform:none}97%,100%{opacity:0}}
+@keyframes mcLost{0%,40%{opacity:0;transform:translateY(8px)}46%,92%{opacity:1;transform:none}97%,100%{opacity:0}}
+@keyframes mcCall{0%,2%{opacity:0}5%,92%{opacity:1}97%,100%{opacity:0}}
+.mc1,.mc2,.mc3,.mc4,.mc5,.mc6,.mc7,.mcLost,.mcCall{opacity:0;animation-duration:14s;animation-iteration-count:infinite;animation-timing-function:cubic-bezier(.2,.7,.1,1)}
+.mc1{animation-name:mc1}.mc2{animation-name:mc2}.mc3{animation-name:mc3}.mc4{animation-name:mc4}.mc5{animation-name:mc5}.mc6{animation-name:mc6}.mc7{animation-name:mc7}.mcLost{animation-name:mcLost}.mcCall{animation-name:mcCall}
+
+@media (prefers-reduced-motion:reduce){
+  .w,.fade,.drop,.beam,.breathe,.spin,.spinr,.ping,.fillnow,.grow,.pop,.float,.sweep,.blink,.ringing,.pill{animation:none}
+  .mc1,.mc2,.mc3,.mc4,.mc5,.mc6,.mc7,.mcLost,.mcCall{animation:none;opacity:1}
+  .lift,.pill,.ghost,.navbtn,.menuitem{transition:none}
+}
+
+/* v2 (7 Nov): mobile CTA bar, off-screen pause, cursor spotlight via CSS vars */
+.mbar{display:none}
+@media (max-width:920px){.mbar{display:flex;position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:55}}
+.offscreen,.offscreen *{animation-play-state:paused !important}
+.spot{--mx:50%;--my:0%}

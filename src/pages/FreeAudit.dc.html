@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Free business audit | MarginBird</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="/_blob/f901add9d736276c532f1e80529fbc09">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Fraunces:opsz,wght@9..144,300;9..144,400&amp;display=swap" rel="stylesheet">
+<style>body{margin:0;background:#040507}input::placeholder,textarea::placeholder{color:#77809A}</style>
+</helmet>
+<div style="--acc: {{t.c}}; --accl: {{t.l}}; --rgb: {{t.rgb}}; font-family: Geist, system-ui, sans-serif; color: #F4EFE6; background: {{t.base}}; width: 100%; box-sizing: border-box; overflow: hidden">
+<dc-import name="Nav" theme="{{theme}}" current="audit" hint-size="100%,72px"></dc-import>
+
+<section style="position: relative; padding: 150px 28px 80px">
+<div aria-hidden="true" class="beam" style="position: absolute; top: -240px; left: 50%; width: 1400px; height: 600px; background: radial-gradient(closest-side, rgba({{t.rgb}},0.45), rgba({{t.rgb}},0.12) 45%, transparent 75%); filter: blur(30px); pointer-events: none"></div>
+<div style="position: relative; max-width: 1180px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 56px; align-items: flex-start">
+<div style="flex: 1 1 440px; min-width: 0">
+<h1 class="fade" style="font-weight: 500; font-size: clamp(48px, 6.6vw, 96px); line-height: 0.96; letter-spacing: -0.055em; margin: 0">Your first fix is on us.</h1>
+<p class="fade" style="animation-delay: .3s; font-size: 20px; line-height: 1.6; color: #BAC2D0; margin: 26px 0 0; max-width: 40ch">A short video audit of your brand, website, ads, social and the tools you pay for, with one fix you can use right away.</p>
+<div style="display: flex; flex-direction: column; gap: 0; margin-top: 40px; border-top: 1px solid rgba(244,239,230,0.08)">
+<sc-for list="{{gets}}" as="g" hint-placeholder-count="3">
+<div style="display: flex; gap: 18px; align-items: flex-start; padding: 20px 0; border-bottom: 1px solid rgba(244,239,230,0.08)">
+<span style="flex: none; width: 44px; height: 44px; border-radius: 12px; background: radial-gradient(circle at 35% 25%, #2A3654, #0B101B); box-shadow: inset 0 1px 0 rgba(255,255,255,0.14), 0 0 0 1px rgba({{t.rgb}},0.45), 0 0 22px -6px rgba({{t.rgb}},0.6); display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="{{t.l}}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{g.icon}}"></path></svg></span>
+<span><span style="display: block; font-size: 18px; font-weight: 500">{{g.t}}</span><span style="display: block; font-size: 15px; line-height: 1.55; color: #A7B0C0; margin-top: 4px">{{g.d}}</span></span>
+</div>
+</sc-for>
+</div>
+</div>
+
+<div style="flex: 1 1 420px; min-width: 0; border-radius: 28px; padding: 1px; background: linear-gradient(160deg, rgba({{t.rgb}},0.8), rgba(244,239,230,0.06) 45%, rgba({{t.rgb}},0.25)); box-shadow: 0 0 80px -30px rgba({{t.rgb}},0.6)">
+<div style="border-radius: 27px; padding: 36px; background: linear-gradient(180deg, #141D30, #0A0F1A)">
+<sc-if value="{{showForm}}" hint-placeholder-val="{{ true }}">
+<form onSubmit="{{submit}}" style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="font-weight: 500; font-size: 26px; letter-spacing: -0.02em; margin: 0">Book your free audit</h2>
+<label style="font-size: 14px; font-weight: 500; color: #DCE1EA">Your name<input name="name" type="text" autocomplete="name" required placeholder="Jane Smith" style="margin-top: 8px; width: 100%; box-sizing: border-box; padding: 14px 16px; border-radius: 12px; border: 1px solid rgba(244,239,230,0.14); background: rgba(4,5,7,0.6); color: #F4EFE6; font-family: Geist, sans-serif; font-size: 16px"></label>
+<label style="font-size: 14px; font-weight: 500; color: #DCE1EA">Business website<input name="site" type="url" placeholder="yourbusiness.com" style="margin-top: 8px; width: 100%; box-sizing: border-box; padding: 14px 16px; border-radius: 12px; border: 1px solid rgba(244,239,230,0.14); background: rgba(4,5,7,0.6); color: #F4EFE6; font-family: Geist, sans-serif; font-size: 16px"></label>
+<label style="font-size: 14px; font-weight: 500; color: #DCE1EA">Work email<input name="email" type="email" autocomplete="email" required placeholder="you@yourbusiness.com" style="margin-top: 8px; width: 100%; box-sizing: border-box; padding: 14px 16px; border-radius: 12px; border: 1px solid rgba(244,239,230,0.14); background: rgba(4,5,7,0.6); color: #F4EFE6; font-family: Geist, sans-serif; font-size: 16px"></label>
+<fieldset style="border: 0; padding: 0; margin: 0"><legend style="font-size: 14px; font-weight: 500; color: #DCE1EA; padding: 0">What takes most of your time?</legend>
+<div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px">
+<sc-for list="{{needs}}" as="n" hint-placeholder-count="5">
+<button type="button" onClick="{{n.pick}}" aria-pressed="{{n.pressed}}" style="font-family: Geist, sans-serif; font-size: 14px; padding: 10px 14px; min-height: 44px; border-radius: 999px; cursor: pointer; border: 1px solid {{n.border}}; background: {{n.bg}}; color: {{n.fg}}">{{n.t}}</button>
+</sc-for>
+</div>
+</fieldset>
+<input type="text" name="company_url" tabindex="-1" autocomplete="off" aria-hidden="true" style="position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0">
+<button type="submit" class="pill" style="margin-top: 8px; border: 0; border-radius: 999px; padding: 17px; font-family: Geist, sans-serif; font-size: 17px; font-weight: 600; cursor: pointer; background: {{t.g}}; color: {{t.ink}}; min-height: 44px">Book my free audit</button>
+<p style="font-size: 13px; line-height: 1.5; color: #8F99AD; margin: 0">We reply within one business day. No sales script, and we never share your details. <a href="Legal.dc.html" style="color: #BAC2D0">Privacy</a></p>
+</form>
+</sc-if>
+<sc-if value="{{sent}}" hint-placeholder-val="{{ false }}">
+<div class="pop" style="text-align: center; padding: 40px 10px">
+<span style="display: inline-flex; width: 72px; height: 72px; border-radius: 50%; background: {{t.g}}; align-items: center; justify-content: center; box-shadow: 0 0 50px -6px {{t.c}}"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="{{t.ink}}" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"></path></svg></span>
+<h2 style="font-weight: 500; font-size: 30px; letter-spacing: -0.03em; margin: 24px 0 0">Audit requested</h2>
+<p style="font-size: 16px; line-height: 1.6; color: #BAC2D0; margin: 12px auto 0; max-width: 32ch">Your video arrives within 48 hours. Check your inbox for a confirmation now.</p>
+<a href="#book-call" style="display: block; margin-top: 20px; font-size: 15px; color: #DCE1EA; text-underline-offset: 4px">Rather talk now? Book 30 minutes</a>
+<a href="Work.dc.html" style="display: inline-block; margin-top: 12px; font-size: 15px; color: {{t.l}}; text-underline-offset: 4px">See our work while you wait</a>
+</div>
+</sc-if>
+</div>
+</div>
+</div>
+</section>
+
+<section style="max-width: 1180px; margin: 0 auto; padding: 60px 28px 120px">
+<h2 style="font-weight: 500; font-size: clamp(36px, 4.4vw, 56px); line-height: 1; letter-spacing: -0.04em; margin: 0; text-align: center">What happens next</h2>
+<ol style="list-style: none; padding: 0; margin: 48px 0 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0">
+<sc-for list="{{next}}" as="st" hint-placeholder-count="4">
+<li style="position: relative; padding: 30px 24px 8px 0; border-top: 1px solid rgba(244,239,230,0.12)">
+<span aria-hidden="true" style="position: absolute; top: -1px; left: 0; width: {{st.bar}}; height: 1px; background: linear-gradient(90deg, {{t.c}}, transparent); box-shadow: 0 0 12px {{t.c}}"></span>
+<div style="font-family: Fraunces, serif; font-weight: 300; font-size: 22px; color: {{t.l}}">{{st.n}}</div>
+<h3 style="font-weight: 500; font-size: 22px; margin: 12px 0 0">{{st.t}}</h3>
+<p style="font-size: 15px; line-height: 1.55; color: #BAC2D0; margin: 8px 0 0">{{st.d}}</p>
+</li>
+</sc-for>
+</ol>
+</section>
+
+<section id="book-call" style="max-width: 1180px; margin: 0 auto; padding: 20px 28px 120px">
+<div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: center; justify-content: space-between; border-radius: 28px; padding: 36px; background: linear-gradient(180deg, #141D30, #0A0F1A); border: 1px solid rgba({{t.rgb}},0.3)">
+<div style="flex: 1 1 380px; min-width: 0"><h2 style="font-weight: 500; font-size: 34px; letter-spacing: -0.03em; margin: 0">Rather talk it through?</h2><p style="font-size: 17px; line-height: 1.6; color: #BAC2D0; margin: 10px 0 0; max-width: 46ch">Book a 30-minute call on US business hours. No pitch deck, just your numbers and one idea.</p></div>
+<a href="https://calendly.com/aymankhak10/30min" target="_blank" rel="noopener" style="flex: none; display: inline-flex; align-items: center; min-height: 48px; padding: 0 26px; border-radius: 999px; border: 1px solid rgba(244,239,230,0.22); color: #F4EFE6; text-decoration: none; font-weight: 600; font-size: 16px">Book a 30-minute call</a>
+</div>
+</section>
+
+<dc-import name="Footer" theme="{{theme}}" hint-size="100%,300px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","default":"violet","options":["ice","platinum","violet","gold"]},"$preview":{"width":1440,"height":2600}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { sent: false, need: null }; }
+  renderVals() {
+    const TH = {
+      ice: { c: '#7DB9FF', l: '#CFE6FF', rgb: '125,185,255', ink: '#04101F', base: '#040507', s: ['#3E78C9', '#CFE6FF', '#7DB9FF', '#F3F9FF', '#4F8BD9'] },
+      platinum: { c: '#DDE3EE', l: '#FFFFFF', rgb: '220,228,240', ink: '#0A0C10', base: '#050506', s: ['#8E97A8', '#F6F8FC', '#C3CAD6', '#FFFFFF', '#9AA3B3'] },
+      violet: { c: '#A78BFF', l: '#DCD2FF', rgb: '167,139,255', ink: '#120A2A', base: '#06050B', s: ['#6C4FE0', '#DCD2FF', '#A78BFF', '#F3EEFF', '#7A5CF0'] },
+      gold: { c: '#F0C462', l: '#FFE3A0', rgb: '240,196,98', ink: '#1A1206', base: '#07090F', s: ['#A9792A', '#F7DC94', '#E0B04E', '#FFF3C8', '#B8893A'] }
+    };
+    const theme = this.props.theme || 'violet';
+    const T0 = TH[theme] || TH.violet;
+    const t = { ...T0, g: 'linear-gradient(110deg, ' + T0.s[0] + ' 0%, ' + T0.s[1] + ' 28%, ' + T0.s[2] + ' 52%, ' + T0.s[3] + ' 72%, ' + T0.s[4] + ' 100%)' };
+    const needs = ['Missed calls and follow-up', 'Social media', 'Ads', 'My website', 'Brand and design'].map((n) => { const on = this.state.need === n; return { t: n, pressed: on ? 'true' : 'false', pick: () => this.setState({ need: on ? null : n }),
+      bg: on ? 'rgba(' + T0.rgb + ',0.16)' : 'transparent', fg: on ? T0.l : '#C9CFDB', border: on ? 'rgba(' + T0.rgb + ',0.7)' : 'rgba(244,239,230,0.14)' }; });
+    return {
+      t, theme, needs,
+      showForm: !this.state.sent, sent: this.state.sent,
+      submit: (e) => { if (e && e.preventDefault) e.preventDefault(); const fm = e && e.currentTarget; if (fm && fm.company_url && fm.company_url.value) return; this.setState({ sent: true }); },
+      gets: [
+        { t: 'A 5-minute video', d: 'We walk through your site, Google profile, ads and Instagram on screen.', icon: 'M4 6h12v12H4z M16 10l5-3v10l-5-3' },
+        { t: 'What you pay for twice', d: 'The people and tools doing work a system could do, with rough monthly cost.', icon: 'M12 2v20 M17 6H9.5a3 3 0 0 0 0 6h5a3 3 0 0 1 0 6H6' },
+        { t: 'One fix you can use today', d: 'Whether or not you hire us.', icon: 'M5 12l5 5 9-10' }
+      ],
+      next: [
+        { n: '01', t: 'You book', d: 'Takes a minute. No call needed.', bar: '25%' },
+        { n: '02', t: 'We look', d: 'Brand, site, ads, social and your tools.', bar: '50%' },
+        { n: '03', t: 'Video in 48 hours', d: 'With the first fix and rough savings.', bar: '75%' },
+        { n: '04', t: 'You decide', d: 'Use the fix yourself, or let us build the system.', bar: '100%' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+/* production additions */
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+button[disabled]{opacity:.7;cursor:progress}
+.mb-consent{position:fixed;left:16px;right:16px;bottom:16px;z-index:70;max-width:560px;margin:0 auto;padding:18px 20px;border-radius:20px;background:rgba(14,12,26,.96);border:1px solid rgba(244,239,230,.14);box-shadow:0 24px 60px -18px rgba(0,0,0,.9);color:#F4EFE6;font:15px/1.5 Geist,system-ui,sans-serif;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.mb-consent p{margin:0;color:#DCE1EA}.mb-consent a{color:#DCD2FF}
+.mb-consent-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.mb-consent button{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid rgba(244,239,230,.2);background:transparent;color:#F4EFE6;font:500 14px Geist,system-ui,sans-serif;cursor:pointer}
+.mb-consent .mb-consent-yes{background:#A78BFF;border-color:#A78BFF;color:#120A2A}
+@media (max-width:920px){.mb-consent{bottom:calc(84px + env(safe-area-inset-bottom,0px))}}
+@media (max-width:920px){.navcta{display:none!important}}
