@@ -67,9 +67,11 @@ section[aria-labelledby="team-title"] [style*="height: 680px"]{grid-column:2;gri
 section[aria-labelledby="team-title"] [style*="min-height: 52px"]{grid-column:1;grid-row:2;min-height:0!important;justify-content:flex-start!important;align-self:start;margin-top:-60px}
 section[aria-labelledby="team-title"]{padding-top:24px!important;padding-bottom:8px!important}
 
-/* ---------- Reviews: one swipeable row instead of a wall ---------- */
-section[aria-labelledby="reviews-title"] div:has(> figure){display:flex!important;grid-template-columns:none!important;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px!important;padding-bottom:10px;scrollbar-width:thin;scrollbar-color:rgba(167,139,255,.5) transparent;-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);mask-image:linear-gradient(90deg,#000 88%,transparent)}
-section[aria-labelledby="reviews-title"] div:has(> figure) > figure{flex:0 0 300px;scroll-snap-align:start;margin:0}
+/* ---------- Reviews: arrow carousel (track + arrows live in Reviews.dc.html) ---------- */
+.rv-arrow{transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
+.rv-arrow:hover{transform:translateY(-1px);box-shadow:0 0 30px rgba(var(--rgb),.45),inset 0 1px 0 rgba(255,255,255,.12)!important;background:radial-gradient(circle at 35% 25%,rgba(var(--rgb),.4),rgba(var(--rgb),.08))!important}
+.rv-arrow:active{transform:scale(.94)}
+.rv-arrow:focus-visible{outline:2px solid var(--accl);outline-offset:3px}
 section[aria-labelledby="reviews-title"] blockquote{font-size:16px!important}
 
 /* ---------- FAQ: two columns on desktop ---------- */
@@ -104,4 +106,14 @@ div:has(> div > .faqrow) p{font-size:15px!important;padding-bottom:18px!importan
   [style*="flex: 0 0 210px"]{flex:1 1 auto!important}
   [style*="flex: 1; height: 8px; border-radius: 4px"]{display:none!important}
   [style*="flex: none; width: 70px; text-align: right"]{width:auto!important}
+}
+
+/* ---------- No visible scrollbars inside the page (swipe, trackpad and arrows still work) ---------- */
+body *{scrollbar-width:none;-ms-overflow-style:none}
+body *::-webkit-scrollbar{display:none;width:0;height:0}
+
+/* Wide comparison tables on phones: a swipe hint + edge fade instead of a scrollbar */
+@media (max-width: 760px){
+  [style*="overflow-x: auto"]:not(.rv-track){-webkit-mask-image:linear-gradient(90deg,#000 82%,transparent);mask-image:linear-gradient(90deg,#000 82%,transparent)}
+  [style*="overflow-x: auto"]:not(.rv-track)::before{content:"Swipe for more  \2192";display:block;position:sticky;left:0;width:max-content;margin:0 0 10px;padding:6px 12px;border-radius:999px;font:500 12px/1 Geist,system-ui,sans-serif;letter-spacing:.06em;color:#DCD2FF;background:rgba(167,139,255,.12);border:1px solid rgba(167,139,255,.35)}
 }

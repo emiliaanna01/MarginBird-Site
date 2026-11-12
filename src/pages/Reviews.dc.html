@@ -30,9 +30,9 @@
 </div>
 </div>
 
-<div style="margin-top: 48px; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px">
+<div ref="{{rvRef}}" class="rv-track" onMouseEnter="{{pause}}" onMouseLeave="{{resume}}" style="margin-top: 48px; display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; overscroll-behavior-x: contain; padding: 2px">
 <sc-for list="{{reviews}}" as="r" hint-placeholder-count="8">
-<figure style="margin: 0; display: flex; flex-direction: column; gap: 14px; padding: 22px; border-radius: 22px; background: linear-gradient(180deg, #121022, #08070E); box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), 0 0 0 1px rgba(244,239,230,0.07)">
+<figure style="margin: 0; flex: 0 0 min(300px, 82vw); scroll-snap-align: start; display: flex; flex-direction: column; gap: 14px; padding: 22px; border-radius: 22px; background: linear-gradient(180deg, #121022, #08070E); box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), 0 0 0 1px rgba(244,239,230,0.07)">
 <div style="display: flex; justify-content: space-between; align-items: center; gap: 10px">
 <span role="img" aria-label="5 out of 5 stars" style="display: inline-flex; gap: 2px">
 <sc-for list="{{five}}" as="st" hint-placeholder-count="5"><svg width="15" height="15" viewBox="0 0 24 24" fill="{{c}}" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"></path></svg></sc-for>
@@ -48,9 +48,7 @@
 </sc-for>
 </div>
 
-<sc-if value="{{canMore}}" hint-placeholder-val="{{ true }}">
-<div style="margin-top: 22px; text-align: center"><button type="button" onClick="{{showMore}}" style="min-height: 44px; padding: 0 22px; border-radius: 999px; border: 1px solid rgba({{rgb}},0.45); background: rgba({{rgb}},0.08); color: #F4EFE6; font-family: Geist, sans-serif; font-size: 15px; font-weight: 500; cursor: pointer">{{moreLabel}}</button></div>
-</sc-if>
+<div style="margin-top: 22px; display: flex; justify-content: center; align-items: center; gap: 12px"><button type="button" aria-label="Previous reviews" onClick="{{prev}}" class="rv-arrow" style="width: 48px; height: 48px; border-radius: 50%; border: 1px solid rgba({{rgb}},0.45); background: radial-gradient(circle at 35% 25%, rgba({{rgb}},0.22), rgba({{rgb}},0.04)); color: {{l}}; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 0 22px rgba({{rgb}},0.18), inset 0 1px 0 rgba(255,255,255,0.08)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"></path></svg></button><span style="font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #8F99AD; min-width: 120px; text-align: center">{{count}} buyer reviews</span><button type="button" aria-label="Next reviews" onClick="{{next}}" class="rv-arrow" style="width: 48px; height: 48px; border-radius: 50%; border: 1px solid rgba({{rgb}},0.45); background: radial-gradient(circle at 35% 25%, rgba({{rgb}},0.22), rgba({{rgb}},0.04)); color: {{l}}; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 0 22px rgba({{rgb}},0.18), inset 0 1px 0 rgba(255,255,255,0.08)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"></path></svg></button></div>
 <div style="margin-top: 22px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 14px">
 <p style="margin: 0; font-size: 16px; line-height: 1.55; color: #DCE1EA; max-width: 60ch">100+ verified reviews. 96 five-star. Buyers in 10 countries, from the US and UK to Singapore and Japan.</p>
 <a href="https://www.fiverr.com/humanbeing489/do-professional-instagram-and-facebook-management#reviews" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 20px; border-radius: 999px; border: 1px solid rgba(244,239,230,0.18); color: #F4EFE6; text-decoration: none; font-size: 15px; font-weight: 500">Read all 100 on Fiverr<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7 M9 7h8v8"></path></svg></a>
@@ -60,7 +58,33 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","default":"violet","options":["ice","platinum","violet","gold"]},"$preview":{"width":1440,"height":1100}}'>
 class Component extends DCLogic {
-  constructor(props) { super(props); this.state = { more: false }; }
+  constructor(props) {
+    super(props);
+    this.paused = false;
+    this.step = (dir) => {
+      const el = this.el; if (!el) return;
+      const card = el.querySelector('figure');
+      const w = card ? card.getBoundingClientRect().width + 14 : 314;
+      const max = el.scrollWidth - el.clientWidth - 4;
+      if (dir > 0 && el.scrollLeft >= max) el.scrollTo({ left: 0 });
+      else if (dir < 0 && el.scrollLeft <= 4) el.scrollTo({ left: el.scrollWidth });
+      else el.scrollBy({ left: dir * w });
+    };
+    this.rvRef = (el) => {
+      this.el = el;
+      if (this.timer) { clearInterval(this.timer); this.timer = null; }
+      if (!el || typeof window === 'undefined') return;
+      if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      el.addEventListener('touchstart', () => { this.paused = true; }, { passive: true });
+      this.timer = setInterval(() => {
+        if (this.paused || document.hidden) return;
+        const r = el.getBoundingClientRect();
+        if (r.bottom < 0 || r.top > window.innerHeight) return;
+        this.step(1);
+      }, 4500);
+    };
+  }
+  componentWillUnmount() { if (this.timer) clearInterval(this.timer); }
   renderVals() {
     const TH = {
       ice: { c: '#7DB9FF', l: '#CFE6FF', rgb: '125,185,255', s: ['#3E78C9', '#CFE6FF', '#7DB9FF', '#F3F9FF', '#4F8BD9'] },
@@ -94,8 +118,6 @@ class Component extends DCLogic {
       ['mmarouane', 'Netherlands', '2021', 'Great seller! Will work definitely again with him!', '$50–$100', true],
       ['barbratolvonen', 'Finland', '2021', 'Thanks Soo much, am happy and do recommend.i will definitely come back', '$50–$100', false]
     ];
-    const FIRST = 8;
-    const all = this.state.more;
     return {
       c: T.c, l: T.l, rgb: T.rgb, g,
       five: [1, 2, 3, 4, 5],
@@ -104,13 +126,17 @@ class Component extends DCLogic {
         { n: '96', l: 'of them five stars' },
         { n: '3×+', l: 'orders from several buyers' }
       ],
-      reviews: raw.slice(0, all ? raw.length : FIRST).map(([name, country, yr, text, price, rep]) => ({
+      reviews: raw.map(([name, country, yr, text, price, rep]) => ({
         name, text, ini: name[0].toUpperCase(),
         meta: 'Hired Ayman · ' + country + ' · ' + yr,
         repeat: rep, repeatLabel: 'Repeat client'
       })),
-      canMore: !all, moreLabel: 'Show ' + (raw.length - FIRST) + ' more reviews',
-      showMore: () => this.setState({ more: true })
+      count: raw.length,
+      prev: () => { this.paused = true; this.step(-1); },
+      next: () => { this.paused = true; this.step(1); },
+      pause: () => { this.paused = true; },
+      resume: () => { this.paused = false; },
+      rvRef: this.rvRef
     };
   }
 }
