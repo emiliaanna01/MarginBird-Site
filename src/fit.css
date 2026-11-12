@@ -117,3 +117,21 @@ body *::-webkit-scrollbar{display:none;width:0;height:0}
   [style*="overflow-x: auto"]:not(.rv-track){-webkit-mask-image:linear-gradient(90deg,#000 82%,transparent);mask-image:linear-gradient(90deg,#000 82%,transparent)}
   [style*="overflow-x: auto"]:not(.rv-track)::before{content:"Swipe for more  \2192";display:block;position:sticky;left:0;width:max-content;margin:0 0 10px;padding:6px 12px;border-radius:999px;font:500 12px/1 Geist,system-ui,sans-serif;letter-spacing:.06em;color:#DCD2FF;background:rgba(167,139,255,.12);border:1px solid rgba(167,139,255,.35)}
 }
+
+/* ---------- Nav: full at the top, slim and faded while scrolling, back on hover ---------- */
+.mbnav{transition:background .35s ease,border-color .35s ease,transform .35s ease,opacity .35s ease,backdrop-filter .35s ease}
+.mbnav-in{transition:padding .35s ease}
+.mbnav .navlinks,.mbnav .navcta,.mbnav a[aria-label="MarginBird home"]{transition:opacity .3s ease,transform .35s ease}
+.drop::before{content:"";position:absolute;left:0;right:0;top:-16px;height:16px}
+html.nav-compact .mbnav:not(:hover):not(:focus-within){background:transparent!important;border-bottom-color:transparent!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+html.nav-compact .mbnav:not(:hover):not(:focus-within) .mbnav-in{padding-top:8px!important;padding-bottom:8px!important}
+html.nav-compact .mbnav:not(:hover):not(:focus-within) .navlinks{opacity:0;pointer-events:none;transform:translateY(-6px)}
+html.nav-compact .mbnav:not(:hover):not(:focus-within) a[aria-label="MarginBird home"]{opacity:.55;transform:scale(.92);transform-origin:left center}
+html.nav-compact .mbnav:not(:hover):not(:focus-within) .navcta{transform:scale(.92);transform-origin:right center;box-shadow:0 8px 30px -8px rgba(var(--rgb),.6)}
+/* phones/tablets: no hover, so the bar slides away on scroll down and returns on scroll up */
+@media (max-width: 920px), (hover: none){
+  html.nav-away .mbnav:not(:focus-within){transform:translateY(-100%);opacity:0}
+  html.nav-compact .mbnav:not(:hover):not(:focus-within){background:rgba(4,5,7,.72)!important;backdrop-filter:blur(16px)!important;-webkit-backdrop-filter:blur(16px)!important}
+  html.nav-compact .mbnav:not(:hover):not(:focus-within) a[aria-label="MarginBird home"]{opacity:1}
+}
+@media (prefers-reduced-motion: reduce){.mbnav,.mbnav-in,.mbnav .navlinks{transition:none}}

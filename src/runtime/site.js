@@ -133,3 +133,19 @@ function whenNear(selector, fn) {
 }
 whenNear('.tl-canvas', () => { if (!window.MBLine && CFG.mbline) loadScript(CFG.mbline); });
 whenNear('.calendly-inline-widget', () => loadScript('https://assets.calendly.com/assets/external/widget.js'));
+
+// ---------- nav: compact on scroll down, full again at the top or on hover ----------
+(function navScroll() {
+  const root = document.documentElement;
+  let last = window.scrollY, ticking = false;
+  function update() {
+    ticking = false;
+    const y = window.scrollY, dy = y - last;
+    if (y < 80) { root.classList.remove('nav-compact', 'nav-away'); }
+    else if (dy > 4) { root.classList.add('nav-compact', 'nav-away'); }
+    else if (dy < -4) { root.classList.add('nav-compact'); root.classList.remove('nav-away'); }
+    last = y;
+  }
+  window.addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+  update();
+})();
