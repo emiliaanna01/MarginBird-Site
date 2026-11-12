@@ -56,7 +56,7 @@ const mbBuf = fs.readFileSync(path.join(SRC, 'vendor', 'mbline.js'));
 const mbName = '/assets/mbline-' + hash(mbBuf) + '.js';
 fs.writeFileSync(path.join(OUT, mbName), mbBuf);
 CONFIG.mbline = mbName;
-const cssBuf = fs.readFileSync(path.join(SRC, 'shared.css'), 'utf8') + fs.readFileSync(path.join(SRC, 'extra.css'), 'utf8');
+const cssBuf = fs.readFileSync(path.join(SRC, 'shared.css'), 'utf8') + fs.readFileSync(path.join(SRC, 'extra.css'), 'utf8') + fs.readFileSync(path.join(SRC, 'fit.css'), 'utf8');
 const cssName = '/assets/site-' + hash(cssBuf) + '.css';
 fs.writeFileSync(path.join(OUT, cssName), cssBuf);
 

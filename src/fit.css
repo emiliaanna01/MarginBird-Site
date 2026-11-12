@@ -1,0 +1,107 @@
+/* MarginBird fit-to-screen layer (loads last).
+   Goal: every section readable inside ~660px of laptop height. Overrides inline sizes by matching them. */
+
+/* ---------- Type scale ---------- */
+[style*="clamp(52px, 8.6vw, 128px)"]{font-size:clamp(40px,5.6vw,78px)!important;max-width:20ch!important;line-height:.98!important}
+[style*="clamp(48px, 7.4vw, 108px)"],[style*="clamp(48px, 6.6vw, 96px)"]{font-size:clamp(38px,4.8vw,66px)!important;max-width:22ch;margin-left:auto;margin-right:auto}
+[style*="clamp(52px, 8vw, 116px)"],[style*="clamp(44px, 6.4vw, 92px)"]{font-size:clamp(34px,4.4vw,60px)!important}
+[style*="clamp(40px, 5vw, 68px)"]{font-size:clamp(30px,3.3vw,46px)!important}
+[style*="clamp(36px, 4.4vw, 56px)"],[style*="clamp(34px, 3.8vw, 52px)"],[style*="clamp(40px, 5vw, 64px)"]{font-size:clamp(28px,3vw,40px)!important}
+/* lead paragraphs */
+p[style*="font-size: 20px"]{font-size:18px!important;margin-top:18px!important}
+
+/* big display numbers */
+[style*="font-size: 96px"]{font-size:64px!important}
+[style*="font-size: 84px"]{font-size:60px!important}
+[style*="font-size: 76px"]{font-size:52px!important}
+[style*="font-size: 72px"]{font-size:52px!important}
+[style*="font-size: 66px"]{font-size:48px!important}
+[style*="font-size: 64px"]{font-size:46px!important}
+[style*="font-size: 62px"]{font-size:46px!important}
+[style*="font-size: 60px"]{font-size:44px!important}
+[style*="font-size: 56px"]{font-size:42px!important}
+[style*="font-size: 54px"]{font-size:42px!important}
+[style*="font-size: 50px"]{font-size:38px!important}
+
+/* ---------- Section rhythm ---------- */
+section[style*="padding: 120px"],section[style*="padding: 140px"],section[style*="padding: 160px"],section[style*="padding: 100px"],section[style*="padding: 80px"],section[style*="padding: 60px 28px"]{padding-top:56px!important;padding-bottom:28px!important}
+section[style*="28px 120px"],section[style*="28px 140px"]{padding-bottom:64px!important}
+section[style*="padding: 150px"]{padding-top:108px!important;padding-bottom:28px!important}
+section#top{padding-top:100px!important;padding-bottom:24px!important}
+[style*="margin-top: 88px"],[style*="margin-top: 80px"],[style*="margin-top: 72px"],[style*="margin-top: 70px"],[style*="margin-top: 64px"]{margin-top:32px!important}
+[style*="margin-top: 60px"],[style*="margin-top: 56px"],[style*="margin-top: 52px"],[style*="margin-top: 48px"],[style*="margin-top: 44px"]{margin-top:26px!important}
+[style*="margin: 72px auto 0"]{margin:20px auto 0!important}
+h2[style*="margin: 0 0 40px"]{margin-bottom:24px!important}
+h1[style*="margin: 34px auto 0"]{margin-top:22px!important}
+[style*="margin: 30px auto 0"],[style*="margin: 26px auto 0"]{margin-top:16px!important}
+
+/* ---------- Cards: less padding ---------- */
+[style*="padding: 40px;"],[style*="padding: 40px 36px"],[style*="padding: 34px 30px"],[style*="padding: 36px;"],[style*="padding: 34px;"]{padding:24px!important}
+[style*="min-height: 520px"],[style*="min-height: 460px"]{min-height:0!important}
+[style*="padding: 56px;"],[style*="padding: 56px 48px"],[style*="padding: 64px 48px"]{padding:32px!important}
+[style*="padding: 32px; height: 100%"]{padding:22px!important;gap:14px!important}
+[style*="padding: 28px;"]{padding:20px!important}
+
+/* ---------- Media sizes ---------- */
+/* website frames */
+[style*="height: 560px"],[style*="height: 520px"]{height:400px!important}
+.autoscroll{animation-name:mbScrollFit!important}
+@keyframes mbScrollFit{0%,8%{transform:translateY(0)}48%,58%{transform:translateY(calc(-100% + 400px))}98%,100%{transform:translateY(0)}}
+/* automation phones */
+[style*="width: 300px; height: 600px"]{zoom:.8}
+/* process player */
+[style*="min-height: 400px"]{min-height:340px!important}
+/* console in hero */
+[style*="max-width: 1080px; margin: 88px auto 0"]{margin-top:28px!important}
+[style*="max-width: 1000px; margin: 80px auto 0"],[style*="max-width: 1080px; margin: 80px auto 0"],[style*="max-width: 1120px; margin: 80px auto 0"]{margin-top:32px!important}
+[style*="height: 360px; margin: 70px auto 0"]{margin-top:24px!important;height:320px!important}
+[style*="height: 380px; max-width: 900px; margin: 60px auto 0"]{margin-top:20px!important;height:320px!important}
+
+/* ---------- Team clothesline: full-size cards, text beside the line ----------
+   The 3D canvas sizes cards from its HEIGHT (card width ~ 0.32 x height), so it keeps 680px.
+   Space is saved by moving the heading into a left column instead of a band above. */
+section[aria-labelledby="team-title"] > div{display:grid!important;grid-template-columns:minmax(260px,330px) minmax(0,1fr);grid-template-rows:1fr auto;column-gap:28px;align-items:center}
+section[aria-labelledby="team-title"] > div > div:first-child{grid-column:1;grid-row:1;display:flex!important;flex-direction:column;align-items:flex-start!important;justify-content:center!important;gap:18px!important}
+section[aria-labelledby="team-title"] > div > div:first-child p{max-width:30ch!important;font-size:16px!important}
+section[aria-labelledby="team-title"] [style*="height: 680px"]{grid-column:2;grid-row:1 / span 2;margin-top:0!important;margin-bottom:-120px;width:100%;min-width:0}
+section[aria-labelledby="team-title"] [style*="min-height: 52px"]{grid-column:1;grid-row:2;min-height:0!important;justify-content:flex-start!important;align-self:start;margin-top:-60px}
+section[aria-labelledby="team-title"]{padding-top:24px!important;padding-bottom:8px!important}
+
+/* ---------- Reviews: one swipeable row instead of a wall ---------- */
+section[aria-labelledby="reviews-title"] div:has(> figure){display:flex!important;grid-template-columns:none!important;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px!important;padding-bottom:10px;scrollbar-width:thin;scrollbar-color:rgba(167,139,255,.5) transparent;-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);mask-image:linear-gradient(90deg,#000 88%,transparent)}
+section[aria-labelledby="reviews-title"] div:has(> figure) > figure{flex:0 0 300px;scroll-snap-align:start;margin:0}
+section[aria-labelledby="reviews-title"] blockquote{font-size:16px!important}
+
+/* ---------- FAQ: two columns on desktop ---------- */
+section:has(.faqrow){max-width:1180px!important}
+div:has(> div > .faqrow){display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:48px;align-items:start}
+.faqrow{font-size:17px!important;padding:18px 4px!important}
+div:has(> div > .faqrow) p{font-size:15px!important;padding-bottom:18px!important}
+
+/* ---------- Pricing cards ---------- */
+[style*="padding: 32px; height: 100%"] [style*="gap: 11px"]{gap:7px!important}
+[style*="padding: 32px; height: 100%"] [style*="font-size: 15px; line-height: 1.5"]{font-size:14px!important}
+
+/* ---------- Phones and tablets ---------- */
+@media (max-width: 760px){
+  div:has(> div > .faqrow){grid-template-columns:1fr}
+  section[aria-labelledby="team-title"] > div{display:block!important}
+  section[aria-labelledby="team-title"] [style*="height: 680px"]{height:400px!important;margin-top:12px!important}
+  section[aria-labelledby="team-title"] [style*="min-height: 52px"]{margin-top:0}
+  [style*="width: 300px; height: 600px"]{zoom:.72}
+  section[style*="padding: 150px"]{padding-top:96px!important}
+}
+
+/* ---------- Follower list + podcast card: tighter ---------- */
+[style*="gap: 16px; padding: 14px 0; border-top"]{padding:9px 0!important}
+[style*="width: 46px; height: 46px; border-radius: 50%; padding: 2px"]{width:38px!important;height:38px!important}
+.fan{min-height:200px!important}
+/* calendly embed */
+.calendly-inline-widget{height:640px!important}
+
+/* ---------- Follower list on phones: name + count, no bar ---------- */
+@media (max-width: 760px){
+  [style*="flex: 0 0 210px"]{flex:1 1 auto!important}
+  [style*="flex: 1; height: 8px; border-radius: 4px"]{display:none!important}
+  [style*="flex: none; width: 70px; text-align: right"]{width:auto!important}
+}
